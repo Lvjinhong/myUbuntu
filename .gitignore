@@ -1,0 +1,14 @@
+ASCpro/
+download
+hpl
+gitBackup
+software
+XianDao
+**/.git/
+.vscode-server/
+.vscode-server-insiders/
+.config/TabNine/
+.cache/
+.local/
+.nv/
+.bash_history
