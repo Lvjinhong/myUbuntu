@@ -26,8 +26,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 # zstyle ':omz:update' frequency 13
-
-
+ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # If not running interactively, don't do anything
 case $- in
@@ -226,7 +225,15 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
  alias lg="ls | grep"
  alias llg="ll | grep"
  alias peg="ps -ef | grep"
-  alias tn="tmux new -s"                                                                                    
-  alias ts="tmux switch -t"
-  alias tks="tmux kill-session -t"
-  
+ alias tn="tmux new -s"                                                                                    
+ alias ts="tmux switch -t"
+ alias tks="tmux kill-session -t"
+ 
+ alias tlist="trash-list"
+ alias tput="trash-put"
+ alias trestore="trash-restore"
+ alias trm="trash-rm"
+ 
+alias setcuda12="export PATH=/usr/local/cuda-12.1/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH"
+alias setcuda11="export PATH=/usr/local/cuda-11.8/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH" 
+export HISTFILESIZE=1000

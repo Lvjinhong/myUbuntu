@@ -21,13 +21,15 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1685630930,,"wq"
+|2,0,1688184720,,"wq"
 :q
-|2,0,1685630794,,"q"
+|2,0,1687696559,,"q"
+:q!
+|2,0,1687157411,,"q!"
+:q\
+|2,0,1685876529,,"q\\"
 :wq\
 |2,0,1684925054,,"wq\\"
-:q!
-|2,0,1684923227,,"q!"
 :%s/-get//g
 |2,0,1684809410,,"%s/-get//g"
 :set nu
@@ -78,338 +80,466 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	n
-|3,0,0,0,1,0,1684924763,"n"
+"0	LINE	0
+	 alias tput="trash-put"
+|3,0,0,1,1,0,1687398279," alias tput=\"trash-put\""
 ""1	LINE	0
-	./run
-|3,1,1,1,1,0,1685176874,"./run"
+	 
+|3,1,1,1,1,0,1687398282," "
 "2	LINE	0
-	vnoremap K 5k
-|3,0,2,1,1,0,1684925049,"vnoremap K 5k"
+	
+|3,0,2,1,1,0,1687398116,""
 "3	LINE	0
-	vnoremap I 5i
-|3,0,3,1,1,0,1684925048,"vnoremap I 5i"
+	./run
+|3,0,3,1,1,0,1685176874,"./run"
 "4	LINE	0
-	nnoremap K 5k
-|3,0,4,1,1,0,1684925047,"nnoremap K 5k"
+	vnoremap K 5k
+|3,0,4,1,1,0,1684925049,"vnoremap K 5k"
 "5	LINE	0
-	nnoremap I 5i
-|3,0,5,1,1,0,1684925045,"nnoremap I 5i"
+	vnoremap I 5i
+|3,0,5,1,1,0,1684925048,"vnoremap I 5i"
 "6	LINE	0
-	nnoremap l l
-|3,0,6,1,1,0,1684924734,"nnoremap l l"
+	nnoremap K 5k
+|3,0,6,1,1,0,1684925047,"nnoremap K 5k"
 "7	LINE	0
-	nnoremap H 0
-|3,0,7,1,1,0,1684923473,"nnoremap H 0"
+	nnoremap I 5i
+|3,0,7,1,1,0,1684925045,"nnoremap I 5i"
 "8	LINE	0
-	" 将 H 键绑定为跳转到行首
-|3,0,8,1,1,0,1684923413,"\" 将 H 键绑定为跳转到行首"
+	nnoremap l l
+|3,0,8,1,1,0,1684924734,"nnoremap l l"
 "9	LINE	0
-	" 将 L 键绑定为跳转到行尾
-|3,0,9,1,1,0,1684923389,"\" 将 L 键绑定为跳转到行尾"
+	nnoremap H 0
+|3,0,9,1,1,0,1684923473,"nnoremap H 0"
 "-	CHAR	0
-	U
-|3,0,36,0,1,0,1684905023,"U"
+	trash-put"
+|3,0,36,0,1,0,1687398122,"trash-put\""
 
 # File marks:
-'0  108  5  ~/.tmux.conf
-|4,48,108,5,1685630930,"~/.tmux.conf"
-'1  1  0  ~/.vimrc
-|4,49,1,0,1685630794,"~/.vimrc"
-'2  1  0  ~/.zshrc
-|4,50,1,0,1685630780,"~/.zshrc"
-'3  155  0  ~/.zshrc
-|4,51,155,0,1685617612,"~/.zshrc"
-'4  155  0  ~/.zshrc
-|4,52,155,0,1685617612,"~/.zshrc"
-'5  202  0  ~/.zshrc
-|4,53,202,0,1685535167,"~/.zshrc"
-'6  202  0  ~/.zshrc
-|4,54,202,0,1685535167,"~/.zshrc"
-'7  202  0  ~/.zshrc
-|4,55,202,0,1685535167,"~/.zshrc"
-'8  202  0  ~/.zshrc
-|4,56,202,0,1685535167,"~/.zshrc"
-'9  202  0  ~/.zshrc
-|4,57,202,0,1685526078,"~/.zshrc"
+'0  2  32  ~/ASCpro/deepmd-kit/start.sh
+|4,48,2,32,1688184720,"~/ASCpro/deepmd-kit/start.sh"
+'1  1  0  ~/ASCpro/ASC23/yuan/yuan_process/vocab.txt
+|4,49,1,0,1687696559,"~/ASCpro/ASC23/yuan/yuan_process/vocab.txt"
+'2  8  16  ~/.gitignore
+|4,50,8,16,1687400793,"~/.gitignore"
+'3  235  20  ~/.zshrc
+|4,51,235,20,1687398292,"~/.zshrc"
+'4  232  11  ~/.zshrc
+|4,52,232,11,1687398245,"~/.zshrc"
+'5  232  11  ~/.zshrc
+|4,53,232,11,1687398245,"~/.zshrc"
+'6  234  10  ~/.zshrc
+|4,54,234,10,1687398175,"~/.zshrc"
+'7  234  10  ~/.zshrc
+|4,55,234,10,1687398175,"~/.zshrc"
+'8  234  10  ~/.zshrc
+|4,56,234,10,1687398175,"~/.zshrc"
+'9  234  10  ~/.zshrc
+|4,57,234,10,1687398175,"~/.zshrc"
 
 # Jumplist (newest first):
--'  108  5  ~/.tmux.conf
-|4,39,108,5,1685630930,"~/.tmux.conf"
--'  57  0  ~/.tmux.conf
-|4,39,57,0,1685630817,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1685630805,"~/.tmux.conf"
--'  1  0  ~/.vimrc
-|4,39,1,0,1685630794,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1685630794,"~/.vimrc"
+-'  2  32  ~/ASCpro/deepmd-kit/start.sh
+|4,39,2,32,1688184720,"~/ASCpro/deepmd-kit/start.sh"
+-'  1  0  ~/ASCpro/deepmd-kit/start.sh
+|4,39,1,0,1688184659,"~/ASCpro/deepmd-kit/start.sh"
+-'  1  0  ~/ASCpro/ASC23/yuan/yuan_process/vocab.txt
+|4,39,1,0,1687696559,"~/ASCpro/ASC23/yuan/yuan_process/vocab.txt"
+-'  1  0  ~/ASCpro/ASC23/yuan/yuan_process/vocab.txt
+|4,39,1,0,1687696559,"~/ASCpro/ASC23/yuan/yuan_process/vocab.txt"
+-'  8  16  ~/.gitignore
+|4,39,8,16,1687400793,"~/.gitignore"
+-'  8  16  ~/.gitignore
+|4,39,8,16,1687400793,"~/.gitignore"
+-'  8  16  ~/.gitignore
+|4,39,8,16,1687400793,"~/.gitignore"
+-'  8  16  ~/.gitignore
+|4,39,8,16,1687400793,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1687400775,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1687400775,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1687400775,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1687400775,"~/.gitignore"
+-'  235  20  ~/.zshrc
+|4,39,235,20,1687398292,"~/.zshrc"
+-'  235  20  ~/.zshrc
+|4,39,235,20,1687398292,"~/.zshrc"
+-'  235  20  ~/.zshrc
+|4,39,235,20,1687398292,"~/.zshrc"
+-'  235  20  ~/.zshrc
+|4,39,235,20,1687398292,"~/.zshrc"
+-'  235  20  ~/.zshrc
+|4,39,235,20,1687398292,"~/.zshrc"
+-'  235  20  ~/.zshrc
+|4,39,235,20,1687398292,"~/.zshrc"
+-'  235  20  ~/.zshrc
+|4,39,235,20,1687398292,"~/.zshrc"
+-'  235  20  ~/.zshrc
+|4,39,235,20,1687398292,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685630780,"~/.zshrc"
+|4,39,1,0,1687398268,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685630780,"~/.zshrc"
+|4,39,1,0,1687398268,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685630780,"~/.zshrc"
+|4,39,1,0,1687398268,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685630780,"~/.zshrc"
--'  155  0  ~/.zshrc
-|4,39,155,0,1685617612,"~/.zshrc"
--'  155  0  ~/.zshrc
-|4,39,155,0,1685617612,"~/.zshrc"
--'  155  0  ~/.zshrc
-|4,39,155,0,1685617612,"~/.zshrc"
--'  155  0  ~/.zshrc
-|4,39,155,0,1685617612,"~/.zshrc"
--'  155  0  ~/.zshrc
-|4,39,155,0,1685617612,"~/.zshrc"
--'  155  0  ~/.zshrc
-|4,39,155,0,1685617612,"~/.zshrc"
--'  155  0  ~/.zshrc
-|4,39,155,0,1685617612,"~/.zshrc"
--'  155  0  ~/.zshrc
-|4,39,155,0,1685617612,"~/.zshrc"
+|4,39,1,0,1687398268,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685598913,"~/.zshrc"
+|4,39,1,0,1687398268,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685598913,"~/.zshrc"
+|4,39,1,0,1687398268,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685598913,"~/.zshrc"
+|4,39,1,0,1687398268,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685598913,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685535167,"~/.zshrc"
+|4,39,1,0,1687398268,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
+-'  232  11  ~/.zshrc
+|4,39,232,11,1687398245,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685534932,"~/.zshrc"
+|4,39,1,0,1687398236,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685534932,"~/.zshrc"
+|4,39,1,0,1687398236,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685534932,"~/.zshrc"
+|4,39,1,0,1687398236,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685534932,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685526078,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685526078,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685526078,"~/.zshrc"
--'  202  0  ~/.zshrc
-|4,39,202,0,1685526078,"~/.zshrc"
+|4,39,1,0,1687398236,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685525689,"~/.zshrc"
+|4,39,1,0,1687398236,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685525689,"~/.zshrc"
+|4,39,1,0,1687398236,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685525689,"~/.zshrc"
+|4,39,1,0,1687398236,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1685525689,"~/.zshrc"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
--'  606  0  ~/XianDao/succesWae/succFinal.cu
-|4,39,606,0,1685177372,"~/XianDao/succesWae/succFinal.cu"
+|4,39,1,0,1687398236,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  234  10  ~/.zshrc
+|4,39,234,10,1687398175,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1687398060,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1687398060,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1687398060,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1687398060,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1687398060,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1687398060,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1687398060,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1687398060,"~/.zshrc"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+-'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
+|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
 
 # History of marks within files (newest to oldest):
 
-> ~/.tmux.conf
-	*	1685630929	0
-	"	108	5
-	^	108	6
-	.	126	10
-	+	1	24
-	+	242	0
-	+	62	5
-	+	63	5
-	+	64	5
-	+	65	5
-	+	64	5
-	+	158	10
-	+	159	10
-	+	160	10
-	+	161	10
-	+	144	10
-	+	146	10
-	+	150	10
-	+	144	10
-	+	146	10
-	+	150	10
-	+	1	12
-	+	1612	5
-	+	255	70
-	+	261	71
-	+	255	0
-	+	204	56
-	+	205	0
-	+	68	0
-	+	302	5
-	+	68	0
-	+	150	0
-	+	153	0
-	+	147	0
-	+	68	0
-	+	143	0
-	+	142	0
-	+	140	10
-	+	128	10
-	+	129	10
-	+	130	10
-	+	131	10
-	+	89	5
-	+	90	5
-	+	91	5
-	+	92	5
-	+	22	10
-	+	23	19
+> ~/ASCpro/deepmd-kit/start.sh
+	*	1688184719	0
+	"	2	32
+	^	2	33
+	.	2	32
+	+	2	38
+	+	3	0
+	+	2	32
+
+> ~/ASCpro/ASC23/yuan/yuan_process/vocab.txt
+	*	1687696559	0
+	"	1	0
+
+> ~/.gitignore
+	*	1687400792	0
+	"	8	16
+	^	8	17
+	.	8	16
+	+	8	16
+
+> ~/.zshrc
+	*	1687398292	0
+	"	235	20
+	^	235	20
+	.	235	19
+	+	105	0
+	+	82	5
+	+	82	2
+	+	82	3
+	+	83	5
+	+	195	0
+	+	212	1
+	+	184	0
+	+	229	1
+	+	219	1
+	+	220	1
+	+	221	1
+	+	222	1
+	+	223	1
+	+	224	1
+	+	225	1
+	+	226	1
+	+	227	1
+	+	228	1
+	+	239	1
+	+	2	0
+	+	3	0
+	+	16	0
+	+	14	0
 	+	1	0
-	+	47	0
-	+	146	27
-	+	147	37
-	+	143	40
+	+	29	0
+	+	30	0
+	+	239	0
+	+	231	1
+	+	228	1
+	+	229	1
+	+	230	1
+	+	237	60
+	+	238	103
+	+	232	0
+	+	233	0
+	+	232	8
+	+	233	23
+	+	235	0
+	+	234	14
+	+	232	11
+	+	235	19
+
+> ~/ASCpro/deepmd-kit/water/test.sh
+	*	1687157408	0
+	"	1	30
+	^	1	31
+	.	1	29
+	+	48	0
+	+	1	29
+
+> ~/ASCpro/deepmd-kit/water/input.json
+	*	1687157345	0
+	"	2	0
+
+> ~/hpl.sh
+	*	1686151535	0
+	"	1	0
+
+> ~/ASCpro/linpack/hpl/hpl.sh
+	*	1686151526	0
+	"	80	0
+	^	6	1
+	.	4	0
+	+	4	0
+
+> ~/ASCpro/linpack/hpl/run.sh
+	*	1686151338	0
+	"	1	0
+
+> ~/ASCpro/docker/run.sh
+	*	1686037591	0
+	"	1	191
+	^	1	192
+	.	1	191
+	+	1	0
+	+	1	191
+
+> ~/.config/.tmux1.conf
+	*	1685876665	0
+	"	211	161
+	^	211	162
+	.	211	106
+	+	846	0
+	+	844	164
+	+	424	0
+	+	422	164
+	+	212	0
+	+	211	106
+
+> ~/.tmux.conf
+	*	1685876530	0
+	"	1	0
+	^	10	15
+	.	10	14
+	+	1	24
+	+	246	0
+	+	66	5
+	+	67	5
+	+	68	5
+	+	69	5
+	+	68	5
+	+	162	10
+	+	163	10
+	+	164	10
+	+	165	10
+	+	148	10
+	+	150	10
+	+	154	10
+	+	148	10
+	+	150	10
+	+	154	10
+	+	1	12
+	+	1616	5
+	+	259	70
+	+	265	71
+	+	259	0
+	+	208	56
+	+	209	0
+	+	72	0
+	+	306	5
+	+	72	0
+	+	154	0
+	+	157	0
+	+	151	0
+	+	72	0
 	+	147	0
 	+	146	0
-	+	146	15
+	+	144	10
+	+	132	10
+	+	133	10
+	+	134	10
+	+	135	10
+	+	93	5
+	+	94	5
+	+	95	5
+	+	96	5
+	+	26	10
+	+	27	19
+	+	1	0
+	+	51	0
+	+	150	27
+	+	151	37
+	+	147	40
+	+	151	0
+	+	150	0
+	+	150	15
+	+	151	0
+	+	144	0
 	+	147	0
-	+	140	0
-	+	143	0
-	+	132	0
+	+	136	0
+	+	151	0
+	+	149	0
 	+	147	0
-	+	145	0
-	+	143	0
-	+	155	21
-	+	156	21
-	+	157	21
-	+	158	21
+	+	159	21
 	+	160	21
 	+	161	21
 	+	162	21
-	+	126	10
+	+	164	21
+	+	165	21
+	+	166	21
+	+	130	10
+	+	10	0
+	+	11	1
+	+	13	0
+	+	12	0
+	+	10	14
+
+> ~/.zshrczsh
+	*	1685874536	0
+	"	1	0
+
+> ~/.bash_history
+	*	1685707672	0
+	"	1	0
 
 > ~/.vimrc
 	*	1685630793	0
@@ -465,37 +595,6 @@ $
 	+	7	12
 	+	7	0
 	+	11	0
-
-> ~/.zshrc
-	*	1685630780	0
-	"	1	0
-	^	1	16
-	.	1	0
-	+	106	0
-	+	83	5
-	+	83	2
-	+	83	3
-	+	84	5
-	+	196	0
-	+	213	1
-	+	185	0
-	+	230	1
-	+	220	1
-	+	221	1
-	+	222	1
-	+	223	1
-	+	224	1
-	+	225	1
-	+	226	1
-	+	227	1
-	+	228	1
-	+	229	1
-	+	233	1
-	+	2	0
-	+	3	0
-	+	16	0
-	+	14	0
-	+	1	0
 
 > ~/XianDao/succesWae/succFinal.cu
 	*	1685177372	0

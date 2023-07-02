@@ -5,6 +5,7 @@ gitBackup
 software
 XianDao
 **/.git/
+.pycharm_helpers/
 .vscode-server/
 .vscode-server-insiders/
 .config/TabNine/
