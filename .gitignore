@@ -5,6 +5,8 @@ gitBackup
 software
 XianDao
 **/.git/
+**/.github/
+.oh-my-zsh
 .pycharm_helpers/
 .vscode-server/
 .vscode-server-insiders/
@@ -12,4 +14,14 @@ XianDao
 .cache/
 .local/
 .nv/
+.vim
 .bash_history
+.zc*
+Project/
+.conda
+.w3m
+.rainbarf.dat
+.selected_editor
+.lesshst
+.spack
+.keras

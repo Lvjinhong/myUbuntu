@@ -11,19 +11,27 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/H
+~MSle0~/o
 
 # Last Substitute Search Pattern:
-~MSle0&-get
+~MSle0&H
 
 # Last Substitute String:
-$
+$~
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1688184720,,"wq"
+|2,0,1688648023,,"wq"
 :q
-|2,0,1687696559,,"q"
+|2,0,1688646329,,"q"
+:AirlineTheme simple
+|2,0,1688646102,,"AirlineTheme simple"
+:Q
+|2,0,1688645734,,"Q"
+:PluginInstall
+|2,0,1688645341,,"PluginInstall"
+:s
+|2,0,1688300829,,"s"
 :q!
 |2,0,1687157411,,"q!"
 :q\
@@ -48,6 +56,10 @@ $
 |2,0,1684590394,,"wq!"
 
 # Search String History (newest to oldest):
+?/ll
+|2,1,1688532282,47,"ll"
+?/o
+|2,1,1688306764,47,"o"
 ?/H
 |2,1,1685630817,47,"H"
 ? -get
@@ -80,265 +92,493 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	 alias tput="trash-put"
-|3,0,0,1,1,0,1687398279," alias tput=\"trash-put\""
+"0	CHAR	0
+	/usr/bin/vim
+|3,0,0,0,1,0,1688382446,"/usr/bin/vim"
 ""1	LINE	0
-	 
-|3,1,1,1,1,0,1687398282," "
+	
+	本次提交重新整理了gitgnore文件，重新定义了文件的存放方式，注意之前有一些子模块也是git仓库，所以根本就没有被存进去，一定要注意该点，本次提交完善了这个错误
+	下面是 本git
+|3,1,1,1,3,0,1688647380,"","本次提交重新整理了gitgnore文件，重新定义了文件的存放方式，注意之前有一些子模块也是git仓库，所以根本就没有被存进去，一定要注意该点，本次提交完善了这个错误","下面是 本git"
 "2	LINE	0
 	
-|3,0,2,1,1,0,1687398116,""
+	本次提交重新整理了gitgnore文件，重新定义了文件的存放方式，注意之前有一些子模块也是git仓库，所以根本就没有被存进去，一定要注意该点，本次提交完善了这个错误
+	下面是 本git
+	
+	
+	# Please enter the commit message for your changes. Lines starting
+	# with '#' will be ignored, and an empty message aborts the commit.
+	#
+	# On branch master
+	# Your branch is up to date with 'origin/master'.
+	#
+	# Changes to be committed:
+	#	deleted:    .conda/environments.txt
+	#	modified:   .config/.tmux.conf
+	#	deleted:    .config/.tmux1.conf
+	#	modified:   .config/htop/htoprc
+	#	deleted:    .config/tmux-powerline
+	#	modified:   .config/tmux/tmux-powerline/powerline.sh
+	#	deleted:    .config/tmuxOrgin
+	#	modified:   .dotnet/corefx/cryptography/crls/d16da424.cbeb964c.crl
+	#	modified:   .gitconfig
+	#	modified:   .gitignore
+	#	deleted:    .keras/keras.json
+|3,0,2,1,23,0,1688647377,"","本次提交重新整理了gitgnore文件，重新定义了文件的存放方式，注意之前有一些子模块也是git仓库，所以根本就没有被存进去，一定要注意该点，本次提交完善了这个错误","下面是 本git","","","# Please enter the commit message for your changes. Lines starting","# with '#' will be ignored, and an empty message aborts the commit.","#","# On branch master",>51
+|<"# Your branch is up to date with 'origin/master'.","#","# Changes to be committed:","#	deleted:    .conda/environments.txt","#	modified:   .config/.tmux.conf","#	deleted:    .config/.tmux1.conf","#	modified:   .config/htop/htoprc","#	deleted:    .config/tmux-powerline","#	modified:   .config/tmux/tmux-powerline/powerline.sh","#	deleted:    .config/tmuxOrgin","#	modified:   .dotnet/corefx/cryptography/crls/d16da424.cbeb964c.crl","#	modified:   .gitconfig","#	modified:   .gitignore",>33
+|<"#	deleted:    .keras/keras.json"
 "3	LINE	0
-	./run
-|3,0,3,1,1,0,1685176874,"./run"
+	source ./share/spack/setup-env.sh
+|3,0,3,1,1,0,1688625785,"source ./share/spack/setup-env.sh"
 "4	LINE	0
-	vnoremap K 5k
-|3,0,4,1,1,0,1684925049,"vnoremap K 5k"
+	export VISUAL=/usr/bin/vim
+|3,0,4,1,1,0,1688382449,"export VISUAL=/usr/bin/vim"
 "5	LINE	0
-	vnoremap I 5i
-|3,0,5,1,1,0,1684925048,"vnoremap I 5i"
+	export HISTFILESIZE=1000
+|3,0,5,1,1,0,1688382232,"export HISTFILESIZE=1000"
 "6	LINE	0
-	nnoremap K 5k
-|3,0,6,1,1,0,1684925047,"nnoremap K 5k"
+	 
+|3,0,6,1,1,0,1687398282," "
 "7	LINE	0
-	nnoremap I 5i
-|3,0,7,1,1,0,1684925045,"nnoremap I 5i"
+	
+|3,0,7,1,1,0,1687398116,""
 "8	LINE	0
-	nnoremap l l
-|3,0,8,1,1,0,1684924734,"nnoremap l l"
+	./run
+|3,0,8,1,1,0,1685176874,"./run"
 "9	LINE	0
-	nnoremap H 0
-|3,0,9,1,1,0,1684923473,"nnoremap H 0"
+	vnoremap K 5k
+|3,0,9,1,1,0,1684925049,"vnoremap K 5k"
 "-	CHAR	0
-	trash-put"
-|3,0,36,0,1,0,1687398122,"trash-put\""
+	d
+|3,0,36,0,1,0,1688307120,"d"
 
 # File marks:
-'0  2  32  ~/ASCpro/deepmd-kit/start.sh
-|4,48,2,32,1688184720,"~/ASCpro/deepmd-kit/start.sh"
-'1  1  0  ~/ASCpro/ASC23/yuan/yuan_process/vocab.txt
-|4,49,1,0,1687696559,"~/ASCpro/ASC23/yuan/yuan_process/vocab.txt"
-'2  8  16  ~/.gitignore
-|4,50,8,16,1687400793,"~/.gitignore"
-'3  235  20  ~/.zshrc
-|4,51,235,20,1687398292,"~/.zshrc"
-'4  232  11  ~/.zshrc
-|4,52,232,11,1687398245,"~/.zshrc"
-'5  232  11  ~/.zshrc
-|4,53,232,11,1687398245,"~/.zshrc"
-'6  234  10  ~/.zshrc
-|4,54,234,10,1687398175,"~/.zshrc"
-'7  234  10  ~/.zshrc
-|4,55,234,10,1687398175,"~/.zshrc"
-'8  234  10  ~/.zshrc
-|4,56,234,10,1687398175,"~/.zshrc"
-'9  234  10  ~/.zshrc
-|4,57,234,10,1687398175,"~/.zshrc"
+'0  6  178  ~/README.md
+|4,48,6,178,1688648023,"~/README.md"
+'1  2  0  ~/.git/COMMIT_EDITMSG
+|4,49,2,0,1688647382,"~/.git/COMMIT_EDITMSG"
+'2  1  0  ~/.zshrc
+|4,50,1,0,1688646329,"~/.zshrc"
+'3  1  0  ~/.vimrc
+|4,51,1,0,1688646124,"~/.vimrc"
+'4  1  0  ~/.vimrc
+|4,52,1,0,1688646121,"~/.vimrc"
+'5  43  0  ~/.zshrc
+|4,53,43,0,1688646112,"~/.zshrc"
+'6  43  0  ~/.zshrc
+|4,54,43,0,1688646112,"~/.zshrc"
+'7  1  0  ~/.vimrc
+|4,55,1,0,1688646015,"~/.vimrc"
+'8  1  0  ~/.vimrc
+|4,56,1,0,1688646015,"~/.vimrc"
+'9  1  0  ~/.zshrc
+|4,57,1,0,1688645866,"~/.zshrc"
 
 # Jumplist (newest first):
--'  2  32  ~/ASCpro/deepmd-kit/start.sh
-|4,39,2,32,1688184720,"~/ASCpro/deepmd-kit/start.sh"
--'  1  0  ~/ASCpro/deepmd-kit/start.sh
-|4,39,1,0,1688184659,"~/ASCpro/deepmd-kit/start.sh"
--'  1  0  ~/ASCpro/ASC23/yuan/yuan_process/vocab.txt
-|4,39,1,0,1687696559,"~/ASCpro/ASC23/yuan/yuan_process/vocab.txt"
--'  1  0  ~/ASCpro/ASC23/yuan/yuan_process/vocab.txt
-|4,39,1,0,1687696559,"~/ASCpro/ASC23/yuan/yuan_process/vocab.txt"
--'  8  16  ~/.gitignore
-|4,39,8,16,1687400793,"~/.gitignore"
--'  8  16  ~/.gitignore
-|4,39,8,16,1687400793,"~/.gitignore"
--'  8  16  ~/.gitignore
-|4,39,8,16,1687400793,"~/.gitignore"
--'  8  16  ~/.gitignore
-|4,39,8,16,1687400793,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1687400775,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1687400775,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1687400775,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1687400775,"~/.gitignore"
--'  235  20  ~/.zshrc
-|4,39,235,20,1687398292,"~/.zshrc"
--'  235  20  ~/.zshrc
-|4,39,235,20,1687398292,"~/.zshrc"
--'  235  20  ~/.zshrc
-|4,39,235,20,1687398292,"~/.zshrc"
--'  235  20  ~/.zshrc
-|4,39,235,20,1687398292,"~/.zshrc"
--'  235  20  ~/.zshrc
-|4,39,235,20,1687398292,"~/.zshrc"
--'  235  20  ~/.zshrc
-|4,39,235,20,1687398292,"~/.zshrc"
--'  235  20  ~/.zshrc
-|4,39,235,20,1687398292,"~/.zshrc"
--'  235  20  ~/.zshrc
-|4,39,235,20,1687398292,"~/.zshrc"
+-'  6  178  ~/README.md
+|4,39,6,178,1688648023,"~/README.md"
+-'  1  0  ~/README.md
+|4,39,1,0,1688647976,"~/README.md"
+-'  2  0  ~/.git/COMMIT_EDITMSG
+|4,39,2,0,1688647382,"~/.git/COMMIT_EDITMSG"
+-'  2  0  ~/.git/COMMIT_EDITMSG
+|4,39,2,0,1688647382,"~/.git/COMMIT_EDITMSG"
+-'  22  0  ~/.git/COMMIT_EDITMSG
+|4,39,22,0,1688647379,"~/.git/COMMIT_EDITMSG"
+-'  22  0  ~/.git/COMMIT_EDITMSG
+|4,39,22,0,1688647379,"~/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.git/COMMIT_EDITMSG
+|4,39,1,0,1688647228,"~/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.git/COMMIT_EDITMSG
+|4,39,1,0,1688647228,"~/.git/COMMIT_EDITMSG"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398268,"~/.zshrc"
+|4,39,1,0,1688646329,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398268,"~/.zshrc"
+|4,39,1,0,1688646329,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398268,"~/.zshrc"
+|4,39,1,0,1688646329,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398268,"~/.zshrc"
+|4,39,1,0,1688646329,"~/.zshrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646124,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646124,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646124,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646124,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646121,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646121,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646121,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646121,"~/.vimrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  43  0  ~/.zshrc
+|4,39,43,0,1688646112,"~/.zshrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646015,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646015,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646015,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646015,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646015,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646015,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646015,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688646015,"~/.vimrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398268,"~/.zshrc"
+|4,39,1,0,1688645882,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398268,"~/.zshrc"
+|4,39,1,0,1688645882,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398268,"~/.zshrc"
+|4,39,1,0,1688645882,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398268,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
--'  232  11  ~/.zshrc
-|4,39,232,11,1687398245,"~/.zshrc"
+|4,39,1,0,1688645882,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398236,"~/.zshrc"
+|4,39,1,0,1688645882,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398236,"~/.zshrc"
+|4,39,1,0,1688645882,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398236,"~/.zshrc"
+|4,39,1,0,1688645882,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398236,"~/.zshrc"
+|4,39,1,0,1688645882,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398236,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398236,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398236,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398236,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
--'  234  10  ~/.zshrc
-|4,39,234,10,1687398175,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398060,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398060,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398060,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398060,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398060,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398060,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398060,"~/.zshrc"
+|4,39,1,0,1688645866,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1687398060,"~/.zshrc"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
--'  1  30  ~/ASCpro/deepmd-kit/water/test.sh
-|4,39,1,30,1687157411,"~/ASCpro/deepmd-kit/water/test.sh"
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1688645866,"~/.zshrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1688645835,"~/.vimrc"
 
 # History of marks within files (newest to oldest):
+
+> ~/README.md
+	*	1688648023	0
+	"	6	178
+	^	6	181
+	.	6	178
+	+	1	39
+	+	6	178
+
+> ~/.git/COMMIT_EDITMSG
+	*	1688647381	0
+	"	2	0
+	.	2	0
+	+	22	0
+	+	1	14
+	+	22	0
+	+	1	17
+	+	22	0
+	+	1	17
+	+	22	0
+	+	1	36
+	+	22	13
+	+	1	69
+	+	22	0
+	+	2	0
+
+> ~/.zshrc
+	*	1688646329	0
+	"	1	0
+	.	245	0
+	+	105	0
+	+	82	5
+	+	82	2
+	+	82	3
+	+	83	5
+	+	195	0
+	+	212	1
+	+	184	0
+	+	230	1
+	+	220	1
+	+	221	1
+	+	222	1
+	+	223	1
+	+	224	1
+	+	225	1
+	+	226	1
+	+	227	1
+	+	228	1
+	+	229	1
+	+	242	1
+	+	2	0
+	+	3	0
+	+	16	0
+	+	14	0
+	+	1	0
+	+	29	0
+	+	30	0
+	+	242	0
+	+	231	34
+	+	229	1
+	+	230	1
+	+	231	1
+	+	239	60
+	+	240	103
+	+	234	0
+	+	235	0
+	+	234	8
+	+	235	23
+	+	237	0
+	+	236	14
+	+	234	11
+	+	237	19
+	+	231	33
+	+	232	0
+	+	234	0
+	+	4	0
+	+	232	18
+	+	231	33
+	+	216	0
+	+	241	24
+	+	244	26
+	+	244	0
+	+	245	0
+
+> ~/.vimrc
+	*	1688646122	0
+	"	1	0
+	^	1	20
+	.	1	0
+	+	1	52
+	+	1	39
+	+	1	0
+	+	1	69
+	+	1	11
+	+	1	22
+	+	1	35
+	+	1	53
+	+	1	68
+	+	1	8
+	+	1	75
+	+	1	73
+	+	1	75
+	+	1	39
+	+	1	26
+	+	1	13
+	+	1	52
+	+	1	0
+	+	1	13
+	+	1	26
+	+	1	65
+	+	1	74
+	+	1	0
+	+	1	13
+	+	1	26
+	+	1	65
+	+	1	0
+	+	1	13
+	+	1	26
+	+	1	39
+	+	1	52
+	+	1	65
+	+	1	67
+	+	1	50
+	+	1	63
+	+	1	77
+	+	1	115
+	+	1	78
+	+	1	91
+	+	1	104
+	+	1	0
+	+	11	12
+	+	11	11
+	+	11	9
+	+	11	12
+	+	7	13
+	+	7	12
+	+	7	0
+	+	11	0
+	+	1	0
+
+> ~/[Vundle] Installer
+	*	1688645814	0
+	"	10	0
+	.	1	0
+	+	18	0
+	+	10	0
+	+	1	0
+
+> ~/script/dcgmRun.sh
+	*	1688643558	0
+	"	1	0
+
+> ~/script/tfTest.sh
+	*	1688531136	0
+	"	1	3
+	^	1	4
+	.	1	3
+	+	4	0
+	+	1	3
+	p	1	0
+
+> /etc/fstab
+	*	1688479933	0
+	"	1	0
+
+> ~/script/isgpu.py
+	*	1688437980	0
+	"	48	0
+	^	48	0
+	.	47	33
+	+	6	33
+	+	47	33
+
+> ~/script/log
+	*	1688382478	0
+	"	1	0
+
+> ~/script/test.sh
+	*	1688382219	0
+	"	1	0
+	^	1	10
+	.	1	9
+	+	1	9
+
+> ~/script/ljhinit.sh
+	*	1688309438	0
+	"	1	0
+
+> ~/.config/ranger/rc.conf
+	*	1688308955	0
+	"	1	0
+	.	433	0
+	+	127	20
+	+	129	34
+	+	129	0
+	+	129	34
+	+	130	18
+	+	131	19
+	+	129	28
+	+	131	22
+	+	1	0
+	+	433	0
 
 > ~/ASCpro/deepmd-kit/start.sh
 	*	1688184719	0
@@ -359,54 +599,6 @@ $
 	^	8	17
 	.	8	16
 	+	8	16
-
-> ~/.zshrc
-	*	1687398292	0
-	"	235	20
-	^	235	20
-	.	235	19
-	+	105	0
-	+	82	5
-	+	82	2
-	+	82	3
-	+	83	5
-	+	195	0
-	+	212	1
-	+	184	0
-	+	229	1
-	+	219	1
-	+	220	1
-	+	221	1
-	+	222	1
-	+	223	1
-	+	224	1
-	+	225	1
-	+	226	1
-	+	227	1
-	+	228	1
-	+	239	1
-	+	2	0
-	+	3	0
-	+	16	0
-	+	14	0
-	+	1	0
-	+	29	0
-	+	30	0
-	+	239	0
-	+	231	1
-	+	228	1
-	+	229	1
-	+	230	1
-	+	237	60
-	+	238	103
-	+	232	0
-	+	233	0
-	+	232	8
-	+	233	23
-	+	235	0
-	+	234	14
-	+	232	11
-	+	235	19
 
 > ~/ASCpro/deepmd-kit/water/test.sh
 	*	1687157408	0
@@ -541,61 +733,6 @@ $
 	*	1685707672	0
 	"	1	0
 
-> ~/.vimrc
-	*	1685630793	0
-	"	1	0
-	^	1	11
-	.	11	0
-	+	1	52
-	+	1	39
-	+	1	0
-	+	1	69
-	+	1	11
-	+	1	22
-	+	1	35
-	+	1	53
-	+	1	68
-	+	1	8
-	+	1	75
-	+	1	73
-	+	1	75
-	+	1	39
-	+	1	26
-	+	1	13
-	+	1	52
-	+	1	0
-	+	1	13
-	+	1	26
-	+	1	65
-	+	1	74
-	+	1	0
-	+	1	13
-	+	1	26
-	+	1	65
-	+	1	0
-	+	1	13
-	+	1	26
-	+	1	39
-	+	1	52
-	+	1	65
-	+	1	67
-	+	1	50
-	+	1	63
-	+	1	77
-	+	1	115
-	+	1	78
-	+	1	91
-	+	1	104
-	+	1	0
-	+	11	12
-	+	11	11
-	+	11	9
-	+	11	12
-	+	7	13
-	+	7	12
-	+	7	0
-	+	11	0
-
 > ~/XianDao/succesWae/succFinal.cu
 	*	1685177372	0
 	"	606	0
@@ -637,21 +774,6 @@ $
 	^	2	0
 	.	1	2
 	+	1	2
-
-> ~/.config/ranger/rc.conf
-	*	1684890809	0
-	"	327	0
-	^	1	0
-	.	1	0
-	+	127	20
-	+	129	34
-	+	129	0
-	+	129	34
-	+	130	18
-	+	131	19
-	+	129	28
-	+	131	22
-	+	1	0
 
 > ~/.config/ranger/commands.py
 	*	1684887371	0
@@ -797,10 +919,6 @@ $
 
 > ~/script/dealPath.py
 	*	1684578823	0
-	"	1	0
-
-> ~/script/dcgmRun.sh
-	*	1684578519	0
 	"	1	0
 
 > ~/download/yesoreyeram-boomtheme-panel/MANIFEST.txt

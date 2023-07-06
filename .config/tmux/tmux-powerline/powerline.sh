@@ -13,10 +13,13 @@ source "${TMUX_POWERLINE_DIR_LIB}/muting.sh"
 source "${TMUX_POWERLINE_DIR_LIB}/powerline.sh"
 source "${TMUX_POWERLINE_DIR_LIB}/rcfile.sh"
 
-if ! powerline_muted "$1"; then
-	process_settings
-	check_arg_side "$1"
-	print_powerline "$1"
-fi
+process_settings
+check_arg_side "$1"
+print_powerline "$1"
+# if ! powerline_muted "$1"; then
+# 	process_settings
+# 	check_arg_side "$1"
+# 	print_powerline "$1"
+# fi
 
 exit 0

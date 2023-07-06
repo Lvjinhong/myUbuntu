@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/home/inspur/nfs/ljh/.oh-my-zsh'
-let g:netrw_dirhist_2='/home/inspur/nfs/ljh'
-let g:netrw_dirhist_1='/home/inspur/nfs/ljh/wae-sample'

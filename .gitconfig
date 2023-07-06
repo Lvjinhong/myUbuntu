@@ -4,3 +4,5 @@
 [user]
 	email = 3027026585@qq.com
 	name = Lvjinhong
+[core]
+	editor = vim

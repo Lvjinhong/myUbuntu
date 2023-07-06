@@ -214,6 +214,7 @@ export PATH=/usr/local/cuda-12.1/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
 
 
+
  alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
  alias unsetproxy="unset  http_proxy  https_proxy  all_proxy "
  alias nv='watch -n 1 nvidia-smi'
@@ -227,13 +228,18 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
  alias peg="ps -ef | grep"
  alias tn="tmux new -s"                                                                                    
  alias ts="tmux switch -t"
- alias tks="tmux kill-session -t"
- 
+ alias tks="tmux kill-session -t" 
+ alias ta="tmux a"
+
  alias tlist="trash-list"
- alias tput="trash-put"
+ alias tp="trash-put"
  alias trestore="trash-restore"
  alias trm="trash-rm"
  
 alias setcuda12="export PATH=/usr/local/cuda-12.1/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH"
 alias setcuda11="export PATH=/usr/local/cuda-11.8/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH" 
 export HISTFILESIZE=1000
+
+
+export EDITOR=/usr/bin/vim
+source /home/inspur/nfs/ljh/software/spack/share/spack/setup-env.sh

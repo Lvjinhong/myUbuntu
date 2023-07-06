@@ -1,3 +1,0 @@
-/home/inspur/nfs/ljh/software/mambaforge/envs/ljh
-/home/inspur/nfs/ljh/software/mambaforge/envs/ljhNew
-/home/inspur/nfs/ljh/software/mambaforge/envs/torch
