@@ -138,7 +138,7 @@ if [ -f "/home/ljh/software/mambaforge/etc/profile.d/mamba.sh" ]; then
     . "/home/ljh/software/mambaforge/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
-
+source /home/inspur/nfs/ljh/software/spack/share/spack/setup-env.sh
 
 export PATH=/usr/local/cuda-12.1/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH

@@ -159,23 +159,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -215,13 +199,15 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
 
 
 
- alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+ alias setproxy="export https_proxy=http://172.28.172.131:7890 http_proxy=http://172.28.172.131:7890 all_proxy=socks5://172.28.172.131:7890"
  alias unsetproxy="unset  http_proxy  https_proxy  all_proxy "
  alias nv='watch -n 1 nvidia-smi'
  alias ut='watch -d uptime'
  alias ww='watch -d w'
  alias ca="conda activate "
  alias plg="pip list | grep"
+
+ alias mlg="mamba list | grep"
  alias cg='watch -d -n 3 curl www.google.com'
  alias lg="ls | grep"
  alias llg="ll | grep"
@@ -240,6 +226,8 @@ alias setcuda12="export PATH=/usr/local/cuda-12.1/bin:$PATH&&export LD_LIBRARY_P
 alias setcuda11="export PATH=/usr/local/cuda-11.8/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH" 
 export HISTFILESIZE=1000
 
-
+eval $(thefuck --alias fff)
 export EDITOR=/usr/bin/vim
 source /home/inspur/nfs/ljh/software/spack/share/spack/setup-env.sh
+#spack load openmpi
+#export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.5/comm_libs/hpcx/bin:$PATH

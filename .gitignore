@@ -11,12 +11,14 @@ XianDao
 .vscode-server/
 .vscode-server-insiders/
 .config/TabNine/
+.config/JetBrains
 .cache/
 .local/
 .nv/
 .vim
 .bash_history
 .zc*
+.z.*
 Project/
 .conda
 .w3m
