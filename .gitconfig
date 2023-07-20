@@ -1,5 +1,4 @@
 [http]
-	proxy = 127.0.0.1:7890
 	sslVerify = false
 [user]
 	email = 3027026585@qq.com

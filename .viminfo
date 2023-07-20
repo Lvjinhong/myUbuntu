@@ -20,12 +20,12 @@
 $
 
 # Command Line History (newest to oldest):
+:q
+|2,0,1689815255,,"q"
+:wq
+|2,0,1689814875,,"wq"
 :q!
 |2,0,1689468456,,"q!"
-:wq
-|2,0,1689468454,,"wq"
-:q
-|2,0,1689468453,,"q"
 :Q
 |2,0,1688703305,,"Q"
 :AirlineTheme simple
@@ -238,32 +238,68 @@ $
 |3,0,36,0,1,0,1688795890,"mpirun:/home/inspur/nfs/ljh/software/spack/bin:/usr/local/cuda-12.1/bin:/home/inspur/nfs/ljh/software/mambaforge/bin:/home/inspur/nfs/ljh/software/mambaforge/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
 # File marks:
-'0  234  0  ~/.zshrc
-|4,48,234,0,1689469326,"~/.zshrc"
-'1  250  1  ~/.zshrc
-|4,49,250,1,1689468456,"~/.zshrc"
-'2  1  0  ~/script/testAll/mul.sh
-|4,50,1,0,1689305351,"~/script/testAll/mul.sh"
-'3  41  10  ~/software/grafana/ASC.json
-|4,51,41,10,1689251430,"~/software/grafana/ASC.json"
-'4  1  0  ~/script/ljhinit.sh
-|4,52,1,0,1689250898,"~/script/ljhinit.sh"
-'5  1  0  ~/script/dockerRun/nvDocker.sh
-|4,53,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
-'6  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,54,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
-'7  1  0  ~/hpl/hpl-linux-x86_64/HPL.dat
-|4,55,1,0,1689151819,"~/hpl/hpl-linux-x86_64/HPL.dat"
-'8  1  0  ~/ASCpro/ASC23/linpack/hpl/HPL.dat
-|4,56,1,0,1689081839,"~/ASCpro/ASC23/linpack/hpl/HPL.dat"
-'9  1  0  ~/ASCpro/ASC23/linpack/hpl/run_
-|4,57,1,0,1689081416,"~/ASCpro/ASC23/linpack/hpl/run_"
+'0  203  0  ~/.zshrc
+|4,48,203,0,1689815255,"~/.zshrc"
+'1  202  60  ~/.zshrc
+|4,49,202,60,1689814875,"~/.zshrc"
+'2  202  60  ~/.zshrc
+|4,50,202,60,1689814875,"~/.zshrc"
+'3  233  0  ~/.zshrc
+|4,51,233,0,1689783398,"~/.zshrc"
+'4  233  0  ~/.zshrc
+|4,52,233,0,1689783398,"~/.zshrc"
+'5  233  0  ~/.zshrc
+|4,53,233,0,1689783398,"~/.zshrc"
+'6  233  0  ~/.zshrc
+|4,54,233,0,1689783398,"~/.zshrc"
+'7  234  0  ~/.zshrc
+|4,55,234,0,1689469326,"~/.zshrc"
+'8  234  0  ~/.zshrc
+|4,56,234,0,1689469326,"~/.zshrc"
+'9  234  0  ~/.zshrc
+|4,57,234,0,1689469326,"~/.zshrc"
 
 # Jumplist (newest first):
+-'  203  0  ~/.zshrc
+|4,39,203,0,1689815255,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1689815246,"~/.zshrc"
+-'  202  60  ~/.zshrc
+|4,39,202,60,1689814875,"~/.zshrc"
+-'  202  60  ~/.zshrc
+|4,39,202,60,1689814875,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1689814861,"~/.zshrc"
+-'  233  0  ~/.zshrc
+|4,39,233,0,1689814857,"~/.zshrc"
+-'  233  0  ~/.zshrc
+|4,39,233,0,1689814857,"~/.zshrc"
+-'  233  0  ~/.zshrc
+|4,39,233,0,1689783398,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1689782800,"~/.zshrc"
+-'  234  0  ~/.zshrc
+|4,39,234,0,1689469326,"~/.zshrc"
+-'  234  0  ~/.zshrc
+|4,39,234,0,1689469326,"~/.zshrc"
+-'  234  0  ~/.zshrc
+|4,39,234,0,1689469326,"~/.zshrc"
 -'  234  0  ~/.zshrc
 |4,39,234,0,1689469326,"~/.zshrc"
 -'  250  1  ~/.zshrc
 |4,39,250,1,1689468456,"~/.zshrc"
+-'  250  1  ~/.zshrc
+|4,39,250,1,1689468456,"~/.zshrc"
+-'  250  1  ~/.zshrc
+|4,39,250,1,1689468456,"~/.zshrc"
+-'  250  1  ~/.zshrc
+|4,39,250,1,1689468456,"~/.zshrc"
+-'  2  0  ~/.zshrc
+|4,39,2,0,1689468423,"~/.zshrc"
+-'  2  0  ~/.zshrc
+|4,39,2,0,1689468423,"~/.zshrc"
+-'  2  0  ~/.zshrc
+|4,39,2,0,1689468423,"~/.zshrc"
 -'  2  0  ~/.zshrc
 |4,39,2,0,1689468423,"~/.zshrc"
 -'  1  0  ~/.zshrc
@@ -274,6 +310,132 @@ $
 |4,39,1,0,1689305351,"~/script/testAll/mul.sh"
 -'  1  0  ~/script/testAll/mul.sh
 |4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  1  0  ~/script/testAll/mul.sh
+|4,39,1,0,1689305351,"~/script/testAll/mul.sh"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
+-'  41  10  ~/software/grafana/ASC.json
+|4,39,41,10,1689251430,"~/software/grafana/ASC.json"
 -'  41  10  ~/software/grafana/ASC.json
 |4,39,41,10,1689251430,"~/software/grafana/ASC.json"
 -'  41  10  ~/software/grafana/ASC.json
@@ -298,174 +460,12 @@ $
 |4,39,1,31,1689250963,"~/software/grafana/ASC.json"
 -'  1  31  ~/software/grafana/ASC.json
 |4,39,1,31,1689250963,"~/software/grafana/ASC.json"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/ljhinit.sh
-|4,39,1,0,1689250898,"~/script/ljhinit.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/dockerRun/nvDocker.sh
-|4,39,1,0,1689250878,"~/script/dockerRun/nvDocker.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
--'  1  0  ~/script/cudaTest/cudnnTest.sh
-|4,39,1,0,1689250853,"~/script/cudaTest/cudnnTest.sh"
 
 # History of marks within files (newest to oldest):
 
 > ~/.zshrc
-	*	1689468365	0
-	"	234	0
+	*	1689815254	0
+	"	203	0
 	^	226	17
 	.	226	16
 	+	105	0
