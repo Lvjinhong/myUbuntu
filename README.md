@@ -4,3 +4,4 @@
     - 安装[rainbarf](https://www.wolai.com/2WnHry43qGUqiz5Mzfhb41#irKKDUvuLJFW2J6Qg8kDpX)，trash-cli命令行回收工具，配置
     - 记得本地主机里的ide，也要配置下vim移动键位的映射方式
 - vim配置：vim插件没有被存入git，所以需要自己安装 vundle管理器后，在终端执行一遍`vim +PluginInstall +qall`（插件列表在vimrc中，已上传git）  
+8.16更新
