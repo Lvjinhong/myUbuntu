@@ -122,20 +122,20 @@ alias unsetproxy="unset https_proxy http_proxy all_proxy"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ljh/software/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/inspur/nfs/ljh/software/mambaforge-pypy/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ljh/software/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/ljh/software/mambaforge/etc/profile.d/conda.sh"
+    if [ -f "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/conda.sh" ]; then
+        . "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ljh/software/mambaforge/bin:$PATH"
+        export PATH="/home/inspur/nfs/ljh/software/mambaforge-pypy/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "/home/ljh/software/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/home/ljh/software/mambaforge/etc/profile.d/mamba.sh"
+if [ -f "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/mamba.sh" ]; then
+    . "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 source /home/inspur/nfs/ljh/software/spack/share/spack/setup-env.sh

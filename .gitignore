@@ -27,3 +27,10 @@ Project/
 .lesshst
 .spack
 .keras
+**/.vscode
+**/.vscode-insiders
+.opennre
+.jupyter
+.java
+*python
+.rpmdb

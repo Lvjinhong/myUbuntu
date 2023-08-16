@@ -39,15 +39,14 @@ esac
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
-shopt -s histappend
-
+setopt APPEND_HISTORY
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+#shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
@@ -178,25 +177,22 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ljh/software/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/inspur/nfs/ljh/software/mambaforge-pypy/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ljh/software/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/ljh/software/mambaforge/etc/profile.d/conda.sh"
+    if [ -f "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/conda.sh" ]; then
+        . "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ljh/software/mambaforge/bin:$PATH"
+        export PATH="/home/inspur/nfs/ljh/software/mambaforge-pypy/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "/home/ljh/software/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/home/ljh/software/mambaforge/etc/profile.d/mamba.sh"
+if [ -f "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/mamba.sh" ]; then
+    . "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/mamba.sh"
 fi
-
-export PATH=/usr/local/cuda-12.1/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
-
+# <<< conda initialize <<<
 
 
  alias setproxy="export https_proxy=http://172.28.172.131:7890 http_proxy=http://172.28.172.131:7890 all_proxy=socks5://172.28.172.131:7890"
@@ -221,7 +217,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
  alias tp="trash-put"
  alias trestore="trash-restore"
  alias trm="trash-rm"
- 
+alias v="nvim" 
 alias setcuda12="export PATH=/usr/local/cuda-12.1/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH"
 alias setcuda11="export PATH=/usr/local/cuda-11.8/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH" 
 export HISTFILESIZE=1000
@@ -231,3 +227,5 @@ export EDITOR=/usr/bin/vim
 source /home/inspur/nfs/ljh/software/spack/share/spack/setup-env.sh
 #spack load openmpi
 #export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.5/comm_libs/hpcx/bin:$PATH
+export PATH="/home/ljh/software/java/jdk-11.0.19/bin":$PATH
+export PATH="/home/ljh/software/neo4j_4.4/bin":$PATH
