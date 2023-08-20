@@ -123,33 +123,7 @@ fi
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
   z
@@ -159,17 +133,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias nv='watch -n 1 nvidia-smi'
-
-alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
-alias unsetproxy="unset https_proxy http_proxy all_proxy"
-
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -177,55 +140,63 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/inspur/nfs/ljh/software/mambaforge-pypy/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/ljh/SoftWare/mambaforge-pypy3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/conda.sh" ]; then
-        . "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/conda.sh"
+    if [ -f "/home/ljh/SoftWare/mambaforge-pypy3/etc/profile.d/conda.sh" ]; then
+        . "/home/ljh/SoftWare/mambaforge-pypy3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/inspur/nfs/ljh/software/mambaforge-pypy/bin:$PATH"
+        export PATH="/home/ljh/SoftWare/mambaforge-pypy3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/mamba.sh" ]; then
-    . "/home/inspur/nfs/ljh/software/mambaforge-pypy/etc/profile.d/mamba.sh"
+if [ -f "/home/ljh/SoftWare/mambaforge-pypy3/etc/profile.d/mamba.sh" ]; then
+    . "/home/ljh/SoftWare/mambaforge-pypy3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 
 
- alias setproxy="export https_proxy=http://172.28.172.131:7890 http_proxy=http://172.28.172.131:7890 all_proxy=socks5://172.28.172.131:7890"
- alias unsetproxy="unset  http_proxy  https_proxy  all_proxy "
- alias nv='watch -n 1 nvidia-smi'
- alias ut='watch -d uptime'
- alias ww='watch -d w'
- alias ca="conda activate "
- alias plg="pip list | grep"
 
- alias mlg="mamba list | grep"
- alias cg='watch -d -n 3 curl www.google.com'
- alias lg="ls | grep"
- alias llg="ll | grep"
- alias peg="ps -ef | grep"
- alias tn="tmux new -s"                                                                                    
- alias ts="tmux switch -t"
- alias tks="tmux kill-session -t" 
- alias ta="tmux a"
-
- alias tlist="trash-list"
- alias tp="trash-put"
- alias trestore="trash-restore"
- alias trm="trash-rm"
+# -------------------------------------------alias 命令集合------------------------------------
+alias nv='watch -n 1 nvidia-smi'
+alias ut='watch -d uptime'
+alias ww='watch -d w'
+alias ca="conda activate "
+alias plg="pip list | grep"
+alias mlg="mamba list | grep"
+alias cg='watch -d -n 3 curl www.google.com'
+alias lg="ls | grep"
+alias llg="ll | grep"
+alias peg="ps -ef | grep"
+alias tn="tmux new -s"                                                                                    
+alias ts="tmux switch -t"
+alias tks="tmux kill-session -t" 
+alias ta="tmux a"
+alias tlist="trash-list"
+alias tp="trash-put"
+alias trestore="trash-restore"
+alias trm="trash-rm"
 alias v="nvim" 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias nv='watch -n 1 nvidia-smi'
+
 alias setcuda12="export PATH=/usr/local/cuda-12.1/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH"
 alias setcuda11="export PATH=/usr/local/cuda-11.8/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH" 
-export HISTFILESIZE=1000
+alias setproxy="systemctl status clash.service; export https_proxy=$claship http_proxy=$claship all_proxy=${claship/http/socks5}; echo '开始测试是否连通google';curl www.google.com"
+alias unsetproxy="unset https_proxy http_proxy all_proxy"
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+#--------------------------------- export 环境变量--------------------------------------
+
+export HISTFILESIZE=1000ww
+export claship="http://172.27.172.10:7878"
 eval $(thefuck --alias fff)
 export EDITOR=/usr/bin/vim
-source /home/inspur/nfs/ljh/software/spack/share/spack/setup-env.sh
-#spack load openmpi
+source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
 #export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.5/comm_libs/hpcx/bin:$PATH
-export PATH="/home/ljh/software/java/jdk-11.0.19/bin":$PATH
-export PATH="/home/ljh/software/neo4j_4.4/bin":$PATH
+# export PATH="/home/ljh/SoftWare/java/jdk-11.0.19/bin":$PATH
+# export PATH="/home/ljh/SoftWare/neo4j_4.4/bin":$PATH

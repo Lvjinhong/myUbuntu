@@ -1,9 +1,9 @@
-ASCpro/
-download
-hpl
+Project/
+Downloads
 gitBackup
-software
+SoftWare
 XianDao
+Data
 **/.git/
 **/.github/
 .oh-my-zsh
@@ -17,6 +17,8 @@ XianDao
 .nv/
 .vim
 .bash_history
+.sudo*
+.att*
 .zc*
 .z.*
 Project/
@@ -26,7 +28,7 @@ Project/
 .selected_editor
 .lesshst
 .spack
-.keras
+**/.keras
 **/.vscode
 **/.vscode-insiders
 .opennre
