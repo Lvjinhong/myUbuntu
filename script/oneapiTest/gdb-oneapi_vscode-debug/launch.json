@@ -1,0 +1,71 @@
+{
+    "configurations": [
+        {
+            "comments": [
+                "Full launch.json configuration details can be found here:",
+                "https://code.visualstudio.com/docs/cpp/launch-json-reference"
+            ],
+            "name": "(gdb-oneapi) simple-sycl-app Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask": "C/C++: icpx 生成活动文件",
+            "postDebugTask": "C/C++: icpx 生成活动文件",
+            "program": "/home/inspur/nfs/ljh/Project/HPC/PAC/PAC22/PAC22-SYCL/example/simple-sycl-app",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "ZET_ENABLE_PROGRAM_DEBUGGING",
+                    "value": "1"
+                },
+                {
+                    "name": "IGC_EnableGTLocationDebugging",
+                    "value": "1"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/home/inspur/nfs/ljh/SoftWare/intel/oneapi/debugger/2023.2.0/gdb/intel64/bin/gdb-oneapi",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Disable target async",
+                    "text": "set target-async off",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "C/C++: g++ 生成和调试活动文件",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++ 生成活动文件",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ],
+    "version": "2.0.0"
+}

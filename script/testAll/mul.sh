@@ -8,3 +8,14 @@ option1=""
 
 # 定义源文件名
 source_file="your_source_file.c"
+com="icx"
+
+function Go() {
+	local arr=("$@")
+	for element in "${arr[@]}"; do
+		echo "$com $element $source_file"
+	done
+}
+
+array=("-Ofast" "-O3")
+Go ${array[@]}

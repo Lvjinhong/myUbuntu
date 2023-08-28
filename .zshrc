@@ -189,14 +189,16 @@ alias setcuda11="export PATH=/usr/local/cuda-11.8/bin:$PATH&&export LD_LIBRARY_P
 alias setproxy="systemctl status clash.service; export https_proxy=$claship http_proxy=$claship all_proxy=${claship/http/socks5}; echo '开始测试是否连通google';curl www.google.com"
 alias unsetproxy="unset https_proxy http_proxy all_proxy"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
+alias oneapi="source /home/ljh/SoftWare/intel/oneapi/setvars.sh --include-intel-llvm --force"
 #--------------------------------- export 环境变量--------------------------------------
 
-export HISTFILESIZE=1000ww
-export claship="http://172.27.172.10:7878"
+export HISTFILESIZE=1000
+export claship="http://172.28.172.135:7878"
 eval $(thefuck --alias fff)
 export EDITOR=/usr/bin/vim
 source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
+export PATH=/usr/local/cuda-12.1/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
+oneapi
 #export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.5/comm_libs/hpcx/bin:$PATH
 # export PATH="/home/ljh/SoftWare/java/jdk-11.0.19/bin":$PATH
 # export PATH="/home/ljh/SoftWare/neo4j_4.4/bin":$PATH
