@@ -36,3 +36,7 @@ Project/
 .java
 *python
 .rpmdb
+intel
+devcloudConnectorLogFile.txt
+.intel/
+.triton/

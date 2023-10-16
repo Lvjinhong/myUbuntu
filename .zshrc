@@ -1,6 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -11,22 +9,11 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-# zstyle ':omz:update' frequency 13
- typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # If not running interactively, don't do anything
 case $- in
@@ -44,14 +31,6 @@ setopt APPEND_HISTORY
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-#shopt -s checkwinsize
-
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -65,10 +44,7 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -111,17 +87,6 @@ fi
 
 
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
 
 
 plugins=(
@@ -138,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-# >>> conda initialize >>>
+# !!>>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ljh/SoftWare/mambaforge-pypy3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -183,22 +148,25 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias nv='watch -n 1 nvidia-smi'
-
+alias mm="mamba"
 alias setcuda12="export PATH=/usr/local/cuda-12.1/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH"
 alias setcuda11="export PATH=/usr/local/cuda-11.8/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH" 
-alias setproxy="systemctl status clash.service; export https_proxy=$claship http_proxy=$claship all_proxy=${claship/http/socks5}; echo '开始测试是否连通google';curl www.google.com"
+alias setproxy=" export https_proxy=$claship http_proxy=$claship all_proxy=${claship/http/socks5}; echo '开始测试是否连通google';curl www.google.com"
 alias unsetproxy="unset https_proxy http_proxy all_proxy"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias oneapi="source /home/ljh/SoftWare/intel/oneapi/setvars.sh --include-intel-llvm --force"
 #--------------------------------- export 环境变量--------------------------------------
 
 export HISTFILESIZE=1000
-export claship="http://172.28.172.135:7878"
+export claship="http://127.0.0.1:7890"
 eval $(thefuck --alias fff)
 export EDITOR=/usr/bin/vim
 source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
-export PATH=/usr/local/cuda-12.1/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
-oneapi
+export CUDA_V=cuda-12.1
+export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH
+#oneapi
 #export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.5/comm_libs/hpcx/bin:$PATH
 # export PATH="/home/ljh/SoftWare/java/jdk-11.0.19/bin":$PATH
 # export PATH="/home/ljh/SoftWare/neo4j_4.4/bin":$PATH
+#
+cowthink -f dragon  "以荒之名 独断万古"

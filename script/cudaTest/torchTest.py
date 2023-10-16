@@ -1,5 +1,5 @@
 import torch
-
+print(torch.version.cuda)
 print(f'\nAvailable cuda = {torch.cuda.is_available()}')
 
 print(f'\nGPUs availables = {torch.cuda.device_count()}')

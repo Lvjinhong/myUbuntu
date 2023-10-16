@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+   
+        {
+            "name": "Python: File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "justMyCode": true,
+            "env": {
+                "datapath":"`pwd`",
+                "CUDA_HOME":"/usr/local/cuda"
+            },
+            "args": [
+            "--input","$datapath/005.txt",
+            "--output_prefix","asc",
+            "--output_path","$datapath/final_bin/",
+            "--vocab","$datapath/",
+            "--workers","16",
+            "--dataset_impl", "mmap",
+            "--workers","14" 
+            ]
+        }
+    ]
+}

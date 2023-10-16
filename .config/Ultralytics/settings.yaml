@@ -1,0 +1,16 @@
+settings_version: 0.0.4
+datasets_dir: /home/inspur/nfs/ljh/datasets
+weights_dir: /home/ljh/weights
+runs_dir: /home/ljh/runs
+uuid: 4179e40be9aa061388d9d606fdf5db3f9d1a12b8172eea3dc4b3ee9faa038813
+sync: true
+api_key: ''
+clearml: true
+comet: true
+dvc: true
+hub: true
+mlflow: true
+neptune: true
+raytune: true
+tensorboard: true
+wandb: true
