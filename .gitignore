@@ -8,8 +8,8 @@ Data
 **/.github/
 .oh-my-zsh
 .pycharm_helpers/
-.vscode-server/
-.vscode-server-insiders/
+.vscode*
+vscode*
 .config/TabNine/
 .config/JetBrains
 .cache/
@@ -40,3 +40,6 @@ intel
 devcloudConnectorLogFile.txt
 .intel/
 .triton/
+.modelscope/
+.rpmdb/
+.dotnet
