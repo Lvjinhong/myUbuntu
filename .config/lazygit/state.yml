@@ -1,9 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/inspur/nfs/ljh/Project/AIGC/vits/mybert-vits2
 - /home/ljh
+- /home/inspur/nfs/ljh/Project/AIGC/vits/mybert-vits2
 - /home/inspur/nfs/ljh/Project/HPC/PAC/PAC23
 startuppopupversion: 5
-customcommandshistory:
-- q
+customcommandshistory: []
 hidecommandlog: false

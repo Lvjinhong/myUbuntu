@@ -166,10 +166,15 @@ alias oneapi="source /home/ljh/SoftWare/intel/oneapi/setvars.sh --include-intel-
 
 alias  vi="vim"
 alias  setnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' 
+
 #--------------------------------- export 环境变量--------------------------------------
 
 export PATH=/home/inspur/nfs/ljh/SoftWare/vim/bin:$PATH
+export PATH=/home/inspur/nfs/ljh/SoftWare/neovim/bin:$PATH
 export NVM_DIR="$HOME/SoftWare/nvm"
+setnvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
 #
 
@@ -189,6 +194,3 @@ export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUD
 #
 cowthink -f dragon  "以荒之名 独断万古"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

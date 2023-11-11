@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/shop
+~MSle0~/copilo
 
 # Last Substitute Search Pattern:
 ~MSle0&int
@@ -20,20 +20,20 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
-|2,0,1699663182,,"wq"
 :q
-|2,0,1699662977,,"q"
-:q!
-|2,0,1699598796,,"q!"
+|2,0,1699672559,,"q"
+:wq
+|2,0,1699667922,,"wq"
+:Wq
+|2,0,1699667413,,"Wq"
 :Copilot setup
-|2,0,1699598705,,"Copilot setup"
-:Copilot enable
-|2,0,1699598583,,"Copilot enable"
-:Q
-|2,0,1699592777,,"Q"
+|2,0,1699665299,,"Copilot setup"
 ::Copilot setup
-|2,0,1699592771,,":Copilot setup"
+|2,0,1699665294,,":Copilot setup"
+:q!
+|2,0,1699664194,,"q!"
+:Q
+|2,0,1694395261,,"Q"
 :q\
 |2,0,1693482748,,"q\\"
 :x
@@ -60,8 +60,6 @@ $
 |2,0,1684634160,,"set nu"
 :.!-d ~/.tmux/plugins/ ];then
 |2,0,1684634060,,".!-d ~/.tmux/plugins/ ];then"
-:Wq
-|2,0,1684633849,,"Wq"
 :set nonu
 |2,0,1684633847,,"set nonu"
 :unset nu
@@ -72,10 +70,12 @@ $
 |2,0,1684590394,,"wq!"
 
 # Search String History (newest to oldest):
-? @$
-|2,1,1698152217,,"@$"
+?/copilo
+|2,1,1699667678,47,"copilo"
 ??\a
 |2,1,1694395259,63,"\\a"
+? @$
+|2,1,1694395259,,"@$"
 ?/shop
 |2,1,1691218900,47,"shop"
 ?/shopt
@@ -123,328 +123,309 @@ $
 
 # Registers:
 "0	LINE	0
-	keymap.set("n", "H", "^")
-|3,0,0,1,1,0,1698152511,"keymap.set(\"n\", \"H\", \"^\")"
+	cowsay -f dragon cowthink -f dragon  "以荒之名 独断万古"  "以荒之名 独断万古"
+|3,0,0,1,1,0,1694395259,"cowsay -f dragon cowthink -f dragon  \"以荒之名 独断万古\"  \"以荒之名 独断万古\""
 ""1	LINE	0
-	def loading():
-	    print("正在加载中...")
-	    time.sleep(1)
-	    print("加载成功")
-|3,1,1,1,4,0,1699605164,"def loading():","    print(\"正在加载中...\")","    time.sleep(1)","    print(\"加载成功\")"
+	keymap.set("v", "o", "i")
+	keymap.set("v", "i", "k")
+	keymap.set("v", "k", "j")
+	keymap.set("v", "j", "h")
+	
+	keymap.set("n", "o", "i")
+	keymap.set("n", "i", "k")
+	keymap.set("n", "k", "j")
+	keymap.set("n", "j", "h")
+	keymap.set("n", "L", "$")
+	keymap.set("n", "J", "^")
+	
+	keymap.set("v", "L", "$")
+	keymap.set("v", "J", "^")
+|3,1,1,1,14,0,1699667915,"keymap.set(\"v\", \"o\", \"i\")","keymap.set(\"v\", \"i\", \"k\")","keymap.set(\"v\", \"k\", \"j\")","keymap.set(\"v\", \"j\", \"h\")","","keymap.set(\"n\", \"o\", \"i\")","keymap.set(\"n\", \"i\", \"k\")","keymap.set(\"n\", \"k\", \"j\")","keymap.set(\"n\", \"j\", \"h\")","keymap.set(\"n\", \"L\", \"$\")","keymap.set(\"n\", \"J\", \"^\")","","keymap.set(\"v\", \"L\", \"$\")","keymap.set(\"v\", \"J\", \"^\")"
 "2	LINE	0
 	
-|3,0,2,1,1,0,1699596063,""
+	def quick_sort(lists, left, right):
+	    if left >= right:
+	        return lists
+	    key = lists[left]
+	    low = left
+	    high = right
+	    while left < right:
+	        while left < right and lists[right] >= key:
+	            right -= 1
+	        lists[left] = lists[right]
+	        while left < right and lists[left] <= key:
+	            left += 1
+	        lists[right] = lists[left]
+	    lists[right] = key
+	    quick_sort(lists, low, left - 1)
+	    quick_sort(lists, left + 1, high)
+	    return lists
+	
+|3,0,2,1,19,0,1699665194,"","def quick_sort(lists, left, right):","    if left >= right:","        return lists","    key = lists[left]","    low = left","    high = right","    while left < right:","        while left < right and lists[right] >= key:","            right -= 1","        lists[left] = lists[right]","        while left < right and lists[left] <= key:","            left += 1","        lists[right] = lists[left]","    lists[right] = key",>38
+|<"    quick_sort(lists, low, left - 1)","    quick_sort(lists, left + 1, high)","    return lists",""
 "3	LINE	0
-	source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
-|3,0,3,1,1,0,1699596059,"source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh"
+	
+	/home/inspur/nfs/ljh/Project/AIGC/vits|2|1697860758
+	/home/inspur/nfs/ljh/Project/AIGC|2|1697860755
+	/home/inspur/nfs/ljh/Project/AIGC/vits/mybert-vits2|3|1697860771
+|3,0,3,1,4,0,1699664866,"","/home/inspur/nfs/ljh/Project/AIGC/vits|2|1697860758","/home/inspur/nfs/ljh/Project/AIGC|2|1697860755","/home/inspur/nfs/ljh/Project/AIGC/vits/mybert-vits2|3|1697860771"
 "4	LINE	0
-	#oneapi
-|3,0,4,1,1,0,1699596036,"#oneapi"
+	
+|3,0,4,1,1,0,1699664522,""
 "5	LINE	0
-	export PATH=$PATH:/home/ljh/.local/bin
-|3,0,5,1,1,0,1699596014,"export PATH=$PATH:/home/ljh/.local/bin"
+	export NVM_DIR="$HOME/.nvm"
+|3,0,5,1,1,0,1699664156,"export NVM_DIR=\"$HOME/.nvm\""
 "6	LINE	0
-	
-|3,0,6,1,1,0,1699596007,""
+	export NVM_DIR="$HOME/.nvm"
+|3,0,6,1,1,0,1699664156,"export NVM_DIR=\"$HOME/.nvm\""
 "7	LINE	0
-	alias  vi="vim"
-|3,0,7,1,1,0,1699596003,"alias  vi=\"vim\""
-"8	LINE	0
-	alias  setnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' 
-|3,0,8,1,1,0,1699595997,"alias  setnvm='[ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\"' "
-"9	LINE	0
 	
-|3,0,9,1,1,0,1699594933,""
+|3,0,7,1,1,0,1699664130,""
+"8	LINE	0
+	
+|3,0,8,1,1,0,1699664126,""
+"9	LINE	0
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+|3,0,9,1,1,0,1699664117,"[ -s \"$NVM_DIR/bash_completion\" ] && \\. \"$NVM_DIR/bash_completion\"  # This loads nvm bash_completion"
 "-	CHAR	0
-	:
-|3,0,36,0,1,0,1699594889,":"
+	/home/inspur/nfs/ljh/Project|2|1697860753
+|3,0,36,0,1,0,1699664865,"/home/inspur/nfs/ljh/Project|2|1697860753"
 
 # File marks:
-'0  48  3  ~/.gitignore
-|4,48,48,3,1699663182,"~/.gitignore"
-'1  47  0  ~/.gitignore
-|4,49,47,0,1699663142,"~/.gitignore"
-'2  47  0  ~/.gitignore
-|4,50,47,0,1699663142,"~/.gitignore"
-'3  45  0  ~/.gitignore
-|4,51,45,0,1699663067,"~/.gitignore"
-'4  45  0  ~/.gitignore
-|4,52,45,0,1699663067,"~/.gitignore"
-'5  45  0  ~/.gitignore
-|4,53,45,0,1699663067,"~/.gitignore"
-'6  45  0  ~/.gitignore
-|4,54,45,0,1699663067,"~/.gitignore"
-'7  46  0  ~/.gitignore
-|4,55,46,0,1699662995,"~/.gitignore"
-'8  46  0  ~/.gitignore
-|4,56,46,0,1699662995,"~/.gitignore"
-'9  46  0  ~/.gitignore
-|4,57,46,0,1699662995,"~/.gitignore"
+'0  1  0  ~/SoftWare/neovim/Cmake
+|4,48,1,0,1699672559,"~/SoftWare/neovim/Cmake"
+'1  52  0  ~/.vimrc
+|4,49,52,0,1699669675,"~/.vimrc"
+'2  10  0  ~/.config/nvim/lua/config/keymaps.lua
+|4,50,10,0,1699667922,"~/.config/nvim/lua/config/keymaps.lua"
+'3  14  36  ~/.config/nvim/lua/config/lazy.lua
+|4,51,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
+'4  172  12  ~/.zshrc
+|4,52,172,12,1699667415,"~/.zshrc"
+'5  1  0  ~/.zshrc
+|4,53,1,0,1699665919,"~/.zshrc"
+'6  1  0  ~/.zshrc
+|4,54,1,0,1699665919,"~/.zshrc"
+'7  175  0  ~/.zshrc
+|4,55,175,0,1699665915,"~/.zshrc"
+'8  175  0  ~/.zshrc
+|4,56,175,0,1699665915,"~/.zshrc"
+'9  174  0  ~/.zshrc
+|4,57,174,0,1699665915,"~/.zshrc"
 
 # Jumplist (newest first):
--'  48  3  ~/.gitignore
-|4,39,48,3,1699663182,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1699663176,"~/.gitignore"
--'  47  0  ~/.gitignore
-|4,39,47,0,1699663142,"~/.gitignore"
--'  47  0  ~/.gitignore
-|4,39,47,0,1699663142,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1699663119,"~/.gitignore"
--'  45  0  ~/.gitignore
-|4,39,45,0,1699663067,"~/.gitignore"
--'  45  0  ~/.gitignore
-|4,39,45,0,1699663067,"~/.gitignore"
--'  45  0  ~/.gitignore
-|4,39,45,0,1699663067,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1699663055,"~/.gitignore"
--'  46  0  ~/.gitignore
-|4,39,46,0,1699662995,"~/.gitignore"
--'  46  0  ~/.gitignore
-|4,39,46,0,1699662995,"~/.gitignore"
--'  46  0  ~/.gitignore
-|4,39,46,0,1699662995,"~/.gitignore"
--'  46  0  ~/.gitignore
-|4,39,46,0,1699662995,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1699662986,"~/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  153  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,153,0,1699662977,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  1  0  ~/Project/AIGC/vits/mybert-vits2/.gitignore
-|4,39,1,0,1699662864,"~/Project/AIGC/vits/mybert-vits2/.gitignore"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  18  15  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,18,15,1699606351,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
--'  1  0  ~/Project/AIGC/vits/MgpuTest/t.py
-|4,39,1,0,1699606331,"~/Project/AIGC/vits/MgpuTest/t.py"
+-'  1  0  ~/SoftWare/neovim/Cmake
+|4,39,1,0,1699672559,"~/SoftWare/neovim/Cmake"
+-'  52  0  ~/.vimrc
+|4,39,52,0,1699669675,"~/.vimrc"
+-'  52  0  ~/.vimrc
+|4,39,52,0,1699669675,"~/.vimrc"
+-'  10  0  ~/.config/nvim/lua/config/keymaps.lua
+|4,39,10,0,1699667922,"~/.config/nvim/lua/config/keymaps.lua"
+-'  10  0  ~/.config/nvim/lua/config/keymaps.lua
+|4,39,10,0,1699667922,"~/.config/nvim/lua/config/keymaps.lua"
+-'  11  0  ~/.config/nvim/lua/config/keymaps.lua
+|4,39,11,0,1699667915,"~/.config/nvim/lua/config/keymaps.lua"
+-'  11  0  ~/.config/nvim/lua/config/keymaps.lua
+|4,39,11,0,1699667915,"~/.config/nvim/lua/config/keymaps.lua"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1699667845,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1699667845,"~/.vimrc"
+-'  1  0  ~/.config/nvim/lua/config/keymaps.lua
+|4,39,1,0,1699667829,"~/.config/nvim/lua/config/keymaps.lua"
+-'  1  0  ~/.config/nvim/lua/config/keymaps.lua
+|4,39,1,0,1699667829,"~/.config/nvim/lua/config/keymaps.lua"
+-'  14  36  ~/.config/nvim/lua/config/lazy.lua
+|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
+-'  14  36  ~/.config/nvim/lua/config/lazy.lua
+|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
+-'  14  36  ~/.config/nvim/lua/config/lazy.lua
+|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
+-'  14  36  ~/.config/nvim/lua/config/lazy.lua
+|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
+-'  14  36  ~/.config/nvim/lua/config/lazy.lua
+|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
+-'  14  36  ~/.config/nvim/lua/config/lazy.lua
+|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
+-'  32  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
+-'  32  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
+-'  32  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
+-'  32  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
+-'  32  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
+-'  32  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
+-'  1  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
+-'  1  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
+-'  1  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
+-'  1  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
+-'  1  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
+-'  1  0  ~/.config/nvim/lua/config/lazy.lua
+|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  172  12  ~/.zshrc
+|4,39,172,12,1699667415,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699667393,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1699665919,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
+-'  175  0  ~/.zshrc
+|4,39,175,0,1699665915,"~/.zshrc"
+-'  174  0  ~/.zshrc
+|4,39,174,0,1699665915,"~/.zshrc"
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore
-	*	1699663181	0
-	"	48	3
-	^	48	4
-	.	48	3
-	+	8	16
-	+	30	9
-	+	40	0
-	+	41	6
-	+	42	7
-	+	46	0
-	+	47	0
-	+	48	3
-
-> ~/Project/AIGC/vits/mybert-vits2/.gitignore
-	*	1699662977	0
-	"	153	0
-
-> ~/Project/AIGC/vits/MgpuTest/t.py
-	*	1699606350	0
-	"	18	15
-	^	18	16
-	.	2	4
-	+	1	19
-	+	19	10
-	+	20	11
-	+	21	16
-	+	22	13
-	+	23	9
-	+	24	15
-	+	25	13
-	+	26	15
-	+	27	38
-	+	28	25
-	+	29	20
-	+	30	19
-	+	31	0
-	+	37	0
-	+	38	8
-	+	2	4
-
-> ~/.config/nvim/lua/config/copilot.lua
-	*	1699604707	0
-	"	9	0
-	^	9	0
-	.	8	1
-	+	8	1
-
-> ~/Project/AIGC/vits/MgpuTest/test.py
-	*	1699598794	0
-	"	4	0
-	^	3	4
-	.	3	3
-	+	4	0
-	+	3	3
+> ~/SoftWare/neovim/Cmake
+	*	1699672557	0
+	"	1	0
 
 > ~/.vimrc
-	*	1699598625	0
-	"	51	16
-	.	52	0
+	*	1699669673	0
+	"	52	0
+	^	3	9
+	.	3	8
 	+	1	52
 	+	1	39
 	+	1	0
@@ -497,254 +478,179 @@ $
 	+	1	0
 	+	60	0
 	+	49	0
-	+	4	0
-	+	1	53
-	+	4	0
-	+	1	67
-	+	4	0
-	+	1	53
-	+	52	0
-	+	52	10
-	+	52	0
-
-> ~/.zshrc
-	*	1699596082	0
-	"	176	11
-	^	176	12
-	.	176	11
-	+	3	0
-	+	16	0
-	+	14	0
-	+	1	0
-	+	29	0
-	+	30	0
-	+	264	0
-	+	253	34
-	+	251	1
-	+	252	1
-	+	253	1
-	+	261	60
-	+	262	103
-	+	256	0
-	+	257	0
-	+	256	8
-	+	257	23
-	+	259	0
-	+	258	14
-	+	256	11
-	+	259	19
-	+	253	33
-	+	254	0
-	+	256	0
-	+	4	0
-	+	254	18
-	+	253	33
-	+	236	0
-	+	263	24
-	+	266	26
-	+	266	0
-	+	267	0
-	+	264	0
-	+	265	25
-	+	267	0
-	+	266	0
-	+	268	19
-	+	269	158
-	+	269	0
-	+	245	0
-	+	246	16
-	+	244	12
-	+	42	20
-	+	49	0
-	+	255	51
-	+	221	0
-	+	187	26
-	+	200	26
-	+	190	0
-	+	189	0
-	+	191	0
-	+	194	0
-	+	193	0
-	+	196	0
-	+	195	0
-	+	198	0
-	+	197	0
-	+	199	0
-	+	192	0
-	+	221	26
-	+	221	25
-	+	202	0
-	+	220	25
-	+	221	0
-	+	209	109
-	+	210	0
-	+	201	13
-	+	210	5
-	+	204	24
-	+	214	0
-	+	216	46
-	+	210	0
-	+	170	0
-	+	154	16
-	+	161	36
-	+	181	0
-	+	164	67
-	+	165	18
-	+	166	86
-	+	166	0
-	+	166	82
-	+	151	14
-	+	171	54
-	+	179	0
-	+	172	6
-	+	173	0
-	+	167	0
-	+	168	0
-	+	172	0
-	+	167	0
-	+	171	0
-	+	174	0
-	+	184	0
-	+	185	0
-	+	182	0
-	+	173	0
-	+	174	1
-	+	175	0
-	+	176	11
-
-> ~/Project/ML/Temp/Attitude_estimation/test.py
-	*	1699592802	0
-	"	1	13
-	^	1	14
-	.	1	13
-	+	1	13
-
-> ~/Project/AIGC/vits/mybert-vits2/.git/MERGE_MSG
-	*	1698887514	0
-	"	1	0
-
-> ~/.ssh/config
-	*	1698398339	0
-	"	87	1
-	.	88	0
-	+	88	30
-	+	88	8
-	+	88	0
+	+	3	8
 
 > ~/.config/nvim/lua/config/keymaps.lua
-	*	1698152585	0
-	"	1	0
-	^	1	0
-	.	1	0
-	+	22	17
-	+	18	17
-	+	16	2
-	+	15	2
-	+	14	2
-	+	13	2
-	+	11	2
-	+	10	2
-	+	9	2
-	+	8	2
-	+	10	3
-	+	20	17
-	+	19	0
-	+	20	27
-	+	1	0
+	*	1699667921	0
+	"	10	0
+	^	10	0
+	.	9	30
+	+	11	0
+	+	7	25
+	+	9	30
 
 > ~/.config/nvim/lua/config/lazy.lua
-	*	1698152318	0
+	*	1699667719	0
+	"	14	36
+	^	14	37
+	.	13	52
+	+	15	0
+	+	13	52
+
+> ~/.zshrc
+	*	1699667413	0
+	"	172	12
+	^	172	13
+	.	173	11
+	+	278	1
+	+	279	1
+	+	280	1
+	+	283	1
+	+	284	1
+	+	285	1
+	+	286	1
+	+	299	1
+	+	1	0
+	+	299	0
+	+	288	34
+	+	286	1
+	+	287	1
+	+	288	1
+	+	296	60
+	+	297	103
+	+	291	0
+	+	292	0
+	+	291	8
+	+	292	23
+	+	294	0
+	+	293	14
+	+	291	11
+	+	294	19
+	+	288	33
+	+	289	0
+	+	291	0
+	+	1	0
+	+	289	18
+	+	288	33
+	+	271	0
+	+	298	24
+	+	301	26
+	+	301	0
+	+	302	0
+	+	299	0
+	+	300	25
+	+	302	0
+	+	301	0
+	+	303	19
+	+	304	158
+	+	304	0
+	+	280	0
+	+	281	16
+	+	279	12
+	+	1	20
+	+	1	0
+	+	290	51
+	+	256	0
+	+	222	26
+	+	235	26
+	+	225	0
+	+	224	0
+	+	226	0
+	+	229	0
+	+	228	0
+	+	231	0
+	+	230	0
+	+	233	0
+	+	232	0
+	+	234	0
+	+	227	0
+	+	256	26
+	+	256	25
+	+	237	0
+	+	255	25
+	+	256	0
+	+	244	109
+	+	245	0
+	+	236	13
+	+	245	5
+	+	239	24
+	+	249	0
+	+	251	46
+	+	245	0
+	+	1	0
+	+	1	16
+	+	1	36
+	+	1	0
+	+	1	67
+	+	1	18
+	+	1	86
+	+	1	0
+	+	1	82
+	+	1	0
+	+	217	99
+	+	1	0
+	+	197	99
+	+	169	0
+	+	197	0
+	+	170	0
+	+	179	0
+	+	173	35
+	+	179	0
+	+	173	35
+	+	177	0
+	+	197	0
+	+	173	35
+	+	175	0
+	+	173	11
+
+> ~/.zs0
+	*	1699665864	0
 	"	1	0
 
-> ~/.config/nvim/init.lua
-	*	1698152252	0
-	"	3	0
-	^	3	0
-	.	3	0
-	+	3	0
+> ~/Project/AIGC/vits/MgpuTest/t.py
+	*	1699665848	0
+	"	18	16
+	^	18	17
+	.	2	4
+	+	19	0
+	+	2	4
 
-> ~/.tmux.conf
-	*	1697900508	0
-	"	6	0
-	^	6	0
-	.	5	28
-	+	1	24
-	+	246	0
-	+	66	5
-	+	67	5
-	+	68	5
-	+	69	5
-	+	68	5
-	+	162	10
-	+	163	10
-	+	164	10
-	+	165	10
-	+	148	10
-	+	150	10
-	+	154	10
-	+	148	10
-	+	150	10
-	+	154	10
-	+	1	12
-	+	1616	5
-	+	259	70
-	+	265	71
-	+	259	0
-	+	208	56
-	+	209	0
-	+	72	0
-	+	306	5
-	+	72	0
-	+	154	0
-	+	157	0
-	+	151	0
-	+	72	0
-	+	147	0
-	+	146	0
-	+	144	10
-	+	132	10
-	+	133	10
-	+	134	10
-	+	135	10
-	+	93	5
-	+	94	5
-	+	95	5
-	+	96	5
-	+	26	10
-	+	27	19
-	+	1	0
-	+	51	0
-	+	150	27
-	+	151	37
-	+	147	40
-	+	151	0
-	+	150	0
-	+	150	15
-	+	151	0
-	+	144	0
-	+	147	0
-	+	136	0
-	+	151	0
-	+	149	0
-	+	147	0
-	+	159	21
-	+	160	21
-	+	161	21
-	+	162	21
-	+	164	21
-	+	165	21
-	+	166	21
-	+	130	10
-	+	11	0
-	+	12	1
-	+	14	0
-	+	13	0
-	+	11	14
-	+	71	0
-	+	15	0
-	+	14	0
-	+	1	0
-	+	5	28
+> ~/.z
+	*	1699664870	0
+	"	67	80
+	^	67	81
+	.	67	80
+	+	1	60
+	+	67	80
+
+> ~/.gitignore
+	*	1699664843	0
+	"	49	3
+	^	49	4
+	.	49	3
+	+	8	16
+	+	30	9
+	+	40	0
+	+	41	6
+	+	42	7
+	+	48	3
+	+	46	0
+	+	49	3
+
+> ~/.gitconfig
+	*	1699664472	0
+	"	3	22
+	^	3	23
+	.	3	22
+	+	3	22
+
+> ~/zshrc
+	*	1699664193	0
+	"	1	0
+
+> ~/.zsh
+	*	1699663562	0
+	"	1	0
 
 > ~/.bashrc
 	*	1696341785	0
@@ -798,10 +704,6 @@ $
 	^	5	61
 	.	5	60
 	+	5	60
-
-> ~/.zsh
-	*	1693149968	0
-	"	1	0
 
 > ~/Project/ASC/Yuan/.gitignore
 	*	1692959566	0
@@ -894,6 +796,84 @@ $
 > ~/Project/mpi/tutorials/mpitutorial/tutorials/mpi-hello-world/code/makefile
 	*	1689945328	0
 	"	2	0
+
+> ~/.tmux.conf
+	*	1689823650	0
+	"	214	0
+	^	10	15
+	.	10	14
+	+	1	24
+	+	246	0
+	+	66	5
+	+	67	5
+	+	68	5
+	+	69	5
+	+	68	5
+	+	162	10
+	+	163	10
+	+	164	10
+	+	165	10
+	+	148	10
+	+	150	10
+	+	154	10
+	+	148	10
+	+	150	10
+	+	154	10
+	+	1	12
+	+	1616	5
+	+	259	70
+	+	265	71
+	+	259	0
+	+	208	56
+	+	209	0
+	+	72	0
+	+	306	5
+	+	72	0
+	+	154	0
+	+	157	0
+	+	151	0
+	+	72	0
+	+	147	0
+	+	146	0
+	+	144	10
+	+	132	10
+	+	133	10
+	+	134	10
+	+	135	10
+	+	93	5
+	+	94	5
+	+	95	5
+	+	96	5
+	+	26	10
+	+	27	19
+	+	1	0
+	+	51	0
+	+	150	27
+	+	151	37
+	+	147	40
+	+	151	0
+	+	150	0
+	+	150	15
+	+	151	0
+	+	144	0
+	+	147	0
+	+	136	0
+	+	151	0
+	+	149	0
+	+	147	0
+	+	159	21
+	+	160	21
+	+	161	21
+	+	162	21
+	+	164	21
+	+	165	21
+	+	166	21
+	+	130	10
+	+	10	0
+	+	11	1
+	+	13	0
+	+	12	0
+	+	10	14
 
 > ~/software/grafana/ASC.json
 	*	1689251430	0
@@ -1343,3 +1323,14 @@ $
 	"	1	0
 	.	5	0
 	+	5	0
+
+> /home/inspur/nfs/zzc/.ssh/authorized_keys
+	*	1684590392	0
+	"	3	0
+	.	2	0
+	+	4	0
+	+	2	0
+
+> ~/download/grafana-clock-panel/img/clock.svg
+	*	1684580520	0
+	"	1	0

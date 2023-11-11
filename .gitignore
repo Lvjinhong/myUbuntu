@@ -46,3 +46,4 @@ devcloudConnectorLogFile.txt
 .cargo
 *copilot*
 .nvm
+.npm
