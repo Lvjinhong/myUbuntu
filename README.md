@@ -13,4 +13,7 @@
 - 如果当前配置数据不在了，请→tmux复现
 - **还有一点，自从使用nfs+软链的方式，以后所有的服务器（实测centos亦可，除了zsh版本太低，不支持p10k），我的用户无处不在**
 
-lazyvim:直接安装完neovim，启动nvim便是 lazyvim了
+- lazyvim:直接安装完neovim，启动nvim便是 lazyvim了
+  - **lazyvim中 添加copilot插件**  ：[**参考**](https://www.lazyvim.org/extras/coding/copilot)
+    - 注意copliot插件需要 Neovim>0.9 
+    - 实测 不如Vim中的copilot (这个也需要新版Vim)
