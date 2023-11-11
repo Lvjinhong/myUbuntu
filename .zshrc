@@ -125,6 +125,7 @@ fi
 
 
 # -------------------------------------------alias 命令集合------------------------------------
+#watch
 alias nv='watch -n 1 nvidia-smi'
 alias ut='watch -d uptime'
 alias ww='watch -d w'
@@ -135,14 +136,21 @@ alias cg='watch -d -n 3 curl www.google.com'
 alias lg="ls | grep"
 alias llg="ll | grep"
 alias peg="ps -ef | grep"
+#tmux
 alias tn="tmux new -s"                                                                                    
 alias ts="tmux switch -t"
 alias tks="tmux kill-session -t" 
 alias ta="tmux a"
+#docker
+alias dk="docker"
+alias dpa="docker ps -a"
+alias dil="docker images ls"
+#trash
 alias tlist="trash-list"
 alias tp="trash-put"
 alias trestore="trash-restore"
 alias trm="trash-rm"
+
 alias v="nvim" 
 alias ll='ls -alF'
 alias la='ls -A'
@@ -155,18 +163,32 @@ alias setproxy=" export https_proxy=$claship http_proxy=$claship all_proxy=${cla
 alias unsetproxy="unset https_proxy http_proxy all_proxy"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias oneapi="source /home/ljh/SoftWare/intel/oneapi/setvars.sh --include-intel-llvm --force"
+
+alias  vi="vim"
+alias  setnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' 
 #--------------------------------- export 环境变量--------------------------------------
 
+export PATH=/home/inspur/nfs/ljh/SoftWare/vim/bin:$PATH
+export NVM_DIR="$HOME/SoftWare/nvm"
+source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
+#
+
+#重要tools配置
+export PATH=$PATH:/home/ljh/.local/bin
 export HISTFILESIZE=1000
 export claship="http://127.0.0.1:7890"
 eval $(thefuck --alias fff)
 export EDITOR=/usr/bin/vim
-source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
 export CUDA_V=cuda-12.1
 export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH
-#oneapi
+
+
 #export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.5/comm_libs/hpcx/bin:$PATH
 # export PATH="/home/ljh/SoftWare/java/jdk-11.0.19/bin":$PATH
 # export PATH="/home/ljh/SoftWare/neo4j_4.4/bin":$PATH
 #
 cowthink -f dragon  "以荒之名 独断万古"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -1,3 +1,6 @@
 [submodule "script/aria2Plus"]
 	path = script/aria2Plus
-	url = https://github.com/NotNoneX/Aria2-Plus.git
+	url = git@github.com:NotNoneX/Aria2-Plus.git
+[submodule "aria2Plus"]
+	path = aria2Plus
+	url = git@github.com:NotNoneX/Aria2-Plus.git

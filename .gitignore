@@ -43,3 +43,6 @@ devcloudConnectorLogFile.txt
 .modelscope/
 .rpmdb/
 .dotnet
+.cargo
+*copilot*
+.nvm

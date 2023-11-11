@@ -5,17 +5,18 @@
 --
 local keymap = vim.keymap
 
-keymap.set("v", "o", "i")
-keymap.set("v", "i", "k")
-keymap.set("v", "k", "j")
-keymap.set("v", "j", "h")
+-- keymap.set("v", "o", "i")
+-- keymap.set("v", "i", "k")
+-- keymap.set("v", "k", "j")
+-- keymap.set("v", "j", "h")
 
-keymap.set("n", "o", "i")
-keymap.set("n", "i", "k")
-keymap.set("n", "k", "j")
-keymap.set("n", "j", "h")
+-- keymap.set("n", "o", "i")
+-- keymap.set("n", "i", "k")
+-- keymap.set("n", "k", "j")
+-- keymap.set("n", "j", "h")
 keymap.set("n", "L", "$")
-keymap.set("n", "J", "^")
+keymap.set("n", "H", "^")
 
+keymap.set("i", "kj", "<Esc>")
 keymap.set("v", "L", "$")
-keymap.set("v", "J", "^")
+keymap.set("v", "H", "^")
