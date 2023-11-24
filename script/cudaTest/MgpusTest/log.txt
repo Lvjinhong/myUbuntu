@@ -1,0 +1,769 @@
+[2023-11-24 12:39:38,471] torch.distributed.run: [WARNING] master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+[2023-11-24 12:39:38,471] torch.distributed.run: [WARNING] 
+[2023-11-24 12:39:38,471] torch.distributed.run: [WARNING] *****************************************
+[2023-11-24 12:39:38,471] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2023-11-24 12:39:38,471] torch.distributed.run: [WARNING] *****************************************
+load local_rank:  1
+load local_rank:  0
+inspur2:140737:140737 [0] NCCL INFO cudaDriverVersion 12030
+inspur2:140737:140737 [0] NCCL INFO Bootstrap : Using ibp134s0:172.168.1.2<0>
+inspur2:140737:140737 [0] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libsharp_coll.so.5: cannot open shared object file: No such file or directory
+inspur2:140737:140737 [0] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+inspur2:140737:140737 [0] NCCL INFO init.cc:1535 Cuda Host Alloc Size 4 pointer 0x7f0aa7c00000
+inspur2:140738:140738 [1] NCCL INFO cudaDriverVersion 12030
+inspur2:140738:140738 [1] NCCL INFO Bootstrap : Using ibp134s0:172.168.1.2<0>
+inspur2:140738:140738 [1] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libsharp_coll.so.5: cannot open shared object file: No such file or directory
+inspur2:140738:140738 [1] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+inspur2:140738:140738 [1] NCCL INFO init.cc:1535 Cuda Host Alloc Size 4 pointer 0x7f5987a00000
+inspur2:140737:140764 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ibp134s0:172.168.1.2<0>
+inspur2:140737:140764 [0] NCCL INFO Using network IB
+inspur2:140738:140765 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ibp134s0:172.168.1.2<0>
+inspur2:140738:140765 [1] NCCL INFO Using network IB
+inspur2:140738:140765 [1] NCCinspur1:136578:136887 [1] NCCL INFO NET/IB : GPU Direct RDMA Enabled for HCA 0 'mlx5_0'
+inspur1:136577:136873 [0] NCCL INFO NET/IB : GPU Direct RDMA Enabled for HCA 0 'mlx5_0'
+inspur1:136578:136887 [1] NCCL INFO GPU Direct RDMA Disabled for GPU 3b000 / HCA 0 (distance 7 > 4)
+inspur1:136578:136887 [1] NCCL INFO GPU Direct RDMA Disabled for GPU af000 / HCA 0 (distance 6 > 4)
+inspur1:136578:136887 [1] NCCL INFO GPU Direct RDMA Disabled for GPU 3b000 / HCA 0 (distance 7 > 4)
+inspur1:136578:136887 [1] NCCL INFO GPU Direct RDMA Disabled for GPU af000 / HCA 0 (distance 6 > 4)
+inspur1:136578:136887 [1] NCCL INFO === System : maxBw 12.0 totalBw 12.0 ===
+inspur1:136578:136887 [1] NCCL INFO CPU/0 (1/1/2)
+inspur1:136578:136887 [1] NCCL INFO + PCI[12.0] - GPU/3B000 (0)
+inspur1:136578:136887 [1] NCCL INFO + SYS[10.0] - CPU/1
+inspur1:136578:136887 [1] NCCL INFO CPU/1 (1/1/2)
+inspur1:136577:136873 [0] NCCL INFO GPU Direct RDMA Disabled for GPU 3b000 / HCA 0 (distance 7 > 4)
+inspur1:136578:136887 [1] NCCL INFO + PCI[12.0] - GPU/AF000 (1)
+inspur1:136577:136873 [0] NCCL INFO GPU Direct RDMA Disabled for GPU af000 / HCA 0 (distance 6 > 4)
+inspur1:136578:136887 [1] NCCL INFO + PCI[12.0] - NIC/86000
+inspur1:136578:136887 [1] NCCL INFO               + NET[12.5] - NET/0 (cebf4b0003da341c/1/12.500000)
+inspur1:136578:136887 [1] NCCL INFO + SYS[10.0] - CPU/0
+inspur1:136578:136887 [1] NCCL INFO ==========================================
+inspur1:136578:136887 [1] NCCL INFO GPU/3B000 :GPU/3B000 (0/5000.000000/LOC) GPU/AF000 (3/10.000000/SYS) CPU/0 (1/12.000000/PHB) CPU/1 (2/10.000000/SYS) NET/0 (4/10.000000/SYS) 
+inspur1:136578:136887 [1] NCCL INFO GPU/AF000 :GPU/3B000 (3/10.000000/SYS) GPU/AF000 (0/5000.000000/LOC) CPU/0 (2/10.000000/SYS) CPU/1 (1/12.000000/PHB) NET/0 (3/12.000000/PHB) 
+inspur1:136578:136887 [1] NCCL INFO NET/0 :GPU/3B000 (4/10.000000/SYS) GPU/AF000 (3/12.000000/PHB) CPU/0 (3/10.000000/SYS) CPU/1 (2/12.000000/PHB) NET/0 (0/5000.000000/LOC) 
+inspur1:136578:136887 [1] NCCL INFO Setting affinity for GPU 1 to fffc00,0fffc000
+4 [0] NCCL INFO               + NET[12.5] - NET/0 (e0cf5b0003da341c/1/12.500000)
+inspur2:140738:140765 [1] NCCL INFO GPU/3B000 :GPU/3B000 (0/5000.000000/LOC) GPU/AF000 (3/10.000000/SYS) CPU/0 (1/12.000000/PHB) CPU/1 (2/10.000000/SYS) NET/0 (4/10.000000/SYS) 
+inspur2:140737:140764 [0] NCCL INFO + SYS[10.0] - CPU/0
+inspur2:140737:140764 [0] NCCL INFO ==========================================
+inspur2:140738:140765 [1] NCCL INFO GPU/AF000 :GPU/3B000 (3/10.000000/SYS) GPU/AF000 (0/5000.000000/LOC) CPU/0 (2/10.000000/SYS) CPU/1 (1/12.000000/PHB) NET/0 (3/12.000000/PHB) 
+inspur2:140737:140764 [0] NCCL INFO GPU/3B000 :GPU/3B000 (0/5000.000000/LOC) GPU/AF000 (3/10.000000/SYS) CPU/0 (1/12.000000/PHB) CPU/1 (2/10.000000/SYS) NET/0 (4/10.000000/SYS) 
+inspur2:140738:140765 [1] NCCL INFO NET/0 :GPU/3B000 (4/10.000000/SYS) GPU/AF000 (3/12.000000/PHB) CPU/0 (3/10.000000/SYS) CPU/1 (2/12.000000/PHB) NET/0 (0/5000.000000/LOC) 
+inspur2:140737:140764 [0] NCCL INFO GPU/AF000 :GPU/3B000 (3/10.000000/SYS) GPU/AF000 (0/5000.000000/LOC) CPU/0 (2/10.000000/SYS) CPU/1 (1/12.000000/PHB) NET/0 (3/12.000000/PHB) 
+inspur2:140738:140765 [1] NCCL INFO Setting affinity for GPU 1 to fffc00,0fffc000
+inspur2:140737:140764 [0] NCCL INFO NET/0 :GPU/3B000 (4/10.000000/SYS) GPU/AF000 (3/12.000000/PHB) CPU/0 (3/10.000000/SYS) CPU/1 (2/12.000000/PHB) NET/0 (0/5000.000000/LOC) 
+inspur2:140737:140764 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+inspur2:140738:140765 [1] NCCL INFO Pattern 4, crossNic 0, nChannels 1, bw 10.000000/10.000000, type SYS/SYS, sameChannels 1
+inspur2:140738:140765 [1] NCCL INFO  0 : NET/0 GPU/2 GPU/3 NET/0
+inspur2:140738:140765 [1] NCCL INFO Pattern 1, crossNic 0, nChannels 1, bw 7.000000/6.000000, type SYS/SYS, sameChannels 1
+inspur2:140737:140764 [0] NCCL INFO Pattern 4, crossNic 0, nChannels 1, bw 10.000000/10.000000, type SYS/SYS, sameChannels 1
+inspur2:140738:140765 [1] NCCL INFO  0 : NET/0 GPU/2 GPU/3 NET/0
+inspur2:140737:140764 [0] NCCL INFO  0 : NET/0 GPU/2 GPU/3 NET/0
+inspur2:140737:140764 [0] NCCL INFO Pattern 1, crossNic 0, nChannels 1, bw 7.000000/6.000000, type SYS/SYS, sameChannels 1
+inspur2:140737:140764 [0] NCCL INFO  0 : NET/0 GPU/2 GPU/3 NET/0
+inspur2:140738:140765 [1] NCCL INFO Tree 0 : 2 -> 3 -> -1/-1/-1
+inspur2:140738:140765 [1] NCCL INFO Tree 1 : 2 -> 3 -> -1/-1/-1
+inspur2:140738:140765 [1] NCCL INFO Ring 00 : 2 -> 3 -> 0
+inspur2:140738:140765 [1] NCCL INFO Ring 01 : 2 -> 3 -> 0
+inspur2:140738:140765 [1] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2
+inspur2:140738:140765 [1] NCCL INFO P2P Chunksize set to 131072
+inspur2:140737:140764 [0] NCCL INFO Tree 0 : 0 -> 2 -> 3/-1/-1
+inspur2:140737:140764 [0] NCCL INFO Tree 1 : -1 -> 2 -> 3/0/-1
+inspur2:140738:140765 [1] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+inspur2:140737:140764 [0] NCCL INFO Ring 00 : 1 -> 2 -> 3
+inspur2:140737:140764 [0] NCCL INFO Ring 01 : 1 -> 2 -> 3
+inspur2:140737:140764 [0] NCCL INFO Trees [0] 3/-1/-1->2->0 [1] 3/0/-1->2->-1
+inspur2:140738:140765 [1] NCCL INFO channel.cc:40 Cuda Alloc Size 1536 pointer 0x7f5960000000
+inspur2:140737:140764 [0] NCCL INFO P2P Chunksize set to 131072
+inspur2:140738:140765 [1] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f5960000600
+inspur2:140738:140765 [1] NCCL INFO channel.cc:52 Cuda Alloc Size 16 pointer 0x7f5960000800
+inspur2:140738:140765 [1] NCCL INFO channel.cc:40 Cuda Alloc Size 1536 pointer 0x7f5960000a00
+inspur2:140738:140765 [1] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f5960001000
+inspur2:140738:140765 [1] NCCL INFO channel.cc:52 Cuda Alloc Size 16 pointer 0x7f5960001200
+inspur2:140737:140764 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+inspur2:140738:140765 [1] NCCL INFO Allocated 9637892 bytes of shared memory in /dev/shm/nccl-0W6ev0
+inspur2:140737:140764 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 1536 pointer 0x7f0a80c00000
+inspur2:140737:140764 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f0a80c00600
+inspur2:140737:140764 [0] NCCL INFO channel.cc:52 Cuda Alloc Size 16 pointer 0x7f0a80c00800
+inspur2:140737:140764 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 1536 pointer 0x7f0a80c00a00
+inspur2:140737:140764 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f0a80c01000
+inspur2:140737:140764 [0] NCCL INFO channel.cc:52 Cuda Alloc Size 16 pointer 0x7f0a80c01200
+inspur2:140737:140764 [0] NCCL INFO GPU Direct RDMA Disabled for GPU 3b000 / HCA 0 (distance 7 > 4)
+inspur2:140737:140773 [0] NCCL INFO Mem Realloc old size 0, new size 8 pointer 0x7f0a78004f10
+inspur2:140737:140773 [0] NCCL INFO Allocated 4194660 bytes of shared memory in /dev/shm/nccl-bUdCjt
+inspur2:140738:140765 [1] NCCL INFO Allocated 9637892 bytes of shared memory in /dev/shm/nccl-IDHU8B
+inspur2:140737:140773 [0] NCCL INFO New proxy recv connection 0 frinspur1:136578:136887 [1] NCCL INFO Allocated 9637892 bytes of shared memory in /dev/shm/nccl-2yUxLW
+inspur1:136577:137088 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+inspur1:136577:137088 [0] NCCL INFO proxyProgressAsync opId=0x7f6447498450 op.type=1 op.reqBuff=0x7f6458000bb0 op.respSize=16 done
+inspur1:136577:136873 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f6447498450
+inspur1:13inspur2:140738:140772 [1] NCCL INFO Mem Realloc old size 0, new size 8 pointer 0x7f5958004f10
+inspur2:140738:140772 [1] NCCL INFO Allocated 4194660 bytes of shared memory in /dev/shm/nccl-ib89Ea
+inspur2:140738:140772 [1] NCCL INFO New proxy send connection 0 from local rank 1, transport 2
+inspur2:140738:140772 [1] NCCL INFO proxyProgressAsync opId=0x7f5967497dc0 op.type=1 op.reqBuff=0x7f5958004ed0 op.respSize=16 done
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Received new opId=0x7f5967497dc0
+inspur2:140738:140765 [1] NCCL INFO recvOpId=0x7f5967497dc0 matches expected opId=0x7f5967497dc0
+inspur2:140738:140772 [1] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140738:140765 [1] NCCL INFO Connection to proxy localRank 1 -> connection 0x7f5958004f30
+inspur2:140738:140772 [1] NCCL INFO proxyProgressAsync opId=0x7f5967497dc0 op.type=3 op.reqBuff=0x7f5958007a00 op.respSize=0 done
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Received new opId=0x7f5967497dc0
+inspur2:140738:140772 [1] NCCL INFO Received and initiated operation=Setup res=0
+inspur2:140737:140764 [0] NCCL INFO Connection to proxy localRank 0 -> connection 0x7f0a78004f30
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498070 op.type=3 op.reqBuff=0x7f0a78007a00 op.respSize=128 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498070
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498070 matches expected opId=0x7f0a87498070
+inspur2:140737:140764 [0] NCCL INFO Channel 00/0 : 1[af000] -> 2[3b000] [receive] via NET/IB/0
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Setup res=0
+inspur2:140737:140764 [0] NCCL INFO GPU Direct RDMA Disabled for GPU 3b000 / HCA 0 (distance 7 > 4)
+inspur2:140737:140773 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498070 op.type=1 op.reqBuff=0x7f0a7800ce40 op.respSize=16 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498070
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140738:140765 [1] NCCL INFO recvOpId=0x7f5967497dc0 matches expected opId=0x7f5967497dc0
+inspur2:140738:140765 [1] NCCL INFO Channel 00/0 : 3[af000] -> 0[3b000] [send] via NET/IB/0
+inspur2:140738:140772 [1] NCCL INFO New proxy send connection 1 from local rank 1, transport 2
+inspur2:140738:140772 [1] NCCL INFO proxyProgressAsync opId=0x7f5967497dc0 op.type=1 op.reqBuff=0x7f595800cd10 op.respSize=16 done
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Received new opId=0x7f5967497dc0
+inspur2:140738:140772 [1] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498070 matches expected opId=0x7f0a87498070
+inspur2:140737:140764 [0] NCCL INFO Connection to proxy localRank 0 -> connection 0x7f0a78004f80
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498070 op.type=3 op.reqBuff=0x7f0a7800ce80 op.respSize=128 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498070
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Setup res=0
+inspur2:140738:140765 [1] NCCL INFO recvOpId=0x7f5967497dc0 matches expected opId=0x7f5967497dc0
+inspur2:140738:140765 [1] NCCL INFO Connection to proxy localRank 1 -> connection 0x7f5958004f80
+inspur2:140738:140772 [1] NCCL INFO proxyProgressAsync opId=0x7f5967497dc0 op.type=3 op.reqBuff=0x7f595800cd50 op.respSize=0 done
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Received new opId=0x7f5967497dc0
+inspur2:140738:140772 [1] NCCL INFO Received and initiated operation=Setup res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498070 matches expected opId=0x7f0a87498070
+inspur2:140737:140764 [0] NCCL INFO Channel 01/0 : 1[af000] -> 2[3b000] [receive] via NET/IB/0
+inspur2:140737:140764 [0] NCCL INFO Allocated 4100 bytes of shared memory in /dev/shm/nccl-O5Qbn2
+inspur2:140737:140764 [0] NCCL INFO Channel 00 : 2[3b000] -> 3[af000] via SHM/direct/direct
+inspur2:140737:140764 [0] NCCL INFO Allocated 4100 bytes of shared memory in /dev/shm/nccl-u9YklC
+inspur2:140737:140764 [0] NCCL INFO Channel 01 : 2[3b000] -> 3[af000] via SHM/direct/direct
+inspur2:140738:140765 [1] NCCL INFO recvOpId=0x7f5967497dc0 matches expected opId=0x7f5967497dc0
+inspur2:140738:140765 [1] NCCL INFO Channel 01/0 : 3[af000] -> 0[3b000] [send] via NET/IB/0
+inspur2:140738:140765 [1] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f596749a0e0
+inspur2:140738:140772 [1] NCCL INFO transport/net_ib.cc:627 Ib Alloc Size 27160 pointer 0x7f5958018000
+inspur2:140738:140765 [1] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f59674ac460
+inspur2:140737:140764 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f0a8749a6b8 &recv->proxyConn=0x7f0a8749a6c0 connectInfo=0x7f0a874adaf0
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:739 Ib Alloc Size 22280 pointer 0x7f0a78018000
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:752 Ib Alloc Size 552 pointer 0x7f0a7801f000
+inspur2:140738:140772 [1] NCCL INFO NET/IB: Dev 0 Port 1 qpn 1804 mtu 5 LID 1
+inspur2:140738:140772 [1] NCCL INFO transport/net_ib.cc:679 Ib Alloc Size 552 pointer 0x7f595803a000
+inspur2:140738:140772 [1] NCCL INFO Received and initiated operation=Connect res=0
+inspur2:140738:140772 [1] NCCL INFO transport/net_ib.cc:627 Ib Alloc Size 27160 pointer 0x7f5958041000
+inspur2:140737:140764 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f0a874ac7c8 &recv->proxyConn=0x7f0a874ac7d0 connectInfo=0x7f0a874adb70
+inspur2:140738:140772 [1] NCCL INFO NET/IB: Dev 0 Port 1 qpn 1805 mtu 5 LID 1
+inspur2:140738:140772 [1] NCCL INFO transport/net_ib.cc:679 Ib Alloc Size 552 pointer 0x7f5958059000
+inspur2:140738:140772 [1] NCCL INFO Received and initiated operation=Connect res=0
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:829 Ib Alloc Size 552 pointer 0x7f0a78046000
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Connect res=0
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:739 Ib Alloc Size 22280 pointer 0x7f0a7804d000
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:752 Ib Alloc Size 552 pointer 0x7f0a78054000
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:829 Ib Alloc Size 552 pointer 0x7f0a78070000
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Connect res=0
+inspur2:140737:140773 [0] NCCL INFO transport/net.cc:778 Cuda Host Alloc Size 9641984 pointer 0x7f0a80e00000
+inspur2:140737:140773 [0] NCCL INFO Mem Realloc old size 0, new size 768 pointer 0x7f0a7801f830
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a8749a6b8 op.type=4 op.reqBuff=0x7f0a780122c0 op.respSize=21040 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a8749a6b8
+inspur2:140738:140772 [1] NCCL INFO transport/net.cc:643 Cuda Host Alloc Size 9641984 pointer 0x7f5960200000
+inspur2:140738:140772 [1] NCCL INFO Mem Realloc old size 0, new size 768 pointer 0x7f595804d010
+inspur2:140738:140772 [1] NCCL INFO proxyProgressAsync opId=0x7f596749a0e0 op.type=4 op.reqBuff=0x7f5958012060 op.respSize=21040 done
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Received new opId=0x7f596749a0e0
+inspur2:140737:140773 [0] NCCL INFO transport/net.cc:778 Cuda Host Alloc Size 9641984 pointer 0x7f0a76000000
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a874ac7c8 op.type=4 op.reqBuff=0x7f0a78017fe0 op.respSize=21040 done
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a8749a6b8 matches expected opId=0x7f0a8749a6b8
+inspur2:140737:140764 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f0a8749a6b8
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a874ac7c8
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a874ac7c8 matches expected opId=0x7f0a874ac7c8
+inspur2:140737:140764 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f0a874ac7c8
+inspur2:140737:140764 [0] NCCL INFO Connected all rings
+inspur2:140737:140764 [0] NCCL INFO GPU Direct RDMA Disabled for GPU 3b000 / HCA 0 (distance 7 > 4)
+inspur2:140737:140773 [0] NCCL INFO New proxy recv connection 2 from local rank 0, transport 2
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498030 op.type=1 op.reqBuff=0x7f0a78025fd0 op.respSize=16 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498030
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140738:140772 [1] NCCL INFO transport/net.cc:643 Cuda Host Alloc Size 9641984 pointer 0x7f5960c00000
+inspur2:140738:140772 [1] NCCL INFO proxyProgressAsync opId=0x7f59674ac460 op.type=4 op.reqBuff=0x7f595801fc50 op.respSize=21040 done
+inspur2:140738:140765 [1] NCCL INFO Queuing opId=0x7f596749a0e0 respBuff=0x7f59674cf6c0 respSize=21040
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f596749a0e0
+inspur2:140738:140765 [1] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f596749a0e0
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Received new opId=0x7f59674ac460
+inspur2:140738:140765 [1] NCCL INFO recvOpId=0x7f59674ac460 matches expected opId=0x7f59674ac460
+inspur2:140738:140765 [1] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f59674ac460
+inspur2:140738:140765 [1] NCCL INFO Connected all rings
+inspur2:140738:140765 [1] NCCL INFO Allocated 4100 bytes of shared memory in /dev/shm/nccl-f81pRT
+inspur2:140738:140765 [1] NCCL INFO Channel 00 : 3[af000] -> 2[3b000] via SHM/direct/direct
+inspur2:140738:140765 [1] NCCL INFO Allocated 4100 bytes of shared memory in /dev/shm/nccl-yPECx4
+inspur2:140738:140765 [1] NCCL INFO Channel 01 : 3[af000] -> 2[3b000] via SHM/direct/direct
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498030 matches expected opId=0x7f0a87498030
+inspur2:140737:140764 [0] NCCL INFO Connection to proxy localRank 0 -> connection 0x7f0a78004fd0
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498030 op.type=3 op.reqBuff=0x7f0a7801ffc0 op.respSize=128 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498030
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Setup res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498030 matches expected opId=0x7f0a87498030
+inspur2:140737:140764 [0] NCCL INFO Channel 00/0 : 0[3b000] -> 2[3b000] [receive] via NET/IB/0
+inspur2:140737:140764 [0] NCCL INFO GPU Direct RDMA Disabled for GPU 3b000 / HCA 0 (distance 7 > 4)
+inspur2:140737:140773 [0] NCCL INFO New proxy recv connection 3 from local rank 0, transport 2
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498030 op.type=1 op.reqBuff=0x7f0a7801fff0 op.respSize=16 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498030
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498030 matchesinspur1:136577:136873 [0] NCCL INpur2:140737:140764 [0] NCCL INFO Connection to proxy localRank 0 -> connection 0x7f0a78005020
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498030 op.type=3 op.reqBuff=0x7f0a78055100 op.respSize=128 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498030
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Setup res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498030 matches expected opId=0x7f0a87498030
+inspur2:140737:140764 [0] NCCL INFO Channel 01/0 : 0[3b000] -> 2[3b000] [receive] via NET/IB/0
+inspur2:140737:140773 [0] NCCL INFO New proxy send connection 4 from local rank 0, transport 2
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498030 op.type=1 op.reqBuff=0x7f0a780550e0 op.respSize=16 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498030
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498030 matches expected opId=0x7f0a87498030
+inspur2:140737:140764 [0] NCCL INFO Connection to proxy localRank 0 -> connection 0x7f0a78005070
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498030 op.type=3 op.reqBuff=0x7f0a780551c0 op.respSize=0 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498030
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Setup res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498030 matches expected opId=0x7f0a87498030
+inspur2:140737:140764 [0] NCCL INFO Channel 00/0 : 2[3b000] -> 0[3b000] [send] via NET/IB/0
+inspur2:140737:140773 [0] NCCL INFO New proxy send connection 5 from local rank 0, transport 2
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498030 op.type=1 op.reqBuff=0x7f0a7801fff0 op.respSize=16 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498030
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498030 matches expected opId=0x7f0a87498030
+inspur2:140737:140764 [0] NCCL INFO Connection to proxy localRank 0 -> connection 0x7f0a780050c0
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a87498030 op.type=3 op.reqBuff=0x7f0a780551f0 op.respSize=0 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a87498030
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Setup res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a87498030 matches expected opId=0x7f0a87498030
+inspur2:140737:140764 [0] NCCL INFO Channel 01/0 : 2[3b000] -> 0[3b000] [send] via NET/IB/0
+inspur2:140737:140764 [0] NCCL INFO Allocated 9637892 bytes of shared memory in /dev/shm/nccl-DXJaYb
+inspur2:140737:140764 [0] NCCL INFO Allocated 9637892 bytes of shared memory in /dev/shm/nccl-hxqvyA
+inspur2:140737:140764 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f0a8749a350
+inspur2:140737:140764 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f0a8749a470 &recv->proxyConn=0x7f0a8749a478 connectInfo=0x7f0a874b1da0
+inspur2:140737:140764 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f0a874ac460
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:627 Ib Alloc Size 27160 pointer 0x7f0a78086000
+inspur2:140737:140764 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f0a874ac580 &recv->proxyConn=0x7f0a874ac588 connectInfo=0x7f0a874b1e20
+inspur2:140737:140773 [0] NCCL INFO NET/IB: Dev 0 Port 1 qpn 1810 mtu 5 LID 1
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:679 Ib Alloc Size 552 pointer 0x7f0a78098000
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Connect res=0
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:739 Ib Alloc Size 22280 pointer 0x7f0a7809f000
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:752 Ib Alloc Size 552 pointer 0x7f0a780a6000
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operatioinspur1:136578:136887 [1] NCCL INFO Co[0] NCCL INFO transport/net_ib.cc:627 Ib Alloc Size 27160 pointer 0x7f0a780ad000
+inspur2:140738:140765 [1] NCCL INFO Connected all trees
+inspur2:140738:140765 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+inspur2:140738:140765 [1] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+inspur2:140738:140772 [1] NCCL INFO New proxy send connection 2 from local rank 1, transport 2
+inspur2:140738:140772 [1] NCCL INFO proxyProgressAsync opId=0x7f596729bca0 op.type=1 op.reqBuff=0x7f5958024fd0 op.respSize=16 done
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Received new opId=0x7f596729bca0
+inspur2:140738:140765 [1] NCCL INFO recvOpId=0x7f596729bca0 matches expected opId=0x7f596729bca0
+inspur2:140738:140765 [1] NCCL INFO Connection to proxy localRank 1 -> connection 0x7f5958004fd0
+inspur2:140738:140772 [1] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140737:140773 [0] NCCL INFO NET/IB: Dev 0 Port 1 qpn 1811 mtu 5 LID 1
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:679 Ib Alloc Size 552 pointer 0x7f0a780c4000
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Connect res=0
+inspur2:140738:140772 [1] NCCL INFO transport/net.cc:446 Cuda Alloc Size 4194304 pointer 0x7f5961600000
+inspur2:140738:140772 [1] NCCL INFO proxyProgressAsync opId=0x7f596729bca0 op.type=2 op.reqBuff=0x7f5958040fb0 op.respSize=0 done
+inspur2:140738:140765 [1] NCCL INFO ncclPollProxyResponse Received new opId=0x7f596729bca0
+inspur2:140738:140772 [1] NCCL INFO Received and initiated operation=SharedInit res=0
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:829 Ib Alloc Size 552 pointer 0x7f0a780e0000
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:739 Ib Alloc Size 22280 pointer 0x7f0a780e7000
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:752 Ib Alloc Size 552 pointer 0x7f0a780ee000
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Connect res=0
+inspur2:140737:140773 [0] NCCL INFO transport/net.cc:643 Cuda Host Alloc Size 9641984 pointer 0x7f0a76a00000
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a8749a350 op.type=4 op.reqBuff=0x7f0a78055220 op.respSize=21040 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a8749a350
+inspur2:140737:140773 [0] NCCL INFO transport/net.cc:778 Cuda Host Alloc Size 9641984 pointer 0x7f0a77400000
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a8749a470 op.type=4 op.reqBuff=0x7f0a780550e0 op.respSize=21040 done
+inspur2:140737:140764 [0] NCCL INFO Queuing opId=0x7f0a8749a350 respBuff=0x7f0a874f0590 respSize=21040
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a8749a470
+inspur2:140737:140764 [0] NCCL INFO Queuing opId=0x7f0a8749a470 respBuff=0x7f0a874f0590 respSize=21040
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f0a8749a350
+inspur2:140737:140764 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f0a8749a350
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f0a8749a470
+inspur2:140737:140764 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f0a8749a470
+inspur2:140737:140773 [0] NCCL INFO transport/net_ib.cc:829 Ib Alloc Size 552 pointer 0x7f0a78048000
+inspur2:140737:140773 [0] NCCL INFO transport/net.cc:778 Cuda Host Alloc Size 9641984 pointer 0x7f0a74000000
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a874ac580 op.type=4 op.reqBuff=0x7f0a7801fff0 op.respSize=21040 done
+inspur2:140738:140765 [1] NCCL INFO recvOpId=0x7f596729bca0 matches expected opId=0x7f596729bca0
+inspur2:140738:140765 [1] NCCL INFO init.cc:380 Cuda Alloc Size 7728 pointer 0x7f5960001400
+inspur2:140737:140773 [0] NCCL INFO transport/net.cc:643 Cuda Host Alloc Size 9641984 pointer 0x7f0a74a00000
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a874ac460 op.type=4 op.reqBuff=0x7f0a78046f10 op.respSize=21040 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a874ac580
+inspur2:140737:140764 [0] NCCL INFO Queuing opId=0x7f0a874ac580 respBuff=0x7f0a874cc5d0 respSize=21040
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f0a874ac580
+inspur2:140737:140764 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f0a874ac580
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a874ac460
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a874ac460 matches expected opId=0x7f0a874ac460
+inspur2:140737:140764 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f0a874ac460
+inspur2:140737:140764 [0] NCCL INFO Connected all trees
+inspur2:140737:140764 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+inspur2:140737:140764 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+inspur2:140737:140773 [0] NCCL INFO New proxy send connection 6 from local rank 0, transport 2
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a8729bf20 op.type=1 op.reqBuff=0x7f0a780e0ff0 op.respSize=16 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a8729bf20
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=Init res=0
+inspur2:140738:140765 [1] NCCL INFO init.cc:405 Cuda Host Alloc Size 33554432 pointer 0x7f5956000000
+inspur2:140738:140765 [1] NCCL INFO init.cc:411 Cuda Host Alloc Size 128 pointer 0x7f5987a00200
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a8729bf20 matches expected opId=0x7f0a8729bf20
+inspur2:140737:140764 [0] NCCL INFO Connection to proxy localRank 0 -> connection 0x7f0a78005110
+inspur2:140737:140773 [0] NCCL INFO transport/net.cc:446 Cuda Alloc Size 4194304 pointer 0x7f0a75400000
+inspur2:140737:140773 [0] NCCL INFO proxyProgressAsync opId=0x7f0a8729bf20 op.type=2 op.reqBuff=0x7f0a780e0ff0 op.respSize=0 done
+inspur2:140737:140764 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f0a8729bf20
+inspur2:140737:140773 [0] NCCL INFO Received and initiated operation=SharedInit res=0
+inspur2:140737:140764 [0] NCCL INFO recvOpId=0x7f0a8729bf20 matches expected opId=0x7f0a8729bf20
+inspur2:140737:140764 [0] NCCL INFO init.cc:380 Cuda Alloc Size 7728 pointer 0x7f0a80c01400
+inspur2:140737:140764 [0] NCCL INFO init.cc:405 Cuda Host Alloc Size 33554432 pointer 0x7f0a72000000
+inspur2:140737:140764 [0] NCCL INFO init.cc:411 Cuda Host Alloc Size 128 pointer 0x7f0aa7c00200
+inspur2:140738:140765 [1] NCCL INFO comm 0x9b54100 rank 3 nranks 4 cudaDev 1 busId af000 commId 0x83087c12b00e234b - Init COMPLETE
+inspur2:140737:140764 [0] NCCL INFO comm 0x71b3680 rank 2 nranks 4 cudaDev 0 busId 3b000 commId 0x83087c12b00e234b - Init COMPLETE
+inspur2:140738:140738 [1] NCCL INFO AllGather: opCount 0 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00e00 count 8 datatype 0 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+inspur2:140737:140737 [0] NCCL INFO AllGather: opCount 0 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00e00 count 8 datatype 0 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140738 [1] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+inspur2:140737:140737 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+inspur2:140737:140737 [0] NCCL INFO Broadcast: opCount 1 sendbuff 0x7f0aa7a00e00 recvbuff 0x7f0aa7a00e00 count 48 datatype 0 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140738 [1] NCCL INFO Broadcast: opCount 1 sendbuff 0x7f59a3a00e00 recvbuff 0x7f59a3a00e00 count 48 datatype 0 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+inspur2:140738:140738 [1] NCCL INFO Broadcast: opCount 2 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 440 datatype 0 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+inspur2:140737:140737 [0] NCCL INFO Broadcast: opCount 2 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 440 datatype 0 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 3 sendbuff 0x7f59a3a00600 recvbuff 0x7f59a3a00600 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 3 sendbuff 0x7f0aa7a00600 recvbuff 0x7f0aa7a00600 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140738 [1] NCCL INFO Broadcast: opCount 4 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 12 datatype 0 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140737 [0] NCCL INFO Broadcast: opCount 4 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 12 datatype 0 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140738 [1] NCCL INFO Broadcast: opCount 5 sendbuff 0x7f59a3a01800 recvbuff 0x7f59a3a01800 count 4 datatype 0 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+inspur2:140737:140737 [0] NCCL INFO Broadcast: opCount 5 sendbuff 0x7f0aa7a01800 recvbuff 0x7f0aa7a01800 count 4 datatype 0 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 6 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 6 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111111
+
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 7 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 7 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 8 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 8 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 9 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 9 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount a sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount a sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount b sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount b sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount c sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount c sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount d sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount d sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount e sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount e sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount f sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount f sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 10 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 10 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 11 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 11 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 12 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 12 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 13 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 13 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 14 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 14 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 15 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 15 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 16 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 16 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 17 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 17 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 18 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 18 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 19 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 19 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 1a sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 1a sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 1b sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 1b sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 1c sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 1c sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 1d sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 1d sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 1e sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 1e sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 1f sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 1f sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 20 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 20 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 21 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 21 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 22 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 22 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 23 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 23 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 24 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 24 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 25 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 25 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 26 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 26 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 27 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 27 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 28 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 28 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 29 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 29 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 2a sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 2a sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 2b sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 2b sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 2c sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 2c sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 2d sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 2d sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 2e sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 2e sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 2f sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 2f sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 30 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 30 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 31 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 31 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 32 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 32 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 33 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 33 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 34 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 34 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 35 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 35 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 36 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 36 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 37 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 37 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 38 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 38 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 39 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 39 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 3a sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 3a sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 3b sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 3b sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 3c sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 3c sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 3d sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 3d sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 3e sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 3e sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 3f sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 3f sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 40 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 40 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 41 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 41 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 42 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 42 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 43 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 43 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 44 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 44 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 45 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 45 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 46 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 46 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 47 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 47 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 48 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 48 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 49 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 49 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 4a sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 4a sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 4b sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 4b sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 4c sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 4c sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 4d sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 4d sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 4e sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 4e sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 4f sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 4f sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 50 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 50 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 51 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 51 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 52 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 52 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 53 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 53 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 54 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 54 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 55 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 55 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 56 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 56 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 57 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 57 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 58 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 58 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 59 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 59 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 5a sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 5a sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 5b sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 5b sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 5c sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 5c sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 5d sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 5d sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 5e sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 5e sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 5f sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 5f sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 60 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 60 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 61 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 61 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 62 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 62 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 63 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 63 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 64 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 64 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 65 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 65 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 66 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 66 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 67 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 67 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140784 [1] NCCL INFO AllReduce: opCount 68 sendbuff 0x7f59a3a00400 recvbuff 0x7f59a3a00400 count 110 datatype 7 op 0 root 0 comm 0x9b54100 [nranks=4] stream 0x9b589a0
+111
+inspur2:140737:140785 [0] NCCL INFO AllReduce: opCount 68 sendbuff 0x7f0aa7a00400 recvbuff 0x7f0aa7a00400 count 110 datatype 7 op 0 root 0 comm 0x71b3680 [nranks=4] stream 0x71b7220
+111
+inspur2:140738:140772 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+inspur2:140737:140773 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+inspur2:140738:140738 [0] NCCL INFO comm 0x9b54100 rank 3 nranks 4 cudaDev 1 busId af000 - Abort COMPLETE
+inspur2:140737:140737 [0] NCCL INFO comm 0x71b3680 rank 2 nranks 4 cudaDev 0 busId 3b000 - Abort COMPLETE
+10 datatype 7 op 0 root 0 comm 0x81ab0f0 [nranks=4] stream 0x81af990
+inspur1:136577:137256 [0] NCCL INFO AllReduce: opCount 61 sendbuff 0x7f646da00400 recvbuff 0x7f646da00400 count 110 datatype 7 op 0 root 0 comm 0x7c5e210 [nranks=4] stream 0x7c61d60
+111
+111
+inspur1:136578:137259 [1] NCCL INFO AllReduce: opCount 62 sendbuff 0x7fa525a00400 recvbuff 0x7fa525a00400 count 110 datatype 7 op 0 root 0 comm 0x81ab0f0 [nranks=4] stream 0x81af990
+inspur1:136577:137256 [0] NCCL INFO AllReduce: opCount 62 sendbuff 0x7f646da00400 recvbuff 0x7f646da00400 count 110 datatype 7 op 0 root 0 comm 0x7c5e210 [nranks=4] stream 0x7c61d60
+111
+111
+inspur1:136578:137259 [1] NCCL INFO AllReduce: opCount 63 sendbuff 0x7fa525a00400 recvbuff 0x7fa525a00400 count 110 datatype 7 op 0 root 0 comm 0x81ab0f0 [nranks=4] stream 0x81af990
+inspur1:136577:137256 [0] NCCL INFO AllReduce: opCount 63 sendbuff 0x7f646da00400 recvbuff 0x7f646da00400 count 110 datatype 7 op 0 root 0 comm 0x7c5e210 [nranks=4] stream 0x7c61d60
+111
+111
+inspur1:136578:137259 [1] NCCL INFO AllReduce: opCount 64 sendbuff 0x7fa525a00400 recvbuff 0x7fa525a00400 count 110 datatype 7 op 0 root 0 comm 0x81ab0f0 [nranks=4] stream 0x81af990
+inspur1:136577:137256 [0] NCCL INFO AllReduce: opCount 64 sendbuff 0x7f646da00400 recvbuff 0x7f646da00400 count 110 datatype 7 op 0 root 0 comm 0x7c5e210 [nranks=4] stream 0x7c61d60
+111
+111
+inspur1:136578:137259 [1] NCCL INFO AllReduce: opCount 65 sendbuff 0x7fa525a00400 recvbuff 0x7fa525a00400 count 110 datatype 7 op 0 root 0 comm 0x81ab0f0 [nranks=4] stream 0x81af990
+inspur1:136577:137256 [0] NCCL INFO AllReduce: opCount 65 sendbuff 0x7f646da00400 recvbuff 0x7f646da00400 count 110 datatype 7 op 0 root 0 comm 0x7c5e210 [nranks=4] stream 0x7c61d60
+111
+111
+inspur1:136578:137259 [1] NCCL INFO AllReduce: opCount 66 sendbuff 0x7fa525a00400 recvbuff 0x7fa525a00400 count 110 datatype 7 op 0 root 0 comm 0x81ab0f0 [nranks=4] stream 0x81af990
+inspur1:136577:137256 [0] NCCL INFO AllReduce: opCount 66 sendbuff 0x7f646da00400 recvbuff 0x7f646da00400 count 110 datatype 7 op 0 root 0 comm 0x7c5e210 [nranks=4] stream 0x7c61d60
+111
+111
+inspur1:136578:137259 [1] NCCL INFO AllReduce: opCount 67 sendbuff 0x7fa525a00400 recvbuff 0x7fa525a00400 count 110 datatype 7 op 0 root 0 comm 0x81ab0f0 [nranks=4] stream 0x81af990
+inspur1:136577:137256 [0] NCCL INFO AllReduce: opCount 67 sendbuff 0x7f646da00400 recvbuff 0x7f646da00400 count 110 datatype 7 op 0 root 0 comm 0x7c5e210 [nranks=4] stream 0x7c61d60
+111
+111
+inspur1:136578:137259 [1] NCCL INFO AllReduce: opCount 68 sendbuff 0x7fa525a00400 recvbuff 0x7fa525a00400 count 110 datatype 7 op 0 root 0 comm 0x81ab0f0 [nranks=4] stream 0x81af990
+inspur1:136577:137256 [0] NCCL INFO AllReduce: opCount 68 sendbuff 0x7f646da00400 recvbuff 0x7f646da00400 count 110 datatype 7 op 0 root 0 comm 0x7c5e210 [nranks=4] stream 0x7c61d60
+111
+111
+inspur1:136578:137087 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+inspur1:136577:137088 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+inspur1:136578:136578 [0] NCCL INFO comm 0x81ab0f0 rank 1 nranks 4 cudaDev 1 busId af000 - Abort COMPLETE
+inspur1:136577:136577 [0] NCCL INFO comm 0x7c5e210 rank 0 nranks 4 cudaDev 0 busId 3b000 - Abort COMPLETE

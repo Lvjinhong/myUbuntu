@@ -21,9 +21,9 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1700793935,,"wq"
+|2,0,1700836609,,"wq"
 :q
-|2,0,1700792289,,"q"
+|2,0,1700828769,,"q"
 :x
 |2,0,1700791882,,"x"
 :set number
@@ -81,9 +81,9 @@ $
 
 # Search String History (newest to oldest):
 ??\a
-|2,1,1700791576,63,"\\a"
+|2,1,1700828768,63,"\\a"
 ? @$
-|2,1,1700791576,,"@$"
+|2,1,1700828768,,"@$"
 ?/pane
 |2,1,1700740254,47,"pane"
 ?/MouseDown2Pane
@@ -140,31 +140,36 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	alias setcudaV="export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH"
-|3,0,0,1,1,0,1700791831,"alias setcudaV=\"export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH\""
-""1	LINE	0
-	#alias setcudaV="export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH"
-|3,1,1,1,1,0,1700793710,"#alias setcudaV=\"export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH\""
+""0	LINE	0
+	
+	#PATH="/homepur/1111****************/bin:$PATH"
+|3,1,0,1,2,0,1700828768,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
+"1	LINE	0
+	
+	#PATH="/homepur/1111****************/bin:$PATH"
+|3,0,1,1,2,0,1700799595,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
 "2	LINE	0
-	echo $PATH
-|3,0,2,1,1,0,1700793707,"echo $PATH"
+	#alias setcudaV="export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH"
+|3,0,2,1,1,0,1700793710,"#alias setcudaV=\"export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH\""
 "3	LINE	0
-	echo "*****************************PATH已更改***********************"
-|3,0,3,1,1,0,1700793704,"echo \"*****************************PATH已更改***********************\""
+	echo $PATH
+|3,0,3,1,1,0,1700793707,"echo $PATH"
 "4	LINE	0
-	#echo $PATH
-|3,0,4,1,1,0,1700793703,"#echo $PATH"
+	echo "*****************************PATH已更改***********************"
+|3,0,4,1,1,0,1700793704,"echo \"*****************************PATH已更改***********************\""
 "5	LINE	0
-	export PATH="/homepur/1111****************/bin:$PATH"
-|3,0,5,1,1,0,1700793703,"export PATH=\"/homepur/1111****************/bin:$PATH\""
+	#echo $PATH
+|3,0,5,1,1,0,1700793703,"#echo $PATH"
 "6	LINE	0
-	fi
-|3,0,6,1,1,0,1700792859,"fi"
+	export PATH="/homepur/1111****************/bin:$PATH"
+|3,0,6,1,1,0,1700793703,"export PATH=\"/homepur/1111****************/bin:$PATH\""
 "7	LINE	0
-	if [ -n "$BASH_VERSION" ]; then
-|3,0,7,1,1,0,1700792858,"if [ -n \"$BASH_VERSION\" ]; then"
+	fi
+|3,0,7,1,1,0,1700792859,"fi"
 "8	LINE	0
+	if [ -n "$BASH_VERSION" ]; then
+|3,0,8,1,1,0,1700792858,"if [ -n \"$BASH_VERSION\" ]; then"
+"9	LINE	0
 	PATH="/homepur/1111****************/bin:$PATH"
 	echo $PATH
 	echo "*****************************PATH已更改***********************"
@@ -182,305 +187,276 @@ $
 	export PATH="fffffffff1111111111111111111/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/mpi/bin:$PATH"
 	echo $PATH
 	#cowthink -f dragon  "以荒之名 独断万古"
-|3,0,8,1,17,0,1700791090,"PATH=\"/homepur/1111****************/bin:$PATH\"","echo $PATH","echo \"*****************************PATH已更改***********************\"","","export HISTFILESIZE=1000","#注意不要与其他端口冲突","export claship=\"http://127.0.0.1:7889\"","eval $(thefuck --alias fff)","export EDITOR=/usr/bin/vim","export CUDA_V=cuda-12.1","setcudaV","","#export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH",>79
+|3,0,9,1,17,0,1700791090,"PATH=\"/homepur/1111****************/bin:$PATH\"","echo $PATH","echo \"*****************************PATH已更改***********************\"","","export HISTFILESIZE=1000","#注意不要与其他端口冲突","export claship=\"http://127.0.0.1:7889\"","eval $(thefuck --alias fff)","export EDITOR=/usr/bin/vim","export CUDA_V=cuda-12.1","setcudaV","","#export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH",>79
 |<"#export MANPATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/man:$MANPATH","export PATH=\"fffffffff1111111111111111111/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/mpi/bin:$PATH\"","echo $PATH","#cowthink -f dragon  \"以荒之名 独断万古\""
-"9	LINE	0
-	export PATH=/home/inspur/nfs/ljh/.local/bin:$PATH
-|3,0,9,1,1,0,1700790164,"export PATH=/home/inspur/nfs/ljh/.local/bin:$PATH"
 "-	CHAR	0
 	s
 |3,0,36,0,1,0,1700747114,"s"
 
 # File marks:
-'0  20  4  ~/README.md
-|4,48,20,4,1700793935,"~/README.md"
-'1  190  10  ~/.zshrc
-|4,49,190,10,1700793804,"~/.zshrc"
-'2  167  122  ~/.zshrc
-|4,50,167,122,1700793551,"~/.zshrc"
-'3  167  122  ~/.zshrc
-|4,51,167,122,1700793551,"~/.zshrc"
-'4  166  9  ~/.zshrc
-|4,52,166,9,1700793411,"~/.zshrc"
-'5  166  9  ~/.zshrc
-|4,53,166,9,1700793411,"~/.zshrc"
-'6  166  9  ~/.zshrc
-|4,54,166,9,1700793411,"~/.zshrc"
-'7  166  9  ~/.zshrc
-|4,55,166,9,1700793411,"~/.zshrc"
-'8  4  0  ~/.zprofile
-|4,56,4,0,1700793278,"~/.zprofile"
-'9  194  0  ~/.zshrc
-|4,57,194,0,1700793266,"~/.zshrc"
+'0  197  48  ~/.zshrc
+|4,48,197,48,1700836609,"~/.zshrc"
+'1  8  0  ~
+|4,49,8,0,1700828770,"~"
+'2  47  0  /etc/zsh/zshrc
+|4,50,47,0,1700820703,"/etc/zsh/zshrc"
+'3  1  0  /etc/zsh/zshenv
+|4,51,1,0,1700820682,"/etc/zsh/zshenv"
+'4  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,52,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+'5  192  0  ~/.zshrc
+|4,53,192,0,1700800218,"~/.zshrc"
+'6  192  0  ~/.zshrc
+|4,54,192,0,1700800218,"~/.zshrc"
+'7  191  96  ~/.zshrc
+|4,55,191,96,1700800197,"~/.zshrc"
+'8  192  0  ~/.zshrc
+|4,56,192,0,1700800197,"~/.zshrc"
+'9  191  96  ~/.zshrc
+|4,57,191,96,1700800197,"~/.zshrc"
 
 # Jumplist (newest first):
--'  20  4  ~/README.md
-|4,39,20,4,1700793935,"~/README.md"
--'  1  0  ~/README.md
-|4,39,1,0,1700793914,"~/README.md"
--'  190  10  ~/.zshrc
-|4,39,190,10,1700793804,"~/.zshrc"
--'  190  10  ~/.zshrc
-|4,39,190,10,1700793804,"~/.zshrc"
+-'  197  48  ~/.zshrc
+|4,39,197,48,1700836609,"~/.zshrc"
+-'  195  39  ~/.zshrc
+|4,39,195,39,1700836595,"~/.zshrc"
+-'  30  0  ~/.zshrc
+|4,39,30,0,1700836556,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793624,"~/.zshrc"
+|4,39,1,0,1700836554,"~/.zshrc"
+-'  8  0  ~
+|4,39,8,0,1700828770,"~"
+-'  8  0  ~
+|4,39,8,0,1700828770,"~"
+-'  56  0  ~
+|4,39,56,0,1700828768,"~"
+-'  56  0  ~
+|4,39,56,0,1700828768,"~"
+-'  47  0  /etc/zsh/zshrc
+|4,39,47,0,1700820703,"/etc/zsh/zshrc"
+-'  47  0  /etc/zsh/zshrc
+|4,39,47,0,1700820703,"/etc/zsh/zshrc"
+-'  47  0  /etc/zsh/zshrc
+|4,39,47,0,1700820703,"/etc/zsh/zshrc"
+-'  47  0  /etc/zsh/zshrc
+|4,39,47,0,1700820703,"/etc/zsh/zshrc"
+-'  91  0  /etc/zsh/zshrc
+|4,39,91,0,1700820696,"/etc/zsh/zshrc"
+-'  91  0  /etc/zsh/zshrc
+|4,39,91,0,1700820696,"/etc/zsh/zshrc"
+-'  91  0  /etc/zsh/zshrc
+|4,39,91,0,1700820696,"/etc/zsh/zshrc"
+-'  91  0  /etc/zsh/zshrc
+|4,39,91,0,1700820696,"/etc/zsh/zshrc"
+-'  1  0  /etc/zsh/zshrc
+|4,39,1,0,1700820688,"/etc/zsh/zshrc"
+-'  1  0  /etc/zsh/zshrc
+|4,39,1,0,1700820688,"/etc/zsh/zshrc"
+-'  1  0  /etc/zsh/zshrc
+|4,39,1,0,1700820688,"/etc/zsh/zshrc"
+-'  1  0  /etc/zsh/zshrc
+|4,39,1,0,1700820688,"/etc/zsh/zshrc"
+-'  1  0  /etc/zsh/zshenv
+|4,39,1,0,1700820682,"/etc/zsh/zshenv"
+-'  1  0  /etc/zsh/zshenv
+|4,39,1,0,1700820682,"/etc/zsh/zshenv"
+-'  1  0  /etc/zsh/zshenv
+|4,39,1,0,1700820682,"/etc/zsh/zshenv"
+-'  1  0  /etc/zsh/zshenv
+|4,39,1,0,1700820682,"/etc/zsh/zshenv"
+-'  1  0  /etc/zsh/zshenv
+|4,39,1,0,1700820682,"/etc/zsh/zshenv"
+-'  1  0  /etc/zsh/zshenv
+|4,39,1,0,1700820682,"/etc/zsh/zshenv"
+-'  1  0  /etc/zsh/zshenv
+|4,39,1,0,1700820682,"/etc/zsh/zshenv"
+-'  1  0  /etc/zsh/zshenv
+|4,39,1,0,1700820682,"/etc/zsh/zshenv"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  6  22  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/run.sh
+|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800218,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793624,"~/.zshrc"
--'  167  122  ~/.zshrc
-|4,39,167,122,1700793551,"~/.zshrc"
--'  167  122  ~/.zshrc
-|4,39,167,122,1700793551,"~/.zshrc"
--'  167  122  ~/.zshrc
-|4,39,167,122,1700793551,"~/.zshrc"
--'  167  122  ~/.zshrc
-|4,39,167,122,1700793551,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793526,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793526,"~/.zshrc"
--'  166  9  ~/.zshrc
-|4,39,166,9,1700793411,"~/.zshrc"
--'  166  9  ~/.zshrc
-|4,39,166,9,1700793411,"~/.zshrc"
--'  166  9  ~/.zshrc
-|4,39,166,9,1700793411,"~/.zshrc"
--'  166  9  ~/.zshrc
-|4,39,166,9,1700793411,"~/.zshrc"
--'  166  9  ~/.zshrc
-|4,39,166,9,1700793411,"~/.zshrc"
--'  166  9  ~/.zshrc
-|4,39,166,9,1700793411,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793390,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793390,"~/.zshrc"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  4  0  ~/.zprofile
-|4,39,4,0,1700793278,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  1  0  ~/.zprofile
-|4,39,1,0,1700793273,"~/.zprofile"
--'  194  0  ~/.zshrc
-|4,39,194,0,1700793266,"~/.zshrc"
--'  193  0  ~/.zshrc
-|4,39,193,0,1700793266,"~/.zshrc"
--'  197  0  ~/.zshrc
-|4,39,197,0,1700793266,"~/.zshrc"
--'  196  0  ~/.zshrc
-|4,39,196,0,1700793266,"~/.zshrc"
--'  197  0  ~/.zshrc
-|4,39,197,0,1700793266,"~/.zshrc"
--'  196  0  ~/.zshrc
-|4,39,196,0,1700793266,"~/.zshrc"
--'  196  0  ~/.zshrc
-|4,39,196,0,1700793266,"~/.zshrc"
--'  194  0  ~/.zshrc
-|4,39,194,0,1700793266,"~/.zshrc"
--'  193  0  ~/.zshrc
-|4,39,193,0,1700793266,"~/.zshrc"
--'  197  0  ~/.zshrc
-|4,39,197,0,1700793266,"~/.zshrc"
--'  196  0  ~/.zshrc
-|4,39,196,0,1700793266,"~/.zshrc"
--'  197  0  ~/.zshrc
-|4,39,197,0,1700793266,"~/.zshrc"
--'  196  0  ~/.zshrc
-|4,39,196,0,1700793266,"~/.zshrc"
--'  196  0  ~/.zshrc
-|4,39,196,0,1700793266,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793223,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793223,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793223,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793223,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793100,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793100,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793100,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700793100,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  189  10  ~/.zshrc
-|4,39,189,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  189  10  ~/.zshrc
-|4,39,189,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  189  10  ~/.zshrc
-|4,39,189,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  189  10  ~/.zshrc
-|4,39,189,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
--'  188  10  ~/.zshrc
-|4,39,188,10,1700792925,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700792913,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700792913,"~/.zshrc"
+|4,39,1,0,1700800210,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1700792913,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700792913,"~/.zshrc"
--'  3  0  ~/.zprofile
-|4,39,3,0,1700792881,"~/.zprofile"
--'  3  0  ~/.zprofile
-|4,39,3,0,1700792881,"~/.zprofile"
+|4,39,1,0,1700800210,"~/.zshrc"
+-'  191  96  ~/.zshrc
+|4,39,191,96,1700800197,"~/.zshrc"
+-'  191  96  ~/.zshrc
+|4,39,191,96,1700800197,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800197,"~/.zshrc"
+-'  191  96  ~/.zshrc
+|4,39,191,96,1700800197,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800197,"~/.zshrc"
+-'  191  96  ~/.zshrc
+|4,39,191,96,1700800197,"~/.zshrc"
+-'  192  0  ~/.zshrc
+|4,39,192,0,1700800197,"~/.zshrc"
 
 # History of marks within files (newest to oldest):
 
-> ~/README.md
-	*	1700793935	0
-	"	20	4
-	^	20	5
-	.	20	5
-	+	1	39
-	+	1	178
-	+	1	0
-	+	15	0
-	+	14	169
-	+	20	127
-	+	20	5
-
 > ~/.zshrc
-	*	1700793804	0
-	"	190	10
-	^	190	11
-	.	158	10
-	+	166	13
-	+	168	0
-	+	201	23
-	+	176	51
-	+	187	51
-	+	176	51
-	+	183	56
-	+	201	23
-	+	201	7
-	+	201	8
-	+	201	37
-	+	201	46
-	+	201	0
+	*	1700836608	0
+	"	197	48
+	^	197	49
+	.	197	48
 	+	187	140
-	+	201	75
+	+	202	75
 	+	187	94
-	+	201	0
-	+	201	16
-	+	201	0
-	+	201	26
+	+	202	0
+	+	202	16
+	+	202	0
+	+	202	26
 	+	184	0
-	+	201	0
-	+	201	25
-	+	201	4
-	+	201	0
-	+	201	9
-	+	201	70
-	+	201	40
-	+	201	0
+	+	202	0
+	+	202	25
+	+	202	4
+	+	202	0
+	+	202	9
+	+	202	70
+	+	202	40
+	+	202	0
 	+	188	0
-	+	195	45
+	+	196	45
 	+	188	0
-	+	191	0
+	+	190	82
 	+	188	0
-	+	195	0
+	+	196	0
 	+	188	6
-	+	194	0
+	+	195	0
 	+	166	1
 	+	188	72
 	+	188	0
 	+	166	0
-	+	200	10
-	+	200	0
+	+	201	10
+	+	201	0
 	+	166	0
-	+	193	0
-	+	199	13
+	+	194	0
+	+	200	13
 	+	166	9
 	+	167	15
 	+	167	122
@@ -498,10 +474,10 @@ $
 	+	172	73
 	+	173	9
 	+	188	0
-	+	200	0
 	+	201	0
+	+	202	0
+	+	196	0
 	+	195	0
-	+	194	0
 	+	138	9
 	+	139	10
 	+	138	9
@@ -533,6 +509,49 @@ $
 	+	156	9
 	+	157	15
 	+	158	10
+	+	212	0
+	+	190	178
+	+	208	0
+	+	213	0
+	+	190	123
+	+	190	178
+	+	190	175
+	+	190	81
+	+	190	82
+	+	191	0
+	+	191	95
+	+	184	37
+	+	186	34
+	+	195	51
+	+	197	48
+
+> /etc/zsh/zshrc
+	*	1700820703	0
+	"	47	0
+
+> /etc/zsh/zshenv
+	*	1700820680	0
+	"	1	0
+
+> ~/script/cudaTest/MgpusTest/run.sh
+	*	1700818680	0
+	"	6	22
+	^	6	23
+	.	6	22
+	+	6	22
+
+> ~/README.md
+	*	1700793935	0
+	"	20	4
+	^	20	5
+	.	20	5
+	+	1	39
+	+	1	178
+	+	1	0
+	+	15	0
+	+	14	169
+	+	20	127
+	+	20	5
 
 > ~/.zprofile
 	*	1700793278	0
@@ -1324,19 +1343,4 @@ $
 
 > ~/.config/rc.conf
 	*	1684886947	0
-	"	1	0
-
-> ~/download/grafana-clock-panel/CHANGELOG.md
-	*	1684839759	0
-	"	1	0
-
-> ~/software/clash/config.yaml
-	*	1684835489	0
-	"	6	35
-	^	6	36
-	.	6	35
-	+	6	35
-
-> ~/.zcompdump-inspur1-5.8
-	*	1684834577	0
 	"	1	0

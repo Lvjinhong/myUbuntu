@@ -3,6 +3,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -163,7 +164,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias nv='watch -n 1 nvidia-smi'
 alias mm='mamba'
-alias setOriginPath='export PATH=$(getconf PATH)'
+
 alias setcudaV='export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH'
 alias setproxy='export https_proxy=$claship http_proxy=$claship all_proxy=${claship/http/socks5}; echo '开始测试是否连通google';proxy'
 alias unsetproxy='unset https_proxy http_proxy all_proxy'
@@ -180,15 +181,36 @@ add_to_path_if_exists() {
     for dir_path in "$@"; do
         if [[ -d "$dir_path" ]] && [[ ":$PATH:" != *":$dir_path:"* ]]; then
             export PATH="$dir_path:$PATH"
-            echo "成功加载 $dir_path"
+            echo "成功加载PATH变量 $dir_path"
         else
-            echo "检测到 $dir_path 不需加载"
+            echo "检测到PATH变量 $dir_path 不需加载"
         fi
     done
 }
 
+add_to_LD_LIBRARY_PATH_if_exists() {
+    for dir_path in "$@"; do
+        if [[ -d "$dir_path" ]] && [[ ":$LD_LIBRARY_PATH:" != *":$dir_path:"* ]]; then
+            export LD_LIBRARY_PATH="$dir_path:$LD_LIBRARY_PATH"
+            echo "成功加载LD_LIBRARY_PATH变量  $dir_path"
+        else
+            echo "检测到LD_LIBRARY_PATH变量  $dir_path 不需加载"
+        fi
+    done
+}
+
+alias setOriginPath='export PATH=$(getconf PATH)'
+alias setOrigin_LD_LIBRARY_PATH='export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/libibverbs:/usr/local/lib64:/usr/lib"'
 add_to_path_if_exists /home/ljh/.local/bin /home/inspur/nfs/ljh/SoftWare/vim/bin \
-/home/inspur/nfs/ljh/SoftWare/neovim/bin  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/mpi/bin
+/home/inspur/nfs/ljh/SoftWare/neovim/bin /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin \
+/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/12.3/openmpi4/latest/bin
+setOrigin_LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/libibverbs:/usr/local/lib64:/usr/lib" 
+add_to_LD_LIBRARY_PATH_if_exists /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/12.3/openmpi4/latest/lib \
+/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/nccl/lib \
+/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/12.3/hpcx/hpcx-2.16/nccl_rdma_sharp_plugin/lib
+
+
 
 #--------------------------------- export 常用应用软件环境变量--------------------------------------
 
@@ -204,14 +226,11 @@ export CUDA_V=cuda-12.1
 #------------------------------------应用初始化----------------------------------------
 eval $(thefuck --alias fff)
 setcudaV
-cowthink -f dragon  "以荒之名 独断万古"
+#cowthink -f dragon  "以荒之名 独断万古"
 source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
 
 
-
-
-#PATH="/homepur/1111****************/bin:$PATH"
-#export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH
+# export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH
 #export MANPATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/man:$MANPATH
 
 
