@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/copilo
+~MSle0~/pane
 
 # Last Substitute Search Pattern:
 ~MSle0&int
@@ -20,14 +20,26 @@
 $
 
 # Command Line History (newest to oldest):
-:q
-|2,0,1699672559,,"q"
 :wq
-|2,0,1699667922,,"wq"
+|2,0,1700793935,,"wq"
+:q
+|2,0,1700792289,,"q"
+:x
+|2,0,1700791882,,"x"
+:set number
+|2,0,1700791800,,"set number"
+:set modifiable
+|2,0,1700733103,,"set modifiable"
+:Copilot enable
+|2,0,1700731887,,"Copilot enable"
+:Copilot setup
+|2,0,1700731833,,"Copilot setup"
+:https://github.com/nvm-sh/nvm
+|2,0,1700731824,,"https://github.com/nvm-sh/nvm"
+:WQ
+|2,0,1700708205,,"WQ"
 :Wq
 |2,0,1699667413,,"Wq"
-:Copilot setup
-|2,0,1699665299,,"Copilot setup"
 ::Copilot setup
 |2,0,1699665294,,":Copilot setup"
 :q!
@@ -36,8 +48,6 @@ $
 |2,0,1694395261,,"Q"
 :q\
 |2,0,1693482748,,"q\\"
-:x
-|2,0,1693454727,,"x"
 :%s/int/long long/g
 |2,0,1690360483,,"%s/int/long long/g"
 :s/int/long long/g
@@ -70,12 +80,20 @@ $
 |2,0,1684590394,,"wq!"
 
 # Search String History (newest to oldest):
+??\a
+|2,1,1700791576,63,"\\a"
+? @$
+|2,1,1700791576,,"@$"
+?/pane
+|2,1,1700740254,47,"pane"
+?/MouseDown2Pane
+|2,1,1700740224,47,"MouseDown2Pane"
+?/kill-pane
+|2,1,1700740208,47,"kill-pane"
+?/7890
+|2,1,1700730787,47,"7890"
 ?/copilo
 |2,1,1699667678,47,"copilo"
-??\a
-|2,1,1694395259,63,"\\a"
-? @$
-|2,1,1694395259,,"@$"
 ?/shop
 |2,1,1691218900,47,"shop"
 ?/shopt
@@ -123,685 +141,470 @@ $
 
 # Registers:
 "0	LINE	0
-	cowsay -f dragon cowthink -f dragon  "以荒之名 独断万古"  "以荒之名 独断万古"
-|3,0,0,1,1,0,1694395259,"cowsay -f dragon cowthink -f dragon  \"以荒之名 独断万古\"  \"以荒之名 独断万古\""
+	alias setcudaV="export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH"
+|3,0,0,1,1,0,1700791831,"alias setcudaV=\"export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH\""
 ""1	LINE	0
-	keymap.set("v", "o", "i")
-	keymap.set("v", "i", "k")
-	keymap.set("v", "k", "j")
-	keymap.set("v", "j", "h")
-	
-	keymap.set("n", "o", "i")
-	keymap.set("n", "i", "k")
-	keymap.set("n", "k", "j")
-	keymap.set("n", "j", "h")
-	keymap.set("n", "L", "$")
-	keymap.set("n", "J", "^")
-	
-	keymap.set("v", "L", "$")
-	keymap.set("v", "J", "^")
-|3,1,1,1,14,0,1699667915,"keymap.set(\"v\", \"o\", \"i\")","keymap.set(\"v\", \"i\", \"k\")","keymap.set(\"v\", \"k\", \"j\")","keymap.set(\"v\", \"j\", \"h\")","","keymap.set(\"n\", \"o\", \"i\")","keymap.set(\"n\", \"i\", \"k\")","keymap.set(\"n\", \"k\", \"j\")","keymap.set(\"n\", \"j\", \"h\")","keymap.set(\"n\", \"L\", \"$\")","keymap.set(\"n\", \"J\", \"^\")","","keymap.set(\"v\", \"L\", \"$\")","keymap.set(\"v\", \"J\", \"^\")"
+	#alias setcudaV="export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH"
+|3,1,1,1,1,0,1700793710,"#alias setcudaV=\"export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH\""
 "2	LINE	0
-	
-	def quick_sort(lists, left, right):
-	    if left >= right:
-	        return lists
-	    key = lists[left]
-	    low = left
-	    high = right
-	    while left < right:
-	        while left < right and lists[right] >= key:
-	            right -= 1
-	        lists[left] = lists[right]
-	        while left < right and lists[left] <= key:
-	            left += 1
-	        lists[right] = lists[left]
-	    lists[right] = key
-	    quick_sort(lists, low, left - 1)
-	    quick_sort(lists, left + 1, high)
-	    return lists
-	
-|3,0,2,1,19,0,1699665194,"","def quick_sort(lists, left, right):","    if left >= right:","        return lists","    key = lists[left]","    low = left","    high = right","    while left < right:","        while left < right and lists[right] >= key:","            right -= 1","        lists[left] = lists[right]","        while left < right and lists[left] <= key:","            left += 1","        lists[right] = lists[left]","    lists[right] = key",>38
-|<"    quick_sort(lists, low, left - 1)","    quick_sort(lists, left + 1, high)","    return lists",""
+	echo $PATH
+|3,0,2,1,1,0,1700793707,"echo $PATH"
 "3	LINE	0
-	
-	/home/inspur/nfs/ljh/Project/AIGC/vits|2|1697860758
-	/home/inspur/nfs/ljh/Project/AIGC|2|1697860755
-	/home/inspur/nfs/ljh/Project/AIGC/vits/mybert-vits2|3|1697860771
-|3,0,3,1,4,0,1699664866,"","/home/inspur/nfs/ljh/Project/AIGC/vits|2|1697860758","/home/inspur/nfs/ljh/Project/AIGC|2|1697860755","/home/inspur/nfs/ljh/Project/AIGC/vits/mybert-vits2|3|1697860771"
+	echo "*****************************PATH已更改***********************"
+|3,0,3,1,1,0,1700793704,"echo \"*****************************PATH已更改***********************\""
 "4	LINE	0
-	
-|3,0,4,1,1,0,1699664522,""
+	#echo $PATH
+|3,0,4,1,1,0,1700793703,"#echo $PATH"
 "5	LINE	0
-	export NVM_DIR="$HOME/.nvm"
-|3,0,5,1,1,0,1699664156,"export NVM_DIR=\"$HOME/.nvm\""
+	export PATH="/homepur/1111****************/bin:$PATH"
+|3,0,5,1,1,0,1700793703,"export PATH=\"/homepur/1111****************/bin:$PATH\""
 "6	LINE	0
-	export NVM_DIR="$HOME/.nvm"
-|3,0,6,1,1,0,1699664156,"export NVM_DIR=\"$HOME/.nvm\""
+	fi
+|3,0,6,1,1,0,1700792859,"fi"
 "7	LINE	0
-	
-|3,0,7,1,1,0,1699664130,""
+	if [ -n "$BASH_VERSION" ]; then
+|3,0,7,1,1,0,1700792858,"if [ -n \"$BASH_VERSION\" ]; then"
 "8	LINE	0
+	PATH="/homepur/1111****************/bin:$PATH"
+	echo $PATH
+	echo "*****************************PATH已更改***********************"
 	
-|3,0,8,1,1,0,1699664126,""
+	export HISTFILESIZE=1000
+	#注意不要与其他端口冲突
+	export claship="http://127.0.0.1:7889"
+	eval $(thefuck --alias fff)
+	export EDITOR=/usr/bin/vim
+	export CUDA_V=cuda-12.1
+	setcudaV
+	
+	#export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH
+	#export MANPATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/man:$MANPATH
+	export PATH="fffffffff1111111111111111111/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/mpi/bin:$PATH"
+	echo $PATH
+	#cowthink -f dragon  "以荒之名 独断万古"
+|3,0,8,1,17,0,1700791090,"PATH=\"/homepur/1111****************/bin:$PATH\"","echo $PATH","echo \"*****************************PATH已更改***********************\"","","export HISTFILESIZE=1000","#注意不要与其他端口冲突","export claship=\"http://127.0.0.1:7889\"","eval $(thefuck --alias fff)","export EDITOR=/usr/bin/vim","export CUDA_V=cuda-12.1","setcudaV","","#export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH",>79
+|<"#export MANPATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/man:$MANPATH","export PATH=\"fffffffff1111111111111111111/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/mpi/bin:$PATH\"","echo $PATH","#cowthink -f dragon  \"以荒之名 独断万古\""
 "9	LINE	0
-	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-|3,0,9,1,1,0,1699664117,"[ -s \"$NVM_DIR/bash_completion\" ] && \\. \"$NVM_DIR/bash_completion\"  # This loads nvm bash_completion"
+	export PATH=/home/inspur/nfs/ljh/.local/bin:$PATH
+|3,0,9,1,1,0,1700790164,"export PATH=/home/inspur/nfs/ljh/.local/bin:$PATH"
 "-	CHAR	0
-	/home/inspur/nfs/ljh/Project|2|1697860753
-|3,0,36,0,1,0,1699664865,"/home/inspur/nfs/ljh/Project|2|1697860753"
+	s
+|3,0,36,0,1,0,1700747114,"s"
 
 # File marks:
-'0  1  0  ~/SoftWare/neovim/Cmake
-|4,48,1,0,1699672559,"~/SoftWare/neovim/Cmake"
-'1  52  0  ~/.vimrc
-|4,49,52,0,1699669675,"~/.vimrc"
-'2  10  0  ~/.config/nvim/lua/config/keymaps.lua
-|4,50,10,0,1699667922,"~/.config/nvim/lua/config/keymaps.lua"
-'3  14  36  ~/.config/nvim/lua/config/lazy.lua
-|4,51,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
-'4  172  12  ~/.zshrc
-|4,52,172,12,1699667415,"~/.zshrc"
-'5  1  0  ~/.zshrc
-|4,53,1,0,1699665919,"~/.zshrc"
-'6  1  0  ~/.zshrc
-|4,54,1,0,1699665919,"~/.zshrc"
-'7  175  0  ~/.zshrc
-|4,55,175,0,1699665915,"~/.zshrc"
-'8  175  0  ~/.zshrc
-|4,56,175,0,1699665915,"~/.zshrc"
-'9  174  0  ~/.zshrc
-|4,57,174,0,1699665915,"~/.zshrc"
+'0  20  4  ~/README.md
+|4,48,20,4,1700793935,"~/README.md"
+'1  190  10  ~/.zshrc
+|4,49,190,10,1700793804,"~/.zshrc"
+'2  167  122  ~/.zshrc
+|4,50,167,122,1700793551,"~/.zshrc"
+'3  167  122  ~/.zshrc
+|4,51,167,122,1700793551,"~/.zshrc"
+'4  166  9  ~/.zshrc
+|4,52,166,9,1700793411,"~/.zshrc"
+'5  166  9  ~/.zshrc
+|4,53,166,9,1700793411,"~/.zshrc"
+'6  166  9  ~/.zshrc
+|4,54,166,9,1700793411,"~/.zshrc"
+'7  166  9  ~/.zshrc
+|4,55,166,9,1700793411,"~/.zshrc"
+'8  4  0  ~/.zprofile
+|4,56,4,0,1700793278,"~/.zprofile"
+'9  194  0  ~/.zshrc
+|4,57,194,0,1700793266,"~/.zshrc"
 
 # Jumplist (newest first):
--'  1  0  ~/SoftWare/neovim/Cmake
-|4,39,1,0,1699672559,"~/SoftWare/neovim/Cmake"
--'  52  0  ~/.vimrc
-|4,39,52,0,1699669675,"~/.vimrc"
--'  52  0  ~/.vimrc
-|4,39,52,0,1699669675,"~/.vimrc"
--'  10  0  ~/.config/nvim/lua/config/keymaps.lua
-|4,39,10,0,1699667922,"~/.config/nvim/lua/config/keymaps.lua"
--'  10  0  ~/.config/nvim/lua/config/keymaps.lua
-|4,39,10,0,1699667922,"~/.config/nvim/lua/config/keymaps.lua"
--'  11  0  ~/.config/nvim/lua/config/keymaps.lua
-|4,39,11,0,1699667915,"~/.config/nvim/lua/config/keymaps.lua"
--'  11  0  ~/.config/nvim/lua/config/keymaps.lua
-|4,39,11,0,1699667915,"~/.config/nvim/lua/config/keymaps.lua"
--'  1  0  ~/.vimrc
-|4,39,1,0,1699667845,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1699667845,"~/.vimrc"
--'  1  0  ~/.config/nvim/lua/config/keymaps.lua
-|4,39,1,0,1699667829,"~/.config/nvim/lua/config/keymaps.lua"
--'  1  0  ~/.config/nvim/lua/config/keymaps.lua
-|4,39,1,0,1699667829,"~/.config/nvim/lua/config/keymaps.lua"
--'  14  36  ~/.config/nvim/lua/config/lazy.lua
-|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
--'  14  36  ~/.config/nvim/lua/config/lazy.lua
-|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
--'  14  36  ~/.config/nvim/lua/config/lazy.lua
-|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
--'  14  36  ~/.config/nvim/lua/config/lazy.lua
-|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
--'  14  36  ~/.config/nvim/lua/config/lazy.lua
-|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
--'  14  36  ~/.config/nvim/lua/config/lazy.lua
-|4,39,14,36,1699667719,"~/.config/nvim/lua/config/lazy.lua"
--'  32  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
--'  32  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
--'  32  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
--'  32  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
--'  32  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
--'  32  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,32,0,1699667676,"~/.config/nvim/lua/config/lazy.lua"
--'  1  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
--'  1  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
--'  1  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
--'  1  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
--'  1  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
--'  1  0  ~/.config/nvim/lua/config/lazy.lua
-|4,39,1,0,1699667663,"~/.config/nvim/lua/config/lazy.lua"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
--'  172  12  ~/.zshrc
-|4,39,172,12,1699667415,"~/.zshrc"
+-'  20  4  ~/README.md
+|4,39,20,4,1700793935,"~/README.md"
+-'  1  0  ~/README.md
+|4,39,1,0,1700793914,"~/README.md"
+-'  190  10  ~/.zshrc
+|4,39,190,10,1700793804,"~/.zshrc"
+-'  190  10  ~/.zshrc
+|4,39,190,10,1700793804,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793624,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793624,"~/.zshrc"
+-'  167  122  ~/.zshrc
+|4,39,167,122,1700793551,"~/.zshrc"
+-'  167  122  ~/.zshrc
+|4,39,167,122,1700793551,"~/.zshrc"
+-'  167  122  ~/.zshrc
+|4,39,167,122,1700793551,"~/.zshrc"
+-'  167  122  ~/.zshrc
+|4,39,167,122,1700793551,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793526,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793526,"~/.zshrc"
+-'  166  9  ~/.zshrc
+|4,39,166,9,1700793411,"~/.zshrc"
+-'  166  9  ~/.zshrc
+|4,39,166,9,1700793411,"~/.zshrc"
+-'  166  9  ~/.zshrc
+|4,39,166,9,1700793411,"~/.zshrc"
+-'  166  9  ~/.zshrc
+|4,39,166,9,1700793411,"~/.zshrc"
+-'  166  9  ~/.zshrc
+|4,39,166,9,1700793411,"~/.zshrc"
+-'  166  9  ~/.zshrc
+|4,39,166,9,1700793411,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793390,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793390,"~/.zshrc"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  4  0  ~/.zprofile
+|4,39,4,0,1700793278,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  1  0  ~/.zprofile
+|4,39,1,0,1700793273,"~/.zprofile"
+-'  194  0  ~/.zshrc
+|4,39,194,0,1700793266,"~/.zshrc"
+-'  193  0  ~/.zshrc
+|4,39,193,0,1700793266,"~/.zshrc"
+-'  197  0  ~/.zshrc
+|4,39,197,0,1700793266,"~/.zshrc"
+-'  196  0  ~/.zshrc
+|4,39,196,0,1700793266,"~/.zshrc"
+-'  197  0  ~/.zshrc
+|4,39,197,0,1700793266,"~/.zshrc"
+-'  196  0  ~/.zshrc
+|4,39,196,0,1700793266,"~/.zshrc"
+-'  196  0  ~/.zshrc
+|4,39,196,0,1700793266,"~/.zshrc"
+-'  194  0  ~/.zshrc
+|4,39,194,0,1700793266,"~/.zshrc"
+-'  193  0  ~/.zshrc
+|4,39,193,0,1700793266,"~/.zshrc"
+-'  197  0  ~/.zshrc
+|4,39,197,0,1700793266,"~/.zshrc"
+-'  196  0  ~/.zshrc
+|4,39,196,0,1700793266,"~/.zshrc"
+-'  197  0  ~/.zshrc
+|4,39,197,0,1700793266,"~/.zshrc"
+-'  196  0  ~/.zshrc
+|4,39,196,0,1700793266,"~/.zshrc"
+-'  196  0  ~/.zshrc
+|4,39,196,0,1700793266,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793223,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793223,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793223,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793223,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793100,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699667393,"~/.zshrc"
+|4,39,1,0,1700793100,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
+|4,39,1,0,1700793100,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
+|4,39,1,0,1700793100,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  189  10  ~/.zshrc
+|4,39,189,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  189  10  ~/.zshrc
+|4,39,189,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  189  10  ~/.zshrc
+|4,39,189,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  189  10  ~/.zshrc
+|4,39,189,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
+-'  188  10  ~/.zshrc
+|4,39,188,10,1700792925,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
+|4,39,1,0,1700792913,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
+|4,39,1,0,1700792913,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
+|4,39,1,0,1700792913,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1699665919,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
--'  175  0  ~/.zshrc
-|4,39,175,0,1699665915,"~/.zshrc"
--'  174  0  ~/.zshrc
-|4,39,174,0,1699665915,"~/.zshrc"
+|4,39,1,0,1700792913,"~/.zshrc"
+-'  3  0  ~/.zprofile
+|4,39,3,0,1700792881,"~/.zprofile"
+-'  3  0  ~/.zprofile
+|4,39,3,0,1700792881,"~/.zprofile"
 
 # History of marks within files (newest to oldest):
 
-> ~/SoftWare/neovim/Cmake
-	*	1699672557	0
-	"	1	0
-
-> ~/.vimrc
-	*	1699669673	0
-	"	52	0
-	^	3	9
-	.	3	8
-	+	1	52
-	+	1	39
-	+	1	0
-	+	1	69
-	+	1	11
-	+	1	22
-	+	1	35
-	+	1	53
-	+	1	68
-	+	1	8
-	+	1	75
-	+	1	73
-	+	1	75
-	+	1	39
-	+	1	26
-	+	1	13
-	+	1	52
-	+	1	0
-	+	1	13
-	+	1	26
-	+	1	65
-	+	1	74
-	+	1	0
-	+	1	13
-	+	1	26
-	+	1	65
-	+	1	0
-	+	1	13
-	+	1	26
-	+	1	39
-	+	1	52
-	+	1	65
-	+	1	67
-	+	1	50
-	+	1	63
-	+	1	77
-	+	1	115
-	+	1	78
-	+	1	91
-	+	1	104
-	+	1	0
-	+	13	12
-	+	13	11
-	+	13	9
-	+	13	12
-	+	9	13
-	+	9	12
-	+	9	0
-	+	13	0
-	+	1	0
-	+	60	0
-	+	49	0
-	+	3	8
-
-> ~/.config/nvim/lua/config/keymaps.lua
-	*	1699667921	0
-	"	10	0
-	^	10	0
-	.	9	30
-	+	11	0
-	+	7	25
-	+	9	30
-
-> ~/.config/nvim/lua/config/lazy.lua
-	*	1699667719	0
-	"	14	36
-	^	14	37
-	.	13	52
-	+	15	0
-	+	13	52
-
-> ~/.zshrc
-	*	1699667413	0
-	"	172	12
-	^	172	13
-	.	173	11
-	+	278	1
-	+	279	1
-	+	280	1
-	+	283	1
-	+	284	1
-	+	285	1
-	+	286	1
-	+	299	1
-	+	1	0
-	+	299	0
-	+	288	34
-	+	286	1
-	+	287	1
-	+	288	1
-	+	296	60
-	+	297	103
-	+	291	0
-	+	292	0
-	+	291	8
-	+	292	23
-	+	294	0
-	+	293	14
-	+	291	11
-	+	294	19
-	+	288	33
-	+	289	0
-	+	291	0
-	+	1	0
-	+	289	18
-	+	288	33
-	+	271	0
-	+	298	24
-	+	301	26
-	+	301	0
-	+	302	0
-	+	299	0
-	+	300	25
-	+	302	0
-	+	301	0
-	+	303	19
-	+	304	158
-	+	304	0
-	+	280	0
-	+	281	16
-	+	279	12
-	+	1	20
-	+	1	0
-	+	290	51
-	+	256	0
-	+	222	26
-	+	235	26
-	+	225	0
-	+	224	0
-	+	226	0
-	+	229	0
-	+	228	0
-	+	231	0
-	+	230	0
-	+	233	0
-	+	232	0
-	+	234	0
-	+	227	0
-	+	256	26
-	+	256	25
-	+	237	0
-	+	255	25
-	+	256	0
-	+	244	109
-	+	245	0
-	+	236	13
-	+	245	5
-	+	239	24
-	+	249	0
-	+	251	46
-	+	245	0
-	+	1	0
-	+	1	16
-	+	1	36
-	+	1	0
-	+	1	67
-	+	1	18
-	+	1	86
-	+	1	0
-	+	1	82
-	+	1	0
-	+	217	99
-	+	1	0
-	+	197	99
-	+	169	0
-	+	197	0
-	+	170	0
-	+	179	0
-	+	173	35
-	+	179	0
-	+	173	35
-	+	177	0
-	+	197	0
-	+	173	35
-	+	175	0
-	+	173	11
-
-> ~/.zs0
-	*	1699665864	0
-	"	1	0
-
-> ~/Project/AIGC/vits/MgpuTest/t.py
-	*	1699665848	0
-	"	18	16
-	^	18	17
-	.	2	4
-	+	19	0
-	+	2	4
-
-> ~/.z
-	*	1699664870	0
-	"	67	80
-	^	67	81
-	.	67	80
-	+	1	60
-	+	67	80
-
-> ~/.gitignore
-	*	1699664843	0
-	"	49	3
-	^	49	4
-	.	49	3
-	+	8	16
-	+	30	9
-	+	40	0
-	+	41	6
-	+	42	7
-	+	48	3
-	+	46	0
-	+	49	3
-
-> ~/.gitconfig
-	*	1699664472	0
-	"	3	22
-	^	3	23
-	.	3	22
-	+	3	22
-
-> ~/zshrc
-	*	1699664193	0
-	"	1	0
-
-> ~/.zsh
-	*	1699663562	0
-	"	1	0
-
-> ~/.bashrc
-	*	1696341785	0
-	"	145	0
-	^	141	67
-	.	141	66
-	+	141	66
-
-> ~/.profile
-	*	1696341771	0
-	"	1	0
-
-> ~/Project/HPC/PAC/PAC22/PACfirst/PAC22/Makefile
-	*	1696052743	0
-	"	5	36
-	^	5	40
-	.	5	39
-	+	5	39
-
-> /etc/n2n/supernode.conf
-	*	1694529621	0
-	"	1	0
-
-> ~/script/cudaTest/torchTest.py
-	*	1694403713	0
-	"	2	24
-	^	2	25
-	.	2	24
-	+	11	63
-	+	1	4
-	+	2	24
-	p	1	0
-
-> ~/Project/HPC/PAC/PAC22/PAC22-SYCL/onetest/run.sh
-	*	1693875575	0
-	"	1	59
-	^	1	60
-	.	1	60
-	+	1	60
-
-> ~/Project/HPC/IPCC/IPCC22/pivot/run.sh
-	*	1693470838	0
-	"	5	35
-	^	5	36
-	.	5	23
-	+	5	23
-
-> ~/Project/HPC/IPCC/IPCC22/first/mpi_run.sh
-	*	1693465339	0
-	"	5	60
-	^	5	61
-	.	5	60
-	+	5	60
-
-> ~/Project/ASC/Yuan/.gitignore
-	*	1692959566	0
-	"	1	3
-	^	1	4
-	.	1	4
-	+	9	85
-	+	11	27
-	+	12	8
-	+	7	0
-	+	1	4
-
-> ~/script/testAll/mul.sh
-	*	1692922993	0
+> ~/README.md
+	*	1700793935	0
 	"	20	4
 	^	20	5
-	.	20	4
-	+	1	39
-	+	22	6
-	+	18	1
-	+	16	39
-	+	11	7
-	+	19	0
-	+	13	10
-	+	21	3
-	+	20	4
-
-> ~/README.md
-	*	1692531875	0
-	"	15	0
-	^	14	170
-	.	14	169
+	.	20	5
 	+	1	39
 	+	1	178
 	+	1	0
 	+	15	0
 	+	14	169
+	+	20	127
+	+	20	5
 
-> ~/Downloads/[Vundle] Installer
-	*	1692519495	0
-	"	10	0
-	.	1	0
+> ~/.zshrc
+	*	1700793804	0
+	"	190	10
+	^	190	11
+	.	158	10
+	+	166	13
+	+	168	0
+	+	201	23
+	+	176	51
+	+	187	51
+	+	176	51
+	+	183	56
+	+	201	23
+	+	201	7
+	+	201	8
+	+	201	37
+	+	201	46
+	+	201	0
+	+	187	140
+	+	201	75
+	+	187	94
+	+	201	0
+	+	201	16
+	+	201	0
+	+	201	26
+	+	184	0
+	+	201	0
+	+	201	25
+	+	201	4
+	+	201	0
+	+	201	9
+	+	201	70
+	+	201	40
+	+	201	0
+	+	188	0
+	+	195	45
+	+	188	0
+	+	191	0
+	+	188	0
+	+	195	0
+	+	188	6
+	+	194	0
+	+	166	1
+	+	188	72
+	+	188	0
+	+	166	0
+	+	200	10
+	+	200	0
+	+	166	0
+	+	193	0
+	+	199	13
+	+	166	9
+	+	167	15
+	+	167	122
+	+	173	6
+	+	174	6
+	+	168	15
+	+	168	141
+	+	169	17
+	+	166	48
+	+	165	9
+	+	160	13
+	+	171	13
+	+	172	14
+	+	171	92
+	+	172	73
+	+	173	9
+	+	188	0
+	+	200	0
+	+	201	0
+	+	195	0
+	+	194	0
+	+	138	9
+	+	139	10
+	+	138	9
+	+	140	10
+	+	142	9
+	+	143	10
+	+	144	24
+	+	143	20
+	+	142	19
+	+	140	28
+	+	139	26
+	+	138	25
+	+	146	21
+	+	147	24
+	+	148	31
+	+	146	9
+	+	147	9
+	+	148	10
+	+	149	16
+	+	151	9
+	+	152	10
+	+	153	27
+	+	152	23
+	+	155	23
+	+	156	19
+	+	158	19
+	+	157	29
+	+	155	12
+	+	156	9
+	+	157	15
+	+	158	10
+
+> ~/.zprofile
+	*	1700793278	0
+	"	4	0
+	^	4	1
+	.	4	0
+	+	14	1
+	+	2	48
+	+	1	50
+	+	15	26
 	+	1	0
+	+	5	0
+	+	1	0
+	+	2	30
+	+	1	30
+	+	2	0
+	+	2	30
+	+	3	0
+	+	2	0
+	+	3	0
+	+	4	0
 
-> ~/.bshrc
-	*	1691760928	0
+> ~/.profile
+	*	1700790118	0
 	"	1	0
 
-> ~/Project/CV/novelai-webui-aki-v3A/models/SadTalker/run.sh
-	*	1691027628	0
-	"	6	0
-	^	6	0
-	.	5	132
-	+	5	132
+> ~/script/cudaTest/MgpusTest/test_torchCuda.py
+	*	1700787235	0
+	"	26	0
+	^	26	0
+	.	26	0
+	+	26	0
 
-> ~/Project/CV/novelai-webui-aki-v3A/models/SadTalker/run.sj
-	*	1691027622	0
-	"	1	0
-
-> ~/script/testAll/shuzu.cpp
-	*	1690360508	0
-	"	41	3
-	^	41	4
-	.	41	3
+> ~/script/cudaTest/cudnnInstall.sh
+	*	1700760048	0
+	"	5	0
+	^	5	1
+	.	5	1
+	+	1	8
+	+	5	84
+	+	1	24
+	+	2	32
 	+	1	0
-	+	19	16
-	+	18	0
-	+	41	0
-	+	1	0
-	+	28	0
-	+	6	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	2	37
+	+	5	86
 	+	8	0
-	+	41	3
+	+	7	22
+	+	3	1
+	+	4	1
+	+	5	1
+	+	3	1
+	+	4	1
+	+	5	1
 
-> ~/Project/NLP/TPLLaMa/llama_inference/main.py
-	*	1690253669	0
-	"	189	0
-
-> ~/Project/mpi/test/go.sh
-	*	1690018107	0
-	"	1	9
-	^	1	10
-	.	1	9
-	+	1	9
-
-> ~/ASCpro/cpc/slave.c
-	*	1690008156	0
-	"	102	0
-
-> ~/Project/mpi/tutorials/mpitutorial/tutorials/mpi-hello-world/code/makefile
-	*	1689945328	0
-	"	2	0
+> ~/Download/cuda12.1/run.sh
+	*	1700747123	0
+	"	7	27
+	^	7	28
+	.	7	27
+	+	1	89
+	+	1	0
+	+	1	99
+	+	7	27
 
 > ~/.tmux.conf
-	*	1689823650	0
-	"	214	0
-	^	10	15
-	.	10	14
+	*	1700744436	0
+	"	208	0
+	^	208	0
+	.	10	0
 	+	1	24
 	+	246	0
 	+	66	5
@@ -873,7 +676,326 @@ $
 	+	11	1
 	+	13	0
 	+	12	0
-	+	10	14
+	+	10	0
+	+	1	0
+	+	26	0
+	+	27	0
+	+	26	0
+	+	27	0
+	+	9	0
+	+	10	0
+
+> ~/.ssh/config
+	*	1700742474	0
+	"	6	1
+	^	6	2
+	.	6	0
+	+	12	8
+	+	13	1
+	+	17	1
+	+	6	0
+
+> /etc/ssh/sshd_config
+	*	1700741910	0
+	"	27	0
+
+> /etc/ssh/4sshd_config
+	*	1700741885	0
+	"	1	0
+
+> /etc/sshd_config
+	*	1700741877	0
+	"	1	0
+
+> /home/inspur/.bashrc
+	*	1700738242	0
+	"	149	0
+
+> ~/.bashrc
+	*	1700738201	0
+	"	145	0
+	^	141	67
+	.	141	66
+	+	141	66
+
+> ~/Download/.tmux
+	*	1700738015	0
+	"	1	0
+
+> ~/.vimrc
+	*	1700738011	0
+	"	1	0
+	^	3	9
+	.	3	8
+	+	1	52
+	+	1	39
+	+	1	0
+	+	1	69
+	+	1	11
+	+	1	22
+	+	1	35
+	+	1	53
+	+	1	68
+	+	1	8
+	+	1	75
+	+	1	73
+	+	1	75
+	+	1	39
+	+	1	26
+	+	1	13
+	+	1	52
+	+	1	0
+	+	1	13
+	+	1	26
+	+	1	65
+	+	1	74
+	+	1	0
+	+	1	13
+	+	1	26
+	+	1	65
+	+	1	0
+	+	1	13
+	+	1	26
+	+	1	39
+	+	1	52
+	+	1	65
+	+	1	67
+	+	1	50
+	+	1	63
+	+	1	77
+	+	1	115
+	+	1	78
+	+	1	91
+	+	1	104
+	+	1	0
+	+	13	12
+	+	13	11
+	+	13	9
+	+	13	12
+	+	9	13
+	+	9	12
+	+	9	0
+	+	13	0
+	+	1	0
+	+	60	0
+	+	49	0
+	+	3	8
+
+> [Vundle] Installer
+	*	1700730715	0
+	"	10	0
+	.	1	0
+	+	1	0
+
+> ~/[Vundle] Installer
+	*	1700710216	0
+	"	7	0
+	.	1	0
+	+	27	0
+	+	19	0
+	+	10	0
+	+	1	0
+
+> ~/SoftWare/clash/config.yaml
+	*	1700709552	0
+	"	6	35
+	^	6	36
+	.	6	35
+	+	1	15
+	+	6	35
+
+> ~/SoftWare/neovim/Cmake
+	*	1699672557	0
+	"	1	0
+
+> ~/.config/nvim/lua/config/keymaps.lua
+	*	1699667921	0
+	"	10	0
+	^	10	0
+	.	9	30
+	+	11	0
+	+	7	25
+	+	9	30
+
+> ~/.config/nvim/lua/config/lazy.lua
+	*	1699667719	0
+	"	14	36
+	^	14	37
+	.	13	52
+	+	15	0
+	+	13	52
+
+> ~/.zs0
+	*	1699665864	0
+	"	1	0
+
+> ~/Project/AIGC/vits/MgpuTest/t.py
+	*	1699665848	0
+	"	18	16
+	^	18	17
+	.	2	4
+	+	19	0
+	+	2	4
+
+> ~/.z
+	*	1699664870	0
+	"	67	80
+	^	67	81
+	.	67	80
+	+	1	60
+	+	67	80
+
+> ~/.gitignore
+	*	1699664843	0
+	"	49	3
+	^	49	4
+	.	49	3
+	+	8	16
+	+	30	9
+	+	40	0
+	+	41	6
+	+	42	7
+	+	48	3
+	+	46	0
+	+	49	3
+
+> ~/.gitconfig
+	*	1699664472	0
+	"	3	22
+	^	3	23
+	.	3	22
+	+	3	22
+
+> ~/zshrc
+	*	1699664193	0
+	"	1	0
+
+> ~/.zsh
+	*	1699663562	0
+	"	1	0
+
+> ~/Project/HPC/PAC/PAC22/PACfirst/PAC22/Makefile
+	*	1696052743	0
+	"	5	36
+	^	5	40
+	.	5	39
+	+	5	39
+
+> /etc/n2n/supernode.conf
+	*	1694529621	0
+	"	1	0
+
+> ~/script/cudaTest/torchTest.py
+	*	1694403713	0
+	"	2	24
+	^	2	25
+	.	2	24
+	+	11	63
+	+	1	4
+	+	2	24
+	p	1	0
+
+> ~/Project/HPC/PAC/PAC22/PAC22-SYCL/onetest/run.sh
+	*	1693875575	0
+	"	1	59
+	^	1	60
+	.	1	60
+	+	1	60
+
+> ~/Project/HPC/IPCC/IPCC22/pivot/run.sh
+	*	1693470838	0
+	"	5	35
+	^	5	36
+	.	5	23
+	+	5	23
+
+> ~/Project/HPC/IPCC/IPCC22/first/mpi_run.sh
+	*	1693465339	0
+	"	5	60
+	^	5	61
+	.	5	60
+	+	5	60
+
+> ~/Project/ASC/Yuan/.gitignore
+	*	1692959566	0
+	"	1	3
+	^	1	4
+	.	1	4
+	+	9	85
+	+	11	27
+	+	12	8
+	+	7	0
+	+	1	4
+
+> ~/script/testAll/mul.sh
+	*	1692922993	0
+	"	20	4
+	^	20	5
+	.	20	4
+	+	1	39
+	+	22	6
+	+	18	1
+	+	16	39
+	+	11	7
+	+	19	0
+	+	13	10
+	+	21	3
+	+	20	4
+
+> ~/Downloads/[Vundle] Installer
+	*	1692519495	0
+	"	10	0
+	.	1	0
+	+	1	0
+
+> ~/.bshrc
+	*	1691760928	0
+	"	1	0
+
+> ~/Project/CV/novelai-webui-aki-v3A/models/SadTalker/run.sh
+	*	1691027628	0
+	"	6	0
+	^	6	0
+	.	5	132
+	+	5	132
+
+> ~/Project/CV/novelai-webui-aki-v3A/models/SadTalker/run.sj
+	*	1691027622	0
+	"	1	0
+
+> ~/script/testAll/shuzu.cpp
+	*	1690360508	0
+	"	41	3
+	^	41	4
+	.	41	3
+	+	1	0
+	+	19	16
+	+	18	0
+	+	41	0
+	+	1	0
+	+	28	0
+	+	6	0
+	+	8	0
+	+	41	3
+
+> ~/Project/NLP/TPLLaMa/llama_inference/main.py
+	*	1690253669	0
+	"	189	0
+
+> ~/Project/mpi/test/go.sh
+	*	1690018107	0
+	"	1	9
+	^	1	10
+	.	1	9
+	+	1	9
+
+> ~/ASCpro/cpc/slave.c
+	*	1690008156	0
+	"	102	0
+
+> ~/Project/mpi/tutorials/mpitutorial/tutorials/mpi-hello-world/code/makefile
+	*	1689945328	0
+	"	2	0
 
 > ~/software/grafana/ASC.json
 	*	1689251430	0
@@ -1034,14 +1156,6 @@ $
 	+	2	0
 	+	1	68
 	+	2	0
-
-> ~/[Vundle] Installer
-	*	1688645814	0
-	"	10	0
-	.	1	0
-	+	18	0
-	+	10	0
-	+	1	0
 
 > ~/script/dcgmRun.sh
 	*	1688643558	0
@@ -1225,112 +1339,4 @@ $
 
 > ~/.zcompdump-inspur1-5.8
 	*	1684834577	0
-	"	1	0
-
-> ~/.zcompdump-inspur
-	*	1684834571	0
-	"	1	0
-
-> ~/.zcompdump
-	*	1684834562	0
-	"	1	0
-
-> ~/download/rangerPlinstall.sh
-	*	1684825308	0
-	"	1	0
-	^	10	31
-	.	10	30
-	+	7	30
-	+	10	41
-	+	1	25
-	+	2	29
-	+	3	30
-	+	4	31
-	+	5	30
-	+	6	30
-	+	7	29
-	+	8	30
-	+	9	30
-	+	10	30
-
-> ~/.tmux.conf_b
-	*	1684660629	0
-	"	217	0
-
-> ~/tmux.conf
-	*	1684659434	0
-	"	1	0
-
-> ~/.selected_editor
-	*	1684658070	0
-	"	2	0
-
-> ~/1.sh
-	*	1684635115	0
-	"	7	1
-	^	7	2
-	.	8	0
-	+	1	19
-	+	1	101
-	+	1	2
-	+	1	0
-	+	1	99
-	+	1	32
-	+	1	100
-	+	1	0
-	+	2	0
-	+	7	102
-	+	2	26
-	+	4	0
-	+	7	0
-	+	5	2
-	+	6	2
-	+	5	1
-	+	6	1
-	+	2	27
-	+	1	28
-	+	7	2
-	+	1	0
-	+	7	2
-	+	4	0
-	+	2	26
-	+	2	0
-	+	5	0
-	+	7	2
-	+	8	0
-	k	1	0
-
-> ~/2.sh
-	*	1684634890	0
-	"	7	1
-	^	7	2
-	.	7	0
-	+	1	33
-	+	7	0
-
-> ~/1.txt
-	*	1684630905	0
-	"	78	0
-	^	38	3
-	.	4	0
-	+	37	0
-	+	38	2
-	+	38	3
-	+	4	0
-
-> ~/.ssh/authorized_keys
-	*	1684590630	0
-	"	1	0
-	.	5	0
-	+	5	0
-
-> /home/inspur/nfs/zzc/.ssh/authorized_keys
-	*	1684590392	0
-	"	3	0
-	.	2	0
-	+	4	0
-	+	2	0
-
-> ~/download/grafana-clock-panel/img/clock.svg
-	*	1684580520	0
 	"	1	0

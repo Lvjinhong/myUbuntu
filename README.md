@@ -17,3 +17,4 @@
   - **lazyvim中 添加copilot插件**  ：[**参考**](https://www.lazyvim.org/extras/coding/copilot)
     - 注意copliot插件需要 Neovim>0.9 
     - 实测 不如Vim中的copilot (这个也需要新版Vim)
+-  **注意alias别名的时候都要用单引号，双引号 会定义别名的时候就替换，而不是实际执行的时候**
