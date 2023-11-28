@@ -1,5 +1,10 @@
 import torch
-print(torch.version.cuda)
+print("CUDA版本：",torch.version.cuda)
+
+import torch
+print("pytorch NCCL版本：", torch.cuda.nccl.version())
+
+
 print(f'\nAvailable cuda = {torch.cuda.is_available()}')
 
 print(f'\nGPUs availables = {torch.cuda.device_count()}')

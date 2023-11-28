@@ -1,9 +1,12 @@
-Project/
+Project/*
+!Project/HPC/
+Project/HPC/*
+!Project/HPC/IBtest
+
 Downloads
 gitBackup
 SoftWare
 XianDao
-Data
 **/.git/
 **/.github/
 .oh-my-zsh
@@ -21,7 +24,6 @@ vscode*
 .att*
 .zc*
 .z.*
-Project/
 .conda
 .w3m
 .rainbarf.dat

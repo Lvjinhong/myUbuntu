@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/pane
+~MSle0~/Data
 
 # Last Substitute Search Pattern:
 ~MSle0&int
@@ -21,9 +21,9 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1700836609,,"wq"
+|2,0,1701187718,,"wq"
 :q
-|2,0,1700828769,,"q"
+|2,0,1701185986,,"q"
 :x
 |2,0,1700791882,,"x"
 :set number
@@ -80,6 +80,10 @@ $
 |2,0,1684590394,,"wq!"
 
 # Search String History (newest to oldest):
+?/Data
+|2,1,1701185794,47,"Data"
+?/D
+|2,1,1701185789,47,"D"
 ??\a
 |2,1,1700828768,63,"\\a"
 ? @$
@@ -140,288 +144,312 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
+"0	LINE	0
 	
 	#PATH="/homepur/1111****************/bin:$PATH"
-|3,1,0,1,2,0,1700828768,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
-"1	LINE	0
-	
-	#PATH="/homepur/1111****************/bin:$PATH"
-|3,0,1,1,2,0,1700799595,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
+|3,0,0,1,2,0,1700828768,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
+""1	LINE	0
+	#Project/
+|3,1,1,1,1,0,1701187420,"#Project/"
 "2	LINE	0
-	#alias setcudaV="export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH"
-|3,0,2,1,1,0,1700793710,"#alias setcudaV=\"export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH\""
+	!Project/HPC/
+|3,0,2,1,1,0,1701187216,"!Project/HPC/"
 "3	LINE	0
-	echo $PATH
-|3,0,3,1,1,0,1700793707,"echo $PATH"
+	!Dsssa/ast
+|3,0,3,1,1,0,1701187211,"!Dsssa/ast"
 "4	LINE	0
-	echo "*****************************PATH已更改***********************"
-|3,0,4,1,1,0,1700793704,"echo \"*****************************PATH已更改***********************\""
+	Dsssa/*
+|3,0,4,1,1,0,1701187210,"Dsssa/*"
 "5	LINE	0
-	#echo $PATH
-|3,0,5,1,1,0,1700793703,"#echo $PATH"
+	#Data
+|3,0,5,1,1,0,1701185791,"#Data"
 "6	LINE	0
-	export PATH="/homepur/1111****************/bin:$PATH"
-|3,0,6,1,1,0,1700793703,"export PATH=\"/homepur/1111****************/bin:$PATH\""
+	#export NCCL_DEBUG=INFO
+	#export NCCL_DEBUG_SUBSYS=ALL
+|3,0,6,1,2,0,1700912954,"#export NCCL_DEBUG=INFO","#export NCCL_DEBUG_SUBSYS=ALL"
 "7	LINE	0
-	fi
-|3,0,7,1,1,0,1700792859,"fi"
+	
+	#PATH="/homepur/1111****************/bin:$PATH"
+|3,0,7,1,2,0,1700799595,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
 "8	LINE	0
-	if [ -n "$BASH_VERSION" ]; then
-|3,0,8,1,1,0,1700792858,"if [ -n \"$BASH_VERSION\" ]; then"
+	#alias setcudaV="export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH"
+|3,0,8,1,1,0,1700793710,"#alias setcudaV=\"export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH\""
 "9	LINE	0
-	PATH="/homepur/1111****************/bin:$PATH"
 	echo $PATH
-	echo "*****************************PATH已更改***********************"
-	
-	export HISTFILESIZE=1000
-	#注意不要与其他端口冲突
-	export claship="http://127.0.0.1:7889"
-	eval $(thefuck --alias fff)
-	export EDITOR=/usr/bin/vim
-	export CUDA_V=cuda-12.1
-	setcudaV
-	
-	#export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH
-	#export MANPATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/man:$MANPATH
-	export PATH="fffffffff1111111111111111111/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/mpi/bin:$PATH"
-	echo $PATH
-	#cowthink -f dragon  "以荒之名 独断万古"
-|3,0,9,1,17,0,1700791090,"PATH=\"/homepur/1111****************/bin:$PATH\"","echo $PATH","echo \"*****************************PATH已更改***********************\"","","export HISTFILESIZE=1000","#注意不要与其他端口冲突","export claship=\"http://127.0.0.1:7889\"","eval $(thefuck --alias fff)","export EDITOR=/usr/bin/vim","export CUDA_V=cuda-12.1","setcudaV","","#export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH",>79
-|<"#export MANPATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/man:$MANPATH","export PATH=\"fffffffff1111111111111111111/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/mpi/bin:$PATH\"","echo $PATH","#cowthink -f dragon  \"以荒之名 独断万古\""
+|3,0,9,1,1,0,1700793707,"echo $PATH"
 "-	CHAR	0
 	s
 |3,0,36,0,1,0,1700747114,"s"
 
 # File marks:
-'0  197  48  ~/.zshrc
-|4,48,197,48,1700836609,"~/.zshrc"
-'1  8  0  ~
-|4,49,8,0,1700828770,"~"
-'2  47  0  /etc/zsh/zshrc
-|4,50,47,0,1700820703,"/etc/zsh/zshrc"
-'3  1  0  /etc/zsh/zshenv
-|4,51,1,0,1700820682,"/etc/zsh/zshenv"
-'4  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,52,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
-'5  192  0  ~/.zshrc
-|4,53,192,0,1700800218,"~/.zshrc"
-'6  192  0  ~/.zshrc
-|4,54,192,0,1700800218,"~/.zshrc"
-'7  191  96  ~/.zshrc
-|4,55,191,96,1700800197,"~/.zshrc"
-'8  192  0  ~/.zshrc
-|4,56,192,0,1700800197,"~/.zshrc"
-'9  191  96  ~/.zshrc
-|4,57,191,96,1700800197,"~/.zshrc"
+'0  3  12  ~/.gitignore
+|4,48,3,12,1701187718,"~/.gitignore"
+'1  2  12  ~/.gitignore
+|4,49,2,12,1701187585,"~/.gitignore"
+'2  2  12  ~/.gitignore
+|4,50,2,12,1701187585,"~/.gitignore"
+'3  2  0  ~/.gitignore
+|4,51,2,0,1701187457,"~/.gitignore"
+'4  2  0  ~/.gitignore
+|4,52,2,0,1701187457,"~/.gitignore"
+'5  27  0  ~/.gitignore
+|4,53,27,0,1701187406,"~/.gitignore"
+'6  27  0  ~/.gitignore
+|4,54,27,0,1701187406,"~/.gitignore"
+'7  27  0  ~/.gitignore
+|4,55,27,0,1701187406,"~/.gitignore"
+'8  27  0  ~/.gitignore
+|4,56,27,0,1701187406,"~/.gitignore"
+'9  26  0  ~/.gitignore
+|4,57,26,0,1701187406,"~/.gitignore"
 
 # Jumplist (newest first):
--'  197  48  ~/.zshrc
-|4,39,197,48,1700836609,"~/.zshrc"
--'  195  39  ~/.zshrc
-|4,39,195,39,1700836595,"~/.zshrc"
--'  30  0  ~/.zshrc
-|4,39,30,0,1700836556,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700836554,"~/.zshrc"
--'  8  0  ~
-|4,39,8,0,1700828770,"~"
--'  8  0  ~
-|4,39,8,0,1700828770,"~"
--'  56  0  ~
-|4,39,56,0,1700828768,"~"
--'  56  0  ~
-|4,39,56,0,1700828768,"~"
--'  47  0  /etc/zsh/zshrc
-|4,39,47,0,1700820703,"/etc/zsh/zshrc"
--'  47  0  /etc/zsh/zshrc
-|4,39,47,0,1700820703,"/etc/zsh/zshrc"
--'  47  0  /etc/zsh/zshrc
-|4,39,47,0,1700820703,"/etc/zsh/zshrc"
--'  47  0  /etc/zsh/zshrc
-|4,39,47,0,1700820703,"/etc/zsh/zshrc"
--'  91  0  /etc/zsh/zshrc
-|4,39,91,0,1700820696,"/etc/zsh/zshrc"
--'  91  0  /etc/zsh/zshrc
-|4,39,91,0,1700820696,"/etc/zsh/zshrc"
--'  91  0  /etc/zsh/zshrc
-|4,39,91,0,1700820696,"/etc/zsh/zshrc"
--'  91  0  /etc/zsh/zshrc
-|4,39,91,0,1700820696,"/etc/zsh/zshrc"
--'  1  0  /etc/zsh/zshrc
-|4,39,1,0,1700820688,"/etc/zsh/zshrc"
--'  1  0  /etc/zsh/zshrc
-|4,39,1,0,1700820688,"/etc/zsh/zshrc"
--'  1  0  /etc/zsh/zshrc
-|4,39,1,0,1700820688,"/etc/zsh/zshrc"
--'  1  0  /etc/zsh/zshrc
-|4,39,1,0,1700820688,"/etc/zsh/zshrc"
--'  1  0  /etc/zsh/zshenv
-|4,39,1,0,1700820682,"/etc/zsh/zshenv"
--'  1  0  /etc/zsh/zshenv
-|4,39,1,0,1700820682,"/etc/zsh/zshenv"
--'  1  0  /etc/zsh/zshenv
-|4,39,1,0,1700820682,"/etc/zsh/zshenv"
--'  1  0  /etc/zsh/zshenv
-|4,39,1,0,1700820682,"/etc/zsh/zshenv"
--'  1  0  /etc/zsh/zshenv
-|4,39,1,0,1700820682,"/etc/zsh/zshenv"
--'  1  0  /etc/zsh/zshenv
-|4,39,1,0,1700820682,"/etc/zsh/zshenv"
--'  1  0  /etc/zsh/zshenv
-|4,39,1,0,1700820682,"/etc/zsh/zshenv"
--'  1  0  /etc/zsh/zshenv
-|4,39,1,0,1700820682,"/etc/zsh/zshenv"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  6  22  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,6,22,1700818680,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  1  0  ~/script/cudaTest/MgpusTest/run.sh
-|4,39,1,0,1700818671,"~/script/cudaTest/MgpusTest/run.sh"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800218,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1700800210,"~/.zshrc"
--'  191  96  ~/.zshrc
-|4,39,191,96,1700800197,"~/.zshrc"
--'  191  96  ~/.zshrc
-|4,39,191,96,1700800197,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800197,"~/.zshrc"
--'  191  96  ~/.zshrc
-|4,39,191,96,1700800197,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800197,"~/.zshrc"
--'  191  96  ~/.zshrc
-|4,39,191,96,1700800197,"~/.zshrc"
--'  192  0  ~/.zshrc
-|4,39,192,0,1700800197,"~/.zshrc"
+-'  3  12  ~/.gitignore
+|4,39,3,12,1701187718,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187708,"~/.gitignore"
+-'  2  12  ~/.gitignore
+|4,39,2,12,1701187585,"~/.gitignore"
+-'  2  12  ~/.gitignore
+|4,39,2,12,1701187585,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187468,"~/.gitignore"
+-'  2  0  ~/.gitignore
+|4,39,2,0,1701187457,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187415,"~/.gitignore"
+-'  27  0  ~/.gitignore
+|4,39,27,0,1701187406,"~/.gitignore"
+-'  26  0  ~/.gitignore
+|4,39,26,0,1701187406,"~/.gitignore"
+-'  26  0  ~/.gitignore
+|4,39,26,0,1701187406,"~/.gitignore"
+-'  26  0  ~/.gitignore
+|4,39,26,0,1701187406,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187394,"~/.gitignore"
+-'  2  0  ~/.gitignore
+|4,39,2,0,1701187372,"~/.gitignore"
+-'  2  0  ~/.gitignore
+|4,39,2,0,1701187372,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187353,"~/.gitignore"
+-'  2  13  ~/.gitignore
+|4,39,2,13,1701187350,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187343,"~/.gitignore"
+-'  2  11  ~/.gitignore
+|4,39,2,11,1701187339,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187317,"~/.gitignore"
+-'  2  18  ~/.gitignore
+|4,39,2,18,1701187311,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187305,"~/.gitignore"
+-'  5  0  ~/.gitignore
+|4,39,5,0,1701187266,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701187266,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1701187266,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701187266,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1701187266,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701187266,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1701187266,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701187266,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1701187266,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701187266,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1701187266,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701187266,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1701187266,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1701187266,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701187250,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1701187233,"~/.gitignore"
+-'  1  14  ~/.gitignore
+|4,39,1,14,1701187224,"~/.gitignore"
+-'  8  0  ~/.gitignore
+|4,39,8,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  7  0  ~/.gitignore
+|4,39,7,0,1701186621,"~/.gitignore"
+-'  7  0  ~/.gitignore
+|4,39,7,0,1701186621,"~/.gitignore"
+-'  5  0  ~/.gitignore
+|4,39,5,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  7  0  ~/.gitignore
+|4,39,7,0,1701186621,"~/.gitignore"
+-'  5  0  ~/.gitignore
+|4,39,5,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  7  0  ~/.gitignore
+|4,39,7,0,1701186621,"~/.gitignore"
+-'  5  0  ~/.gitignore
+|4,39,5,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  7  0  ~/.gitignore
+|4,39,7,0,1701186621,"~/.gitignore"
+-'  5  0  ~/.gitignore
+|4,39,5,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  7  0  ~/.gitignore
+|4,39,7,0,1701186621,"~/.gitignore"
+-'  5  0  ~/.gitignore
+|4,39,5,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  7  0  ~/.gitignore
+|4,39,7,0,1701186621,"~/.gitignore"
+-'  5  0  ~/.gitignore
+|4,39,5,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701186621,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186621,"~/.gitignore"
+-'  4  0  ~/.gitignore
+|4,39,4,0,1701186621,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701186619,"~/.gitignore"
+-'  10  6  ~/.gitignore
+|4,39,10,6,1701186544,"~/.gitignore"
+-'  9  6  ~/.gitignore
+|4,39,9,6,1701186544,"~/.gitignore"
+-'  9  6  ~/.gitignore
+|4,39,9,6,1701186544,"~/.gitignore"
+-'  8  6  ~/.gitignore
+|4,39,8,6,1701186544,"~/.gitignore"
+-'  9  6  ~/.gitignore
+|4,39,9,6,1701186544,"~/.gitignore"
+-'  8  6  ~/.gitignore
+|4,39,8,6,1701186544,"~/.gitignore"
+-'  9  6  ~/.gitignore
+|4,39,9,6,1701186544,"~/.gitignore"
+-'  8  6  ~/.gitignore
+|4,39,8,6,1701186544,"~/.gitignore"
+-'  9  6  ~/.gitignore
+|4,39,9,6,1701186544,"~/.gitignore"
+-'  8  6  ~/.gitignore
+|4,39,8,6,1701186544,"~/.gitignore"
+-'  9  6  ~/.gitignore
+|4,39,9,6,1701186544,"~/.gitignore"
+-'  8  6  ~/.gitignore
+|4,39,8,6,1701186544,"~/.gitignore"
+-'  9  6  ~/.gitignore
+|4,39,9,6,1701186544,"~/.gitignore"
+-'  8  6  ~/.gitignore
+|4,39,8,6,1701186544,"~/.gitignore"
+-'  8  6  ~/.gitignore
+|4,39,8,6,1701186544,"~/.gitignore"
+-'  8  6  ~/.gitignore
+|4,39,8,6,1701186544,"~/.gitignore"
+-'  6  6  ~/.gitignore
+|4,39,6,6,1701186544,"~/.gitignore"
+-'  6  6  ~/.gitignore
+|4,39,6,6,1701186544,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701186537,"~/.gitignore"
+-'  6  5  ~/.gitignore
+|4,39,6,5,1701186526,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701186456,"~/.gitignore"
+-'  8  9  ~/.gitignore
+|4,39,8,9,1701186211,"~/.gitignore"
+-'  7  9  ~/.gitignore
+|4,39,7,9,1701186211,"~/.gitignore"
+-'  7  9  ~/.gitignore
+|4,39,7,9,1701186211,"~/.gitignore"
+-'  7  9  ~/.gitignore
+|4,39,7,9,1701186211,"~/.gitignore"
+-'  7  9  ~/.gitignore
+|4,39,7,9,1701186211,"~/.gitignore"
+-'  7  9  ~/.gitignore
+|4,39,7,9,1701186211,"~/.gitignore"
+-'  7  9  ~/.gitignore
+|4,39,7,9,1701186211,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701186205,"~/.gitignore"
+-'  6  6  ~/.gitignore
+|4,39,6,6,1701186201,"~/.gitignore"
+-'  6  6  ~/.gitignore
+|4,39,6,6,1701186201,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701186195,"~/.gitignore"
+-'  6  5  ~/.gitignore
+|4,39,6,5,1701186183,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1701186051,"~/.gitignore"
+-'  6  0  ~/.gitignore
+|4,39,6,0,1701186039,"~/.gitignore"
 
 # History of marks within files (newest to oldest):
 
+> ~/.gitignore
+	*	1701187718	0
+	"	3	12
+	^	3	13
+	.	3	12
+	+	11	16
+	+	32	9
+	+	42	0
+	+	43	6
+	+	44	7
+	+	50	3
+	+	48	0
+	+	51	3
+	+	52	12
+	+	10	4
+	+	10	0
+	+	10	6
+	+	10	10
+	+	10	0
+	+	52	0
+	+	1	8
+	+	2	0
+	+	2	12
+	+	5	0
+	+	1	8
+	+	2	13
+	+	1	0
+	+	2	0
+	+	27	0
+	+	1	0
+	+	2	13
+	+	3	12
+
+> ~/script/cudaTest/MgpusTest/README.md
+	*	1701184880	0
+	"	3	55
+	^	3	58
+	.	3	55
+	+	3	55
+
 > ~/.zshrc
-	*	1700836608	0
-	"	197	48
+	*	1701158690	0
+	"	237	0
 	^	197	49
 	.	197	48
 	+	187	140
@@ -524,6 +552,20 @@ $
 	+	186	34
 	+	195	51
 	+	197	48
+
+> ~/Project/AIGC/VITS/Bert-VITS2/run_MnodesAndMgpus.sh
+	*	1700922184	0
+	"	15	0
+	^	15	1
+	.	15	0
+	+	16	0
+	+	14	0
+	+	16	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	14	0
+	+	15	0
 
 > /etc/zsh/zshrc
 	*	1700820703	0
@@ -863,20 +905,6 @@ $
 	.	67	80
 	+	1	60
 	+	67	80
-
-> ~/.gitignore
-	*	1699664843	0
-	"	49	3
-	^	49	4
-	.	49	3
-	+	8	16
-	+	30	9
-	+	40	0
-	+	41	6
-	+	42	7
-	+	48	3
-	+	46	0
-	+	49	3
 
 > ~/.gitconfig
 	*	1699664472	0
@@ -1336,11 +1364,3 @@ $
 	^	2	0
 	.	1	2
 	+	1	2
-
-> ~/.config/ranger/commands.py
-	*	1684887371	0
-	"	1	0
-
-> ~/.config/rc.conf
-	*	1684886947	0
-	"	1	0

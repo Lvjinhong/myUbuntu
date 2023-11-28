@@ -21,7 +21,6 @@ def main():
     world_size = int(os.environ["WORLD_SIZE"])
     print("load local_rank: ", local_rank)
     dist.init_process_group("nccl")
-
     # 创建模型
     model = SimpleNet().cuda(local_rank)
     ddp_model = DDP(model, device_ids=[local_rank])
