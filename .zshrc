@@ -123,7 +123,7 @@ fi
 # <<< conda initialize <<<
 
 proxy() {
-  export all_proxy=172.28.172.144:7878
+  #export all_proxy=172.28.172.144:7878
   if curl -I https://www.google.com/ --max-time 2 >/dev/null 2>&1; then
     echo "Success"
   else

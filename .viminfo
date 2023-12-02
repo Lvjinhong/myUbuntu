@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/Data
+~Msle0~/\<core_freq\>
 
 # Last Substitute Search Pattern:
 ~MSle0&int
@@ -21,9 +21,11 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1701187718,,"wq"
+|2,0,1701510233,,"wq"
 :q
-|2,0,1701185986,,"q"
+|2,0,1701266045,,"q"
+:q!
+|2,0,1701265102,,"q!"
 :x
 |2,0,1700791882,,"x"
 :set number
@@ -42,8 +44,6 @@ $
 |2,0,1699667413,,"Wq"
 ::Copilot setup
 |2,0,1699665294,,":Copilot setup"
-:q!
-|2,0,1699664194,,"q!"
 :Q
 |2,0,1694395261,,"Q"
 :q\
@@ -80,6 +80,12 @@ $
 |2,0,1684590394,,"wq!"
 
 # Search String History (newest to oldest):
+? \<core_freq\>
+|2,1,1701265092,,"\\<core_freq\\>"
+?/bin/bash
+|2,1,1701265092,47,"bin/bash"
+? \<初始化总频率变量\>
+|2,1,1701265080,,"\\<初始化总频率变量\\>"
 ?/Data
 |2,1,1701185794,47,"Data"
 ?/D
@@ -149,310 +155,381 @@ $
 	#PATH="/homepur/1111****************/bin:$PATH"
 |3,0,0,1,2,0,1700828768,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
 ""1	LINE	0
-	#Project/
-|3,1,1,1,1,0,1701187420,"#Project/"
+	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done"
+|3,1,1,1,1,0,1701267358,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done\""
 "2	LINE	0
-	!Project/HPC/
-|3,0,2,1,1,0,1701187216,"!Project/HPC/"
+	watch -n 0.2 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done"
+|3,0,2,1,1,0,1701266295,"watch -n 0.2 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done\""
 "3	LINE	0
-	!Dsssa/ast
-|3,0,3,1,1,0,1701187211,"!Dsssa/ast"
+	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq; done"
+|3,0,3,1,1,0,1701266058,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq; done\""
 "4	LINE	0
-	Dsssa/*
-|3,0,4,1,1,0,1701187210,"Dsssa/*"
-"5	LINE	0
-	#Data
-|3,0,5,1,1,0,1701185791,"#Data"
-"6	LINE	0
-	#export NCCL_DEBUG=INFO
-	#export NCCL_DEBUG_SUBSYS=ALL
-|3,0,6,1,2,0,1700912954,"#export NCCL_DEBUG=INFO","#export NCCL_DEBUG_SUBSYS=ALL"
-"7	LINE	0
+	# 读取所有核心的频率
+	for i in $(seq 0 27); do
+	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
+	         total_freq=$((total_freq + core_freq))
+	         done
+	le read -r line; do
+	    # 检查行是否包含频率信息
+	    #     if [[ "$line" =~ "cpu MHz" ]]; then
+	    #             # 提取频率值并累加
+	    #                     freq=$(echo "$line" | awk '{print $4}')
+	    #                             total_freq=$(echo "$total_freq + $freq" | bc)
+	    #                                     ((core_count++))
+	    #                                         fi
+	    #                                         done < /proc/cpuinfo
+	    #
+	    #                                         # 计算平均频率
+	    #                                         if [ $core_count -gt 0 ]; then
+	    #                                             avg_freq=$(echo "scale=2; $total_freq / $core_count" | bc)
+	    #                                                 echo "Average CPU frequency: $avg_freq MHz"
+	    #                                                 else
+	    #                                                     echo "No CPU frequency information found."
+	    #                                                     fi
+	         # 计算平均频率
+	         avg_freq=$((total_freq / 28))
+	#
+	         # 将频率从 kHz 转换为 GHz
+	         avg_freq_ghz=$(echo "scale=2; $avg_freq / 1000000" | bc)
+	#
+	         # 输出平均频率
+	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
+	#
 	
-	#PATH="/homepur/1111****************/bin:$PATH"
-|3,0,7,1,2,0,1700799595,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
+|3,0,4,1,32,0,1701265099,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","le read -r line; do","    # 检查行是否包含频率信息","    #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","    #             # 提取频率值并累加","    #                     freq=$(echo \"$line\" | awk '{print $4}')",>83
+|<"    #                             total_freq=$(echo \"$total_freq + $freq\" | bc)","    #                                     ((core_count++))","    #                                         fi","    #                                         done < /proc/cpuinfo","    #","    #                                         # 计算平均频率","    #                                         if [ $core_count -gt 0 ]; then",>112
+|<"    #                                             avg_freq=$(echo \"scale=2; $total_freq / $core_count\" | bc)","    #                                                 echo \"Average CPU frequency: $avg_freq MHz\"","    #                                                 else","    #                                                     echo \"No CPU frequency information found.\"","    #                                                     fi","         # 计算平均频率",>40
+|<"         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率","         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
+"5	LINE	0
+	# 读取所有核心的频率
+	for i in $(seq 0 27); do
+	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
+	         total_freq=$((total_freq + core_freq))
+	         done
+	
+	         # 计算平均频率
+	         avg_freq=$((total_freq / 28))
+	#
+	         # 将频率从 kHz 转换为 GHz
+	         avg_freq_ghz=$(echo "scale=2; $avg_freq / 1000000" | bc)
+	#
+	         # 输出平均频率
+	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
+	#
+	
+|3,0,5,1,16,0,1701265087,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","","         # 计算平均频率","         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率",>94
+|<"         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
+"6	LINE	0
+	#
+|3,0,6,1,1,0,1701265086,"#"
+"7	LINE	0
+	NITOR_DURATION=10
+	
+	# 初始化总频率变量
+	 total_frele read -r line; do
+	     # 检查行是否包含频率信息
+	     #     if [[ "$line" =~ "cpu MHz" ]]; then
+	     #             # 提取频率值并累加
+	     #                     freq=$(echo "$line" | awk '{print $4}')
+	     #                             total_freq=$(echo "$total_freq + $freq" | bc)
+	     #                                     ((core_count++))
+	     #                                         fi
+	     #                                         done < /proc/cpuinfo
+	     #
+	     #                                         # 计算平均频率
+	     #                                         if [ $core_count -gt 0 ]; then
+	     #                                             avg_freq=$(echo "scale=2; $total_freq / $core_count" | bc)
+	     #                                                 echo "Average CPU frequency: $avg_freq MHz"
+	     #                                                 else
+	     #                                                     echo "No CPU frequency information found."
+	     #                                                     fi
+	     #                                                     q=0
+|3,0,7,1,21,0,1701265082,"NITOR_DURATION=10","","# 初始化总频率变量"," total_frele read -r line; do","     # 检查行是否包含频率信息","     #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","     #             # 提取频率值并累加","     #                     freq=$(echo \"$line\" | awk '{print $4}')","     #                             total_freq=$(echo \"$total_freq + $freq\" | bc)",>61
+|<"     #                                     ((core_count++))","     #                                         fi","     #                                         done < /proc/cpuinfo","     #","     #                                         # 计算平均频率","     #                                         if [ $core_count -gt 0 ]; then","     #                                             avg_freq=$(echo \"scale=2; $total_freq / $core_count\" | bc)",>102
+|<"     #                                                 echo \"Average CPU frequency: $avg_freq MHz\"","     #                                                 else","     #                                                     echo \"No CPU frequency information found.\"","     #                                                     fi","     #                                                     q=0"
 "8	LINE	0
-	#alias setcudaV="export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH"
-|3,0,8,1,1,0,1700793710,"#alias setcudaV=\"export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH\""
+	NITOR_DURATION=10
+	
+	# 初始化总频率变量
+	 total_freq=0
+	#
+	# 读取所有核心的频率
+	for i in $(seq 0 27); do
+	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
+	         total_freq=$((total_freq + core_freq))
+	         done
+	
+	         # 计算平均频率
+	         avg_freq=$((total_freq / 28))
+	#
+	         # 将频率从 kHz 转换为 GHz
+	         avg_freq_ghz=$(echo "scale=2; $avg_freq / 1000000" | bc)
+	#
+	         # 输出平均频率
+	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
+	#
+	
+|3,0,8,1,21,0,1701265078,"NITOR_DURATION=10","","# 初始化总频率变量"," total_freq=0","#","# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","","         # 计算平均频率","         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz",>69
+|<"         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率","         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
 "9	LINE	0
-	echo $PATH
-|3,0,9,1,1,0,1700793707,"echo $PATH"
+	
+	# 初始化总频率变量
+	# total_freq=0
+	#
+	# # 读取所有核心的频率
+	# for i in $(seq 0 27); do
+	#     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
+	#         total_freq=$((total_freq + core_freq))
+	#         done
+	#
+	#         # 计算平均频率
+	#         avg_freq=$((total_freq / 28))
+	#
+	#         # 将频率从 kHz 转换为 GHz
+	#         avg_freq_ghz=$(echo "scale=2; $avg_freq / 1000000" | bc)
+	#
+	#         # 输出平均频率
+	#         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
+	#
+	#
+	
+|3,0,9,1,21,0,1701264043,"","# 初始化总频率变量","# total_freq=0","#","# # 读取所有核心的频率","# for i in $(seq 0 27); do","#     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","#         total_freq=$((total_freq + core_freq))","#         done","#","#         # 计算平均频率","#         avg_freq=$((total_freq / 28))","#","#         # 将频率从 kHz 转换为 GHz",>70
+|<"#         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","#         # 输出平均频率","#         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#","#",""
 "-	CHAR	0
 	s
 |3,0,36,0,1,0,1700747114,"s"
 
 # File marks:
-'0  3  12  ~/.gitignore
-|4,48,3,12,1701187718,"~/.gitignore"
-'1  2  12  ~/.gitignore
-|4,49,2,12,1701187585,"~/.gitignore"
-'2  2  12  ~/.gitignore
-|4,50,2,12,1701187585,"~/.gitignore"
-'3  2  0  ~/.gitignore
-|4,51,2,0,1701187457,"~/.gitignore"
-'4  2  0  ~/.gitignore
-|4,52,2,0,1701187457,"~/.gitignore"
-'5  27  0  ~/.gitignore
-|4,53,27,0,1701187406,"~/.gitignore"
-'6  27  0  ~/.gitignore
-|4,54,27,0,1701187406,"~/.gitignore"
-'7  27  0  ~/.gitignore
-|4,55,27,0,1701187406,"~/.gitignore"
-'8  27  0  ~/.gitignore
-|4,56,27,0,1701187406,"~/.gitignore"
-'9  26  0  ~/.gitignore
-|4,57,26,0,1701187406,"~/.gitignore"
+'0  179  1  ~/.zshrc
+|4,48,179,1,1701510233,"~/.zshrc"
+'1  10  0  ~/script/testAll/watch_cpu_freq.sh
+|4,49,10,0,1701267365,"~/script/testAll/watch_cpu_freq.sh"
+'2  11  1  ~/script/testAll/watch_cpu_freq.sh
+|4,50,11,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
+'3  10  1  ~/script/testAll/watch_cpu_freq.sh
+|4,51,10,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
+'4  11  12  ~/script/testAll/watch_cpu_freq.sh
+|4,52,11,12,1701266097,"~/script/testAll/watch_cpu_freq.sh"
+'5  10  12  ~/script/testAll/watch_cpu_freq.sh
+|4,53,10,12,1701266097,"~/script/testAll/watch_cpu_freq.sh"
+'6  1  1  ~/script/testAll/cpu_monitor.sh
+|4,54,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+'7  1  0  ~/script/testAll/cpu_monitor.sh
+|4,55,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+'8  19  0  ~/script/testAll/cpu_monitor.sh
+|4,56,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+'9  19  0  ~/script/testAll/cpu_monitor.sh
+|4,57,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
 
 # Jumplist (newest first):
--'  3  12  ~/.gitignore
-|4,39,3,12,1701187718,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187708,"~/.gitignore"
--'  2  12  ~/.gitignore
-|4,39,2,12,1701187585,"~/.gitignore"
--'  2  12  ~/.gitignore
-|4,39,2,12,1701187585,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187468,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1701187457,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187415,"~/.gitignore"
--'  27  0  ~/.gitignore
-|4,39,27,0,1701187406,"~/.gitignore"
--'  26  0  ~/.gitignore
-|4,39,26,0,1701187406,"~/.gitignore"
--'  26  0  ~/.gitignore
-|4,39,26,0,1701187406,"~/.gitignore"
--'  26  0  ~/.gitignore
-|4,39,26,0,1701187406,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187394,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1701187372,"~/.gitignore"
--'  2  0  ~/.gitignore
-|4,39,2,0,1701187372,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187353,"~/.gitignore"
--'  2  13  ~/.gitignore
-|4,39,2,13,1701187350,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187343,"~/.gitignore"
--'  2  11  ~/.gitignore
-|4,39,2,11,1701187339,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187317,"~/.gitignore"
--'  2  18  ~/.gitignore
-|4,39,2,18,1701187311,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187305,"~/.gitignore"
--'  5  0  ~/.gitignore
-|4,39,5,0,1701187266,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701187266,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1701187266,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701187266,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1701187266,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701187266,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1701187266,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701187266,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1701187266,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701187266,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1701187266,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701187266,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1701187266,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1701187266,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701187250,"~/.gitignore"
--'  3  0  ~/.gitignore
-|4,39,3,0,1701187233,"~/.gitignore"
--'  1  14  ~/.gitignore
-|4,39,1,14,1701187224,"~/.gitignore"
--'  8  0  ~/.gitignore
-|4,39,8,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  7  0  ~/.gitignore
-|4,39,7,0,1701186621,"~/.gitignore"
--'  7  0  ~/.gitignore
-|4,39,7,0,1701186621,"~/.gitignore"
--'  5  0  ~/.gitignore
-|4,39,5,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  7  0  ~/.gitignore
-|4,39,7,0,1701186621,"~/.gitignore"
--'  5  0  ~/.gitignore
-|4,39,5,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  7  0  ~/.gitignore
-|4,39,7,0,1701186621,"~/.gitignore"
--'  5  0  ~/.gitignore
-|4,39,5,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  7  0  ~/.gitignore
-|4,39,7,0,1701186621,"~/.gitignore"
--'  5  0  ~/.gitignore
-|4,39,5,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  7  0  ~/.gitignore
-|4,39,7,0,1701186621,"~/.gitignore"
--'  5  0  ~/.gitignore
-|4,39,5,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  7  0  ~/.gitignore
-|4,39,7,0,1701186621,"~/.gitignore"
--'  5  0  ~/.gitignore
-|4,39,5,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701186621,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186621,"~/.gitignore"
--'  4  0  ~/.gitignore
-|4,39,4,0,1701186621,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701186619,"~/.gitignore"
--'  10  6  ~/.gitignore
-|4,39,10,6,1701186544,"~/.gitignore"
--'  9  6  ~/.gitignore
-|4,39,9,6,1701186544,"~/.gitignore"
--'  9  6  ~/.gitignore
-|4,39,9,6,1701186544,"~/.gitignore"
--'  8  6  ~/.gitignore
-|4,39,8,6,1701186544,"~/.gitignore"
--'  9  6  ~/.gitignore
-|4,39,9,6,1701186544,"~/.gitignore"
--'  8  6  ~/.gitignore
-|4,39,8,6,1701186544,"~/.gitignore"
--'  9  6  ~/.gitignore
-|4,39,9,6,1701186544,"~/.gitignore"
--'  8  6  ~/.gitignore
-|4,39,8,6,1701186544,"~/.gitignore"
--'  9  6  ~/.gitignore
-|4,39,9,6,1701186544,"~/.gitignore"
--'  8  6  ~/.gitignore
-|4,39,8,6,1701186544,"~/.gitignore"
--'  9  6  ~/.gitignore
-|4,39,9,6,1701186544,"~/.gitignore"
--'  8  6  ~/.gitignore
-|4,39,8,6,1701186544,"~/.gitignore"
--'  9  6  ~/.gitignore
-|4,39,9,6,1701186544,"~/.gitignore"
--'  8  6  ~/.gitignore
-|4,39,8,6,1701186544,"~/.gitignore"
--'  8  6  ~/.gitignore
-|4,39,8,6,1701186544,"~/.gitignore"
--'  8  6  ~/.gitignore
-|4,39,8,6,1701186544,"~/.gitignore"
--'  6  6  ~/.gitignore
-|4,39,6,6,1701186544,"~/.gitignore"
--'  6  6  ~/.gitignore
-|4,39,6,6,1701186544,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701186537,"~/.gitignore"
--'  6  5  ~/.gitignore
-|4,39,6,5,1701186526,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701186456,"~/.gitignore"
--'  8  9  ~/.gitignore
-|4,39,8,9,1701186211,"~/.gitignore"
--'  7  9  ~/.gitignore
-|4,39,7,9,1701186211,"~/.gitignore"
--'  7  9  ~/.gitignore
-|4,39,7,9,1701186211,"~/.gitignore"
--'  7  9  ~/.gitignore
-|4,39,7,9,1701186211,"~/.gitignore"
--'  7  9  ~/.gitignore
-|4,39,7,9,1701186211,"~/.gitignore"
--'  7  9  ~/.gitignore
-|4,39,7,9,1701186211,"~/.gitignore"
--'  7  9  ~/.gitignore
-|4,39,7,9,1701186211,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701186205,"~/.gitignore"
--'  6  6  ~/.gitignore
-|4,39,6,6,1701186201,"~/.gitignore"
--'  6  6  ~/.gitignore
-|4,39,6,6,1701186201,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701186195,"~/.gitignore"
--'  6  5  ~/.gitignore
-|4,39,6,5,1701186183,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1701186051,"~/.gitignore"
--'  6  0  ~/.gitignore
-|4,39,6,0,1701186039,"~/.gitignore"
+-'  179  1  ~/.zshrc
+|4,39,179,1,1701510233,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1701508829,"~/.zshrc"
+-'  10  0  ~/script/testAll/watch_cpu_freq.sh
+|4,39,10,0,1701267365,"~/script/testAll/watch_cpu_freq.sh"
+-'  10  0  ~/script/testAll/watch_cpu_freq.sh
+|4,39,10,0,1701267365,"~/script/testAll/watch_cpu_freq.sh"
+-'  1  0  ~/script/testAll/watch_cpu_freq.sh
+|4,39,1,0,1701267354,"~/script/testAll/watch_cpu_freq.sh"
+-'  1  0  ~/script/testAll/watch_cpu_freq.sh
+|4,39,1,0,1701267354,"~/script/testAll/watch_cpu_freq.sh"
+-'  11  1  ~/script/testAll/watch_cpu_freq.sh
+|4,39,11,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
+-'  10  1  ~/script/testAll/watch_cpu_freq.sh
+|4,39,10,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
+-'  11  1  ~/script/testAll/watch_cpu_freq.sh
+|4,39,11,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
+-'  10  1  ~/script/testAll/watch_cpu_freq.sh
+|4,39,10,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
+-'  1  0  ~/script/testAll/watch_cpu_freq.sh
+|4,39,1,0,1701266294,"~/script/testAll/watch_cpu_freq.sh"
+-'  1  0  ~/script/testAll/watch_cpu_freq.sh
+|4,39,1,0,1701266294,"~/script/testAll/watch_cpu_freq.sh"
+-'  10  12  ~/script/testAll/watch_cpu_freq.sh
+|4,39,10,12,1701266097,"~/script/testAll/watch_cpu_freq.sh"
+-'  10  12  ~/script/testAll/watch_cpu_freq.sh
+|4,39,10,12,1701266097,"~/script/testAll/watch_cpu_freq.sh"
+-'  1  0  ~/script/testAll/watch_cpu_freq.sh
+|4,39,1,0,1701266051,"~/script/testAll/watch_cpu_freq.sh"
+-'  1  0  ~/script/testAll/watch_cpu_freq.sh
+|4,39,1,0,1701266051,"~/script/testAll/watch_cpu_freq.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  1  ~/script/testAll/cpu_monitor.sh
+|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  1  0  ~/script/testAll/cpu_monitor.sh
+|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  19  0  ~/script/testAll/cpu_monitor.sh
+|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+-'  9  46  ~/script/testAll/cpu_monitor.sh
+|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore
-	*	1701187718	0
-	"	3	12
-	^	3	13
-	.	3	12
-	+	11	16
-	+	32	9
-	+	42	0
-	+	43	6
-	+	44	7
-	+	50	3
-	+	48	0
-	+	51	3
-	+	52	12
-	+	10	4
-	+	10	0
-	+	10	6
-	+	10	10
-	+	10	0
-	+	52	0
-	+	1	8
-	+	2	0
-	+	2	12
-	+	5	0
-	+	1	8
-	+	2	13
-	+	1	0
-	+	2	0
-	+	27	0
-	+	1	0
-	+	2	13
-	+	3	12
-
-> ~/script/cudaTest/MgpusTest/README.md
-	*	1701184880	0
-	"	3	55
-	^	3	58
-	.	3	55
-	+	3	55
-
 > ~/.zshrc
-	*	1701158690	0
-	"	237	0
-	^	197	49
-	.	197	48
-	+	187	140
+	*	1701508850	0
+	"	179	1
+	^	179	2
+	.	126	2
 	+	202	75
 	+	187	94
 	+	202	0
@@ -552,6 +629,83 @@ $
 	+	186	34
 	+	195	51
 	+	197	48
+	+	126	2
+
+> ~/script/testAll/watch_cpu_freq.sh
+	*	1701267364	0
+	"	10	0
+	^	10	0
+	.	9	170
+	+	7	2
+	+	11	147
+	+	11	158
+	+	11	0
+	+	9	170
+
+> ~/script/testAll/cpu_monitor.sh
+	*	1701266044	0
+	"	1	1
+	^	1	3
+	.	1	0
+	+	1	11
+	+	1	0
+	+	1	1
+	+	1	0
+	+	1	47
+	+	1	0
+
+> ~/script/testAll/README.md
+	*	1701263956	0
+	"	5	27
+	^	5	30
+	.	5	27
+	+	1	21
+	+	2	25
+	+	2	31
+	+	3	0
+	+	1	9
+	+	3	38
+	+	5	27
+
+> ~/.gitignore
+	*	1701189729	0
+	"	1	0
+	^	3	13
+	.	3	12
+	+	11	16
+	+	32	9
+	+	42	0
+	+	43	6
+	+	44	7
+	+	50	3
+	+	48	0
+	+	51	3
+	+	52	12
+	+	10	4
+	+	10	0
+	+	10	6
+	+	10	10
+	+	10	0
+	+	52	0
+	+	1	8
+	+	2	0
+	+	2	12
+	+	5	0
+	+	1	8
+	+	2	13
+	+	1	0
+	+	2	0
+	+	27	0
+	+	1	0
+	+	2	13
+	+	3	12
+
+> ~/script/cudaTest/MgpusTest/README.md
+	*	1701184880	0
+	"	3	55
+	^	3	58
+	.	3	55
+	+	3	55
 
 > ~/Project/AIGC/VITS/Bert-VITS2/run_MnodesAndMgpus.sh
 	*	1700922184	0
@@ -1343,24 +1497,3 @@ $
 > ~/XianDao/succesWae/test.sh
 	*	1685176082	0
 	"	1	0
-
-> ~/.config/.tmux.conf
-	*	1684905119	0
-	"	3	0
-	^	3	0
-	.	3	0
-	+	2	0
-	+	33	0
-	+	2	0
-	+	3	0
-
-> ~/.config/tmux/fzf_panes.tmux
-	*	1684896041	0
-	"	2	0
-
-> ~/download/1
-	*	1684892523	0
-	"	2	0
-	^	2	0
-	.	1	2
-	+	1	2
