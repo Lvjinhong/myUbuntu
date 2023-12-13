@@ -151,7 +151,7 @@ alias ta='tmux a'
 #docker
 alias dk='docker'
 alias dpa='docker ps -a'
-alias dil='docker images ls'
+alias dimgs='docker images -a'
 #trash
 alias tlist='trash-list'
 alias tp='trash-put'
@@ -216,6 +216,7 @@ add_to_LD_LIBRARY_PATH_if_exists /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_lib
 
 export NVM_DIR="$HOME/SoftWare/nvm"
 export NLTK_DATA=/home/inspur/nfs/ljh/SoftWare/nltk_data
+export HF_HOME=/home/ljh/Project/LLM/HFhub
 
 #--------------------------------------系统级驱动配置----------------------------------
 export HISTFILESIZE=1000

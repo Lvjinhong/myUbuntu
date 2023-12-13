@@ -21,9 +21,9 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1701510233,,"wq"
+|2,0,1702341879,,"wq"
 :q
-|2,0,1701266045,,"q"
+|2,0,1702341825,,"q"
 :q!
 |2,0,1701265102,,"q!"
 :x
@@ -155,15 +155,27 @@ $
 	#PATH="/homepur/1111****************/bin:$PATH"
 |3,0,0,1,2,0,1700828768,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
 ""1	LINE	0
-	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done"
-|3,1,1,1,1,0,1701267358,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done\""
+	dGall:
+	    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	clean:
+	    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	
+|3,1,1,1,5,0,1701766503,"dGall:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules","clean:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean",""
 "2	LINE	0
-	watch -n 0.2 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done"
-|3,0,2,1,1,0,1701266295,"watch -n 0.2 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done\""
+	export TRANSFORMERS_CACHE=/home/ljh/Project/LLM/HFhub/transformers
+	export HF_DATASETS_CACHE=/home/ljh/Project/LLM/HFhub/datasets
+	export HF_METRICS_CACHE=/home/ljh/Project/LLM/HFhub/metrics
+|3,0,2,1,3,0,1701536900,"export TRANSFORMERS_CACHE=/home/ljh/Project/LLM/HFhub/transformers","export HF_DATASETS_CACHE=/home/ljh/Project/LLM/HFhub/datasets","export HF_METRICS_CACHE=/home/ljh/Project/LLM/HFhub/metrics"
 "3	LINE	0
-	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq; done"
-|3,0,3,1,1,0,1701266058,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq; done\""
+	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done"
+|3,0,3,1,1,0,1701267358,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done\""
 "4	LINE	0
+	watch -n 0.2 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done"
+|3,0,4,1,1,0,1701266295,"watch -n 0.2 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done\""
+"5	LINE	0
+	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq; done"
+|3,0,5,1,1,0,1701266058,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq; done\""
+"6	LINE	0
 	# 读取所有核心的频率
 	for i in $(seq 0 27); do
 	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
@@ -196,11 +208,11 @@ $
 	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
 	#
 	
-|3,0,4,1,32,0,1701265099,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","le read -r line; do","    # 检查行是否包含频率信息","    #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","    #             # 提取频率值并累加","    #                     freq=$(echo \"$line\" | awk '{print $4}')",>83
+|3,0,6,1,32,0,1701265099,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","le read -r line; do","    # 检查行是否包含频率信息","    #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","    #             # 提取频率值并累加","    #                     freq=$(echo \"$line\" | awk '{print $4}')",>83
 |<"    #                             total_freq=$(echo \"$total_freq + $freq\" | bc)","    #                                     ((core_count++))","    #                                         fi","    #                                         done < /proc/cpuinfo","    #","    #                                         # 计算平均频率","    #                                         if [ $core_count -gt 0 ]; then",>112
 |<"    #                                             avg_freq=$(echo \"scale=2; $total_freq / $core_count\" | bc)","    #                                                 echo \"Average CPU frequency: $avg_freq MHz\"","    #                                                 else","    #                                                     echo \"No CPU frequency information found.\"","    #                                                     fi","         # 计算平均频率",>40
 |<"         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率","         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
-"5	LINE	0
+"7	LINE	0
 	# 读取所有核心的频率
 	for i in $(seq 0 27); do
 	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
@@ -217,12 +229,12 @@ $
 	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
 	#
 	
-|3,0,5,1,16,0,1701265087,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","","         # 计算平均频率","         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率",>94
+|3,0,7,1,16,0,1701265087,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","","         # 计算平均频率","         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率",>94
 |<"         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
-"6	LINE	0
+"8	LINE	0
 	#
-|3,0,6,1,1,0,1701265086,"#"
-"7	LINE	0
+|3,0,8,1,1,0,1701265086,"#"
+"9	LINE	0
 	NITOR_DURATION=10
 	
 	# 初始化总频率变量
@@ -244,300 +256,244 @@ $
 	     #                                                     echo "No CPU frequency information found."
 	     #                                                     fi
 	     #                                                     q=0
-|3,0,7,1,21,0,1701265082,"NITOR_DURATION=10","","# 初始化总频率变量"," total_frele read -r line; do","     # 检查行是否包含频率信息","     #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","     #             # 提取频率值并累加","     #                     freq=$(echo \"$line\" | awk '{print $4}')","     #                             total_freq=$(echo \"$total_freq + $freq\" | bc)",>61
+|3,0,9,1,21,0,1701265082,"NITOR_DURATION=10","","# 初始化总频率变量"," total_frele read -r line; do","     # 检查行是否包含频率信息","     #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","     #             # 提取频率值并累加","     #                     freq=$(echo \"$line\" | awk '{print $4}')","     #                             total_freq=$(echo \"$total_freq + $freq\" | bc)",>61
 |<"     #                                     ((core_count++))","     #                                         fi","     #                                         done < /proc/cpuinfo","     #","     #                                         # 计算平均频率","     #                                         if [ $core_count -gt 0 ]; then","     #                                             avg_freq=$(echo \"scale=2; $total_freq / $core_count\" | bc)",>102
 |<"     #                                                 echo \"Average CPU frequency: $avg_freq MHz\"","     #                                                 else","     #                                                     echo \"No CPU frequency information found.\"","     #                                                     fi","     #                                                     q=0"
-"8	LINE	0
-	NITOR_DURATION=10
-	
-	# 初始化总频率变量
-	 total_freq=0
-	#
-	# 读取所有核心的频率
-	for i in $(seq 0 27); do
-	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
-	         total_freq=$((total_freq + core_freq))
-	         done
-	
-	         # 计算平均频率
-	         avg_freq=$((total_freq / 28))
-	#
-	         # 将频率从 kHz 转换为 GHz
-	         avg_freq_ghz=$(echo "scale=2; $avg_freq / 1000000" | bc)
-	#
-	         # 输出平均频率
-	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
-	#
-	
-|3,0,8,1,21,0,1701265078,"NITOR_DURATION=10","","# 初始化总频率变量"," total_freq=0","#","# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","","         # 计算平均频率","         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz",>69
-|<"         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率","         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
-"9	LINE	0
-	
-	# 初始化总频率变量
-	# total_freq=0
-	#
-	# # 读取所有核心的频率
-	# for i in $(seq 0 27); do
-	#     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
-	#         total_freq=$((total_freq + core_freq))
-	#         done
-	#
-	#         # 计算平均频率
-	#         avg_freq=$((total_freq / 28))
-	#
-	#         # 将频率从 kHz 转换为 GHz
-	#         avg_freq_ghz=$(echo "scale=2; $avg_freq / 1000000" | bc)
-	#
-	#         # 输出平均频率
-	#         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
-	#
-	#
-	
-|3,0,9,1,21,0,1701264043,"","# 初始化总频率变量","# total_freq=0","#","# # 读取所有核心的频率","# for i in $(seq 0 27); do","#     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","#         total_freq=$((total_freq + core_freq))","#         done","#","#         # 计算平均频率","#         avg_freq=$((total_freq / 28))","#","#         # 将频率从 kHz 转换为 GHz",>70
-|<"#         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","#         # 输出平均频率","#         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#","#",""
 "-	CHAR	0
 	s
 |3,0,36,0,1,0,1700747114,"s"
 
 # File marks:
-'0  179  1  ~/.zshrc
-|4,48,179,1,1701510233,"~/.zshrc"
-'1  10  0  ~/script/testAll/watch_cpu_freq.sh
-|4,49,10,0,1701267365,"~/script/testAll/watch_cpu_freq.sh"
-'2  11  1  ~/script/testAll/watch_cpu_freq.sh
-|4,50,11,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
-'3  10  1  ~/script/testAll/watch_cpu_freq.sh
-|4,51,10,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
-'4  11  12  ~/script/testAll/watch_cpu_freq.sh
-|4,52,11,12,1701266097,"~/script/testAll/watch_cpu_freq.sh"
-'5  10  12  ~/script/testAll/watch_cpu_freq.sh
-|4,53,10,12,1701266097,"~/script/testAll/watch_cpu_freq.sh"
-'6  1  1  ~/script/testAll/cpu_monitor.sh
-|4,54,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
-'7  1  0  ~/script/testAll/cpu_monitor.sh
-|4,55,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
-'8  19  0  ~/script/testAll/cpu_monitor.sh
-|4,56,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
-'9  19  0  ~/script/testAll/cpu_monitor.sh
-|4,57,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
+'0  154  28  ~/.zshrc
+|4,48,154,28,1702341879,"~/.zshrc"
+'1  214  0  ~/.tmux.conf
+|4,49,214,0,1702341825,"~/.tmux.conf"
+'2  203  0  ~/.tmux.conf
+|4,50,203,0,1702341577,"~/.tmux.conf"
+'3  203  0  ~/.tmux.conf
+|4,51,203,0,1702341577,"~/.tmux.conf"
+'4  152  0  ~/.zshrc
+|4,52,152,0,1701910550,"~/.zshrc"
+'5  152  0  ~/.zshrc
+|4,53,152,0,1701910550,"~/.zshrc"
+'6  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,54,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+'7  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,55,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+'8  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,56,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+'9  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,57,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
 
 # Jumplist (newest first):
--'  179  1  ~/.zshrc
-|4,39,179,1,1701510233,"~/.zshrc"
+-'  154  28  ~/.zshrc
+|4,39,154,28,1702341879,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1701508829,"~/.zshrc"
--'  10  0  ~/script/testAll/watch_cpu_freq.sh
-|4,39,10,0,1701267365,"~/script/testAll/watch_cpu_freq.sh"
--'  10  0  ~/script/testAll/watch_cpu_freq.sh
-|4,39,10,0,1701267365,"~/script/testAll/watch_cpu_freq.sh"
--'  1  0  ~/script/testAll/watch_cpu_freq.sh
-|4,39,1,0,1701267354,"~/script/testAll/watch_cpu_freq.sh"
--'  1  0  ~/script/testAll/watch_cpu_freq.sh
-|4,39,1,0,1701267354,"~/script/testAll/watch_cpu_freq.sh"
--'  11  1  ~/script/testAll/watch_cpu_freq.sh
-|4,39,11,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
--'  10  1  ~/script/testAll/watch_cpu_freq.sh
-|4,39,10,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
--'  11  1  ~/script/testAll/watch_cpu_freq.sh
-|4,39,11,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
--'  10  1  ~/script/testAll/watch_cpu_freq.sh
-|4,39,10,1,1701266302,"~/script/testAll/watch_cpu_freq.sh"
--'  1  0  ~/script/testAll/watch_cpu_freq.sh
-|4,39,1,0,1701266294,"~/script/testAll/watch_cpu_freq.sh"
--'  1  0  ~/script/testAll/watch_cpu_freq.sh
-|4,39,1,0,1701266294,"~/script/testAll/watch_cpu_freq.sh"
--'  10  12  ~/script/testAll/watch_cpu_freq.sh
-|4,39,10,12,1701266097,"~/script/testAll/watch_cpu_freq.sh"
--'  10  12  ~/script/testAll/watch_cpu_freq.sh
-|4,39,10,12,1701266097,"~/script/testAll/watch_cpu_freq.sh"
--'  1  0  ~/script/testAll/watch_cpu_freq.sh
-|4,39,1,0,1701266051,"~/script/testAll/watch_cpu_freq.sh"
--'  1  0  ~/script/testAll/watch_cpu_freq.sh
-|4,39,1,0,1701266051,"~/script/testAll/watch_cpu_freq.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  1  ~/script/testAll/cpu_monitor.sh
-|4,39,1,1,1701266045,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  1  0  ~/script/testAll/cpu_monitor.sh
-|4,39,1,0,1701265102,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  19  0  ~/script/testAll/cpu_monitor.sh
-|4,39,19,0,1701264081,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
--'  9  46  ~/script/testAll/cpu_monitor.sh
-|4,39,9,46,1701264069,"~/script/testAll/cpu_monitor.sh"
+|4,39,1,0,1702341828,"~/.zshrc"
+-'  214  0  ~/.tmux.conf
+|4,39,214,0,1702341825,"~/.tmux.conf"
+-'  214  0  ~/.tmux.conf
+|4,39,214,0,1702341825,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1702341818,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1702341818,"~/.tmux.conf"
+-'  203  0  ~/.tmux.conf
+|4,39,203,0,1702341577,"~/.tmux.conf"
+-'  203  0  ~/.tmux.conf
+|4,39,203,0,1702341577,"~/.tmux.conf"
+-'  203  0  ~/.tmux.conf
+|4,39,203,0,1702341577,"~/.tmux.conf"
+-'  203  0  ~/.tmux.conf
+|4,39,203,0,1702341577,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1702341517,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1702341517,"~/.tmux.conf"
+-'  152  0  ~/.zshrc
+|4,39,152,0,1701910550,"~/.zshrc"
+-'  152  0  ~/.zshrc
+|4,39,152,0,1701910550,"~/.zshrc"
+-'  152  0  ~/.zshrc
+|4,39,152,0,1701910550,"~/.zshrc"
+-'  152  0  ~/.zshrc
+|4,39,152,0,1701910550,"~/.zshrc"
+-'  152  0  ~/.zshrc
+|4,39,152,0,1701910550,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1701909697,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1701909697,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1701909697,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1701909697,"~/.zshrc"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  20  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/p_t.c
+|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  1  0  ~/Project/ML/Temp/t2/Makefile
+|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+-'  4  7  ~/Project/ML/Temp/t2/Makefile
+|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
 
 # History of marks within files (newest to oldest):
 
 > ~/.zshrc
-	*	1701508850	0
-	"	179	1
-	^	179	2
-	.	126	2
-	+	202	75
-	+	187	94
-	+	202	0
-	+	202	16
-	+	202	0
-	+	202	26
-	+	184	0
-	+	202	0
+	*	1702341879	0
+	"	154	28
+	^	154	29
+	.	154	28
 	+	202	25
 	+	202	4
 	+	202	0
@@ -630,6 +586,124 @@ $
 	+	195	51
 	+	197	48
 	+	126	2
+	+	220	51
+	+	220	66
+	+	220	51
+	+	220	50
+	+	219	14
+	+	220	0
+	+	219	41
+	+	154	28
+
+> ~/.tmux.conf
+	*	1702341825	0
+	"	214	0
+	^	208	0
+	.	10	0
+	+	1	24
+	+	246	0
+	+	66	5
+	+	67	5
+	+	68	5
+	+	69	5
+	+	68	5
+	+	162	10
+	+	163	10
+	+	164	10
+	+	165	10
+	+	148	10
+	+	150	10
+	+	154	10
+	+	148	10
+	+	150	10
+	+	154	10
+	+	1	12
+	+	1616	5
+	+	259	70
+	+	265	71
+	+	259	0
+	+	208	56
+	+	209	0
+	+	72	0
+	+	306	5
+	+	72	0
+	+	154	0
+	+	157	0
+	+	151	0
+	+	72	0
+	+	147	0
+	+	146	0
+	+	144	10
+	+	132	10
+	+	133	10
+	+	134	10
+	+	135	10
+	+	93	5
+	+	94	5
+	+	95	5
+	+	96	5
+	+	26	10
+	+	27	19
+	+	1	0
+	+	51	0
+	+	150	27
+	+	151	37
+	+	147	40
+	+	151	0
+	+	150	0
+	+	150	15
+	+	151	0
+	+	144	0
+	+	147	0
+	+	136	0
+	+	151	0
+	+	149	0
+	+	147	0
+	+	159	21
+	+	160	21
+	+	161	21
+	+	162	21
+	+	164	21
+	+	165	21
+	+	166	21
+	+	130	10
+	+	10	0
+	+	11	1
+	+	13	0
+	+	12	0
+	+	10	0
+	+	1	0
+	+	26	0
+	+	27	0
+	+	26	0
+	+	27	0
+	+	9	0
+	+	10	0
+
+> ~/Project/ML/Temp/t2/p_t.c
+	*	1701766549	0
+	"	20	0
+	^	20	0
+	.	19	22
+	+	21	0
+	+	19	22
+
+> ~/Project/ML/Temp/t2/Makefile
+	*	1701766521	0
+	"	1	0
+	.	8	0
+	+	8	63
+	+	1	5
+	+	2	48
+	+	7	41
+	+	8	0
+
+> ~/Project/AIGC/MyDB/DB-GPT/run.sh
+	*	1701578532	0
+	"	1	34
+	^	1	35
+	.	1	34
+	+	1	34
 
 > ~/script/testAll/watch_cpu_freq.sh
 	*	1701267364	0
@@ -814,91 +888,6 @@ $
 	+	1	0
 	+	1	99
 	+	7	27
-
-> ~/.tmux.conf
-	*	1700744436	0
-	"	208	0
-	^	208	0
-	.	10	0
-	+	1	24
-	+	246	0
-	+	66	5
-	+	67	5
-	+	68	5
-	+	69	5
-	+	68	5
-	+	162	10
-	+	163	10
-	+	164	10
-	+	165	10
-	+	148	10
-	+	150	10
-	+	154	10
-	+	148	10
-	+	150	10
-	+	154	10
-	+	1	12
-	+	1616	5
-	+	259	70
-	+	265	71
-	+	259	0
-	+	208	56
-	+	209	0
-	+	72	0
-	+	306	5
-	+	72	0
-	+	154	0
-	+	157	0
-	+	151	0
-	+	72	0
-	+	147	0
-	+	146	0
-	+	144	10
-	+	132	10
-	+	133	10
-	+	134	10
-	+	135	10
-	+	93	5
-	+	94	5
-	+	95	5
-	+	96	5
-	+	26	10
-	+	27	19
-	+	1	0
-	+	51	0
-	+	150	27
-	+	151	37
-	+	147	40
-	+	151	0
-	+	150	0
-	+	150	15
-	+	151	0
-	+	144	0
-	+	147	0
-	+	136	0
-	+	151	0
-	+	149	0
-	+	147	0
-	+	159	21
-	+	160	21
-	+	161	21
-	+	162	21
-	+	164	21
-	+	165	21
-	+	166	21
-	+	130	10
-	+	10	0
-	+	11	1
-	+	13	0
-	+	12	0
-	+	10	0
-	+	1	0
-	+	26	0
-	+	27	0
-	+	26	0
-	+	27	0
-	+	9	0
-	+	10	0
 
 > ~/.ssh/config
 	*	1700742474	0
@@ -1475,25 +1464,4 @@ $
 
 > ~/.bash_history
 	*	1685707672	0
-	"	1	0
-
-> ~/XianDao/succesWae/succFinal.cu
-	*	1685177372	0
-	"	606	0
-	^	606	0
-	.	605	1
-	+	605	1
-
-> ~/XianDao/succesWae/run.sh
-	*	1685176880	0
-	"	3	27
-	^	3	28
-	.	3	27
-	+	1	33
-	+	2	14
-	+	3	0
-	+	3	27
-
-> ~/XianDao/succesWae/test.sh
-	*	1685176082	0
 	"	1	0
