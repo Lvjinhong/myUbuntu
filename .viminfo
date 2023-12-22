@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<core_freq\>
+~MSle0~/auto
 
 # Last Substitute Search Pattern:
 ~MSle0&int
@@ -21,9 +21,9 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1702341879,,"wq"
+|2,0,1703232245,,"wq"
 :q
-|2,0,1702341825,,"q"
+|2,0,1703232238,,"q"
 :q!
 |2,0,1701265102,,"q!"
 :x
@@ -80,6 +80,12 @@ $
 |2,0,1684590394,,"wq!"
 
 # Search String History (newest to oldest):
+?/auto
+|2,1,1702950623,47,"auto"
+?/proxy
+|2,1,1702464632,47,"proxy"
+?/pro
+|2,1,1702464626,47,"pro"
 ? \<core_freq\>
 |2,1,1701265092,,"\\<core_freq\\>"
 ?/bin/bash
@@ -155,27 +161,53 @@ $
 	#PATH="/homepur/1111****************/bin:$PATH"
 |3,0,0,1,2,0,1700828768,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
 ""1	LINE	0
+	function lib_installed()
+	{
+	    /sbin/ldconfig -N -v $(sed 's/:/ /g' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1 | sed -e 's/^\t*//' -e 's/.*=>//'
+	}
+	
+	function check() {
+	    lib_path=$(lib_installed $1)
+	    if [ -n "$lib_path" ]; then
+	        echo "$1 is installed at $lib_path"
+	    else
+	        echo "ERROR: $1 is NOT installed"
+	    fi
+	}
+	
+	# 使用示例
+	# 检测 libcudnn
+	check "libcudnn"
+	
+|3,1,1,1,18,0,1702648925,"function lib_installed()","{","    /sbin/ldconfig -N -v $(sed 's/:/ /g' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1 | sed -e 's/^\\t*//' -e 's/.*=>//'","}","","function check() {","    lib_path=$(lib_installed $1)","    if [ -n \"$lib_path\" ]; then","        echo \"$1 is installed at $lib_path\"","    else","        echo \"ERROR: $1 is NOT installed\"","    fi","}","","# 使用示例","# 检测 libcudnn","check \"libcudnn\"",""
+"2	LINE	0
+	function lib_installed() 
+	{ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1; }
+	function check() { lib_installed $1 && echo "$1 is installed" || echo "ERROR: $1 is NOT installed"; }
+	check libcudnn
+|3,0,2,1,4,0,1702648803,"function lib_installed() ","{ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1; }","function check() { lib_installed $1 && echo \"$1 is installed\" || echo \"ERROR: $1 is NOT installed\"; }","check libcudnn"
+"3	LINE	0
 	dGall:
 	    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 	clean:
 	    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 	
-|3,1,1,1,5,0,1701766503,"dGall:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules","clean:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean",""
-"2	LINE	0
+|3,0,3,1,5,0,1701766503,"dGall:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules","clean:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean",""
+"4	LINE	0
 	export TRANSFORMERS_CACHE=/home/ljh/Project/LLM/HFhub/transformers
 	export HF_DATASETS_CACHE=/home/ljh/Project/LLM/HFhub/datasets
 	export HF_METRICS_CACHE=/home/ljh/Project/LLM/HFhub/metrics
-|3,0,2,1,3,0,1701536900,"export TRANSFORMERS_CACHE=/home/ljh/Project/LLM/HFhub/transformers","export HF_DATASETS_CACHE=/home/ljh/Project/LLM/HFhub/datasets","export HF_METRICS_CACHE=/home/ljh/Project/LLM/HFhub/metrics"
-"3	LINE	0
-	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done"
-|3,0,3,1,1,0,1701267358,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done\""
-"4	LINE	0
-	watch -n 0.2 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done"
-|3,0,4,1,1,0,1701266295,"watch -n 0.2 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done\""
+|3,0,4,1,3,0,1701536900,"export TRANSFORMERS_CACHE=/home/ljh/Project/LLM/HFhub/transformers","export HF_DATASETS_CACHE=/home/ljh/Project/LLM/HFhub/datasets","export HF_METRICS_CACHE=/home/ljh/Project/LLM/HFhub/metrics"
 "5	LINE	0
-	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq; done"
-|3,0,5,1,1,0,1701266058,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq; done\""
+	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done"
+|3,0,5,1,1,0,1701267358,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done\""
 "6	LINE	0
+	watch -n 0.2 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done"
+|3,0,6,1,1,0,1701266295,"watch -n 0.2 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done\""
+"7	LINE	0
+	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq; done"
+|3,0,7,1,1,0,1701266058,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq; done\""
+"8	LINE	0
 	# 读取所有核心的频率
 	for i in $(seq 0 27); do
 	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
@@ -208,11 +240,11 @@ $
 	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
 	#
 	
-|3,0,6,1,32,0,1701265099,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","le read -r line; do","    # 检查行是否包含频率信息","    #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","    #             # 提取频率值并累加","    #                     freq=$(echo \"$line\" | awk '{print $4}')",>83
+|3,0,8,1,32,0,1701265099,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","le read -r line; do","    # 检查行是否包含频率信息","    #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","    #             # 提取频率值并累加","    #                     freq=$(echo \"$line\" | awk '{print $4}')",>83
 |<"    #                             total_freq=$(echo \"$total_freq + $freq\" | bc)","    #                                     ((core_count++))","    #                                         fi","    #                                         done < /proc/cpuinfo","    #","    #                                         # 计算平均频率","    #                                         if [ $core_count -gt 0 ]; then",>112
 |<"    #                                             avg_freq=$(echo \"scale=2; $total_freq / $core_count\" | bc)","    #                                                 echo \"Average CPU frequency: $avg_freq MHz\"","    #                                                 else","    #                                                     echo \"No CPU frequency information found.\"","    #                                                     fi","         # 计算平均频率",>40
 |<"         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率","         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
-"7	LINE	0
+"9	LINE	0
 	# 读取所有核心的频率
 	for i in $(seq 0 27); do
 	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
@@ -229,275 +261,277 @@ $
 	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
 	#
 	
-|3,0,7,1,16,0,1701265087,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","","         # 计算平均频率","         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率",>94
+|3,0,9,1,16,0,1701265087,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","","         # 计算平均频率","         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率",>94
 |<"         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
-"8	LINE	0
-	#
-|3,0,8,1,1,0,1701265086,"#"
-"9	LINE	0
-	NITOR_DURATION=10
-	
-	# 初始化总频率变量
-	 total_frele read -r line; do
-	     # 检查行是否包含频率信息
-	     #     if [[ "$line" =~ "cpu MHz" ]]; then
-	     #             # 提取频率值并累加
-	     #                     freq=$(echo "$line" | awk '{print $4}')
-	     #                             total_freq=$(echo "$total_freq + $freq" | bc)
-	     #                                     ((core_count++))
-	     #                                         fi
-	     #                                         done < /proc/cpuinfo
-	     #
-	     #                                         # 计算平均频率
-	     #                                         if [ $core_count -gt 0 ]; then
-	     #                                             avg_freq=$(echo "scale=2; $total_freq / $core_count" | bc)
-	     #                                                 echo "Average CPU frequency: $avg_freq MHz"
-	     #                                                 else
-	     #                                                     echo "No CPU frequency information found."
-	     #                                                     fi
-	     #                                                     q=0
-|3,0,9,1,21,0,1701265082,"NITOR_DURATION=10","","# 初始化总频率变量"," total_frele read -r line; do","     # 检查行是否包含频率信息","     #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","     #             # 提取频率值并累加","     #                     freq=$(echo \"$line\" | awk '{print $4}')","     #                             total_freq=$(echo \"$total_freq + $freq\" | bc)",>61
-|<"     #                                     ((core_count++))","     #                                         fi","     #                                         done < /proc/cpuinfo","     #","     #                                         # 计算平均频率","     #                                         if [ $core_count -gt 0 ]; then","     #                                             avg_freq=$(echo \"scale=2; $total_freq / $core_count\" | bc)",>102
-|<"     #                                                 echo \"Average CPU frequency: $avg_freq MHz\"","     #                                                 else","     #                                                     echo \"No CPU frequency information found.\"","     #                                                     fi","     #                                                     q=0"
 "-	CHAR	0
 	s
 |3,0,36,0,1,0,1700747114,"s"
 
 # File marks:
-'0  154  28  ~/.zshrc
-|4,48,154,28,1702341879,"~/.zshrc"
-'1  214  0  ~/.tmux.conf
-|4,49,214,0,1702341825,"~/.tmux.conf"
-'2  203  0  ~/.tmux.conf
-|4,50,203,0,1702341577,"~/.tmux.conf"
-'3  203  0  ~/.tmux.conf
-|4,51,203,0,1702341577,"~/.tmux.conf"
-'4  152  0  ~/.zshrc
-|4,52,152,0,1701910550,"~/.zshrc"
-'5  152  0  ~/.zshrc
-|4,53,152,0,1701910550,"~/.zshrc"
-'6  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,54,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
-'7  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,55,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
-'8  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,56,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
-'9  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,57,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+'0  52  3  ~/.gitignore
+|4,48,52,3,1703232245,"~/.gitignore"
+'1  1  0  ~/.zshrc
+|4,49,1,0,1703232238,"~/.zshrc"
+'2  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,50,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+'3  174  9  ~/.zshrc
+|4,51,174,9,1702884264,"~/.zshrc"
+'4  174  9  ~/.zshrc
+|4,52,174,9,1702884264,"~/.zshrc"
+'5  1  15  ~/SoftWare/clash/config.yaml
+|4,53,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+'6  1  15  ~/SoftWare/clash/config.yaml
+|4,54,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+'7  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,55,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+'8  4  39  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,56,4,39,1702713722,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+'9  4  39  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,57,4,39,1702713722,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
 
 # Jumplist (newest first):
--'  154  28  ~/.zshrc
-|4,39,154,28,1702341879,"~/.zshrc"
+-'  52  3  ~/.gitignore
+|4,39,52,3,1703232245,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1703232242,"~/.gitignore"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1702341828,"~/.zshrc"
--'  214  0  ~/.tmux.conf
-|4,39,214,0,1702341825,"~/.tmux.conf"
--'  214  0  ~/.tmux.conf
-|4,39,214,0,1702341825,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1702341818,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1702341818,"~/.tmux.conf"
--'  203  0  ~/.tmux.conf
-|4,39,203,0,1702341577,"~/.tmux.conf"
--'  203  0  ~/.tmux.conf
-|4,39,203,0,1702341577,"~/.tmux.conf"
--'  203  0  ~/.tmux.conf
-|4,39,203,0,1702341577,"~/.tmux.conf"
--'  203  0  ~/.tmux.conf
-|4,39,203,0,1702341577,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1702341517,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1702341517,"~/.tmux.conf"
--'  152  0  ~/.zshrc
-|4,39,152,0,1701910550,"~/.zshrc"
--'  152  0  ~/.zshrc
-|4,39,152,0,1701910550,"~/.zshrc"
--'  152  0  ~/.zshrc
-|4,39,152,0,1701910550,"~/.zshrc"
--'  152  0  ~/.zshrc
-|4,39,152,0,1701910550,"~/.zshrc"
--'  152  0  ~/.zshrc
-|4,39,152,0,1701910550,"~/.zshrc"
+|4,39,1,0,1703232238,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1701909697,"~/.zshrc"
+|4,39,1,0,1703232238,"~/.zshrc"
+-'  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  7  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,7,0,1702950623,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  7  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,7,0,1702950623,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  7  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,7,0,1702950623,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  7  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,7,0,1702950623,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  1  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,1,0,1702950619,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  1  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,1,0,1702950619,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  1  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,1,0,1702950619,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  1  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+|4,39,1,0,1702950619,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
+-'  174  9  ~/.zshrc
+|4,39,174,9,1702884264,"~/.zshrc"
+-'  174  9  ~/.zshrc
+|4,39,174,9,1702884264,"~/.zshrc"
+-'  174  9  ~/.zshrc
+|4,39,174,9,1702884264,"~/.zshrc"
+-'  174  9  ~/.zshrc
+|4,39,174,9,1702884264,"~/.zshrc"
+-'  174  9  ~/.zshrc
+|4,39,174,9,1702884264,"~/.zshrc"
+-'  174  9  ~/.zshrc
+|4,39,174,9,1702884264,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1701909697,"~/.zshrc"
+|4,39,1,0,1702884237,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1701909697,"~/.zshrc"
+|4,39,1,0,1702884237,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1701909697,"~/.zshrc"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  20  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,20,0,1701766549,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/p_t.c
-|4,39,1,0,1701766538,"~/Project/ML/Temp/t2/p_t.c"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  1  0  ~/Project/ML/Temp/t2/Makefile
-|4,39,1,0,1701766523,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
--'  4  7  ~/Project/ML/Temp/t2/Makefile
-|4,39,4,7,1701766507,"~/Project/ML/Temp/t2/Makefile"
+|4,39,1,0,1702884237,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1702884237,"~/.zshrc"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  15  ~/SoftWare/clash/config.yaml
+|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
 
 # History of marks within files (newest to oldest):
 
+> ~/.gitignore
+	*	1703232245	0
+	"	52	3
+	^	52	4
+	.	52	3
+	+	11	16
+	+	32	9
+	+	42	0
+	+	43	6
+	+	44	7
+	+	50	3
+	+	48	0
+	+	51	3
+	+	52	12
+	+	10	4
+	+	10	0
+	+	10	6
+	+	10	10
+	+	10	0
+	+	52	0
+	+	1	8
+	+	2	0
+	+	2	12
+	+	5	0
+	+	1	8
+	+	2	13
+	+	1	0
+	+	2	0
+	+	27	0
+	+	1	0
+	+	2	13
+	+	3	12
+	+	52	3
+
 > ~/.zshrc
-	*	1702341879	0
-	"	154	28
-	^	154	29
-	.	154	28
-	+	202	25
-	+	202	4
-	+	202	0
-	+	202	9
+	*	1703232236	0
+	"	1	0
+	^	169	39
+	.	169	39
 	+	202	70
 	+	202	40
 	+	202	0
@@ -594,6 +628,105 @@ $
 	+	220	0
 	+	219	41
 	+	154	28
+	+	224	16
+	+	169	106
+	+	169	0
+	+	169	39
+
+> ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
+	*	1702950627	0
+	"	21	99
+	^	21	100
+	.	21	99
+	+	21	99
+
+> ~/SoftWare/clash/config.yaml
+	*	1702726467	0
+	"	1	15
+	^	1	16
+	.	1	15
+	+	1	15
+	+	6	35
+	+	1	15
+	+	6	35
+	+	1	15
+
+> ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
+	*	1702713743	0
+	"	1	0
+	^	4	40
+	.	4	39
+	+	4	39
+
+> ~/SoftWare/clash/config.yaml.ljh.back
+	*	1702707741	0
+	"	1	0
+
+> ~/script/cudaTest/cudnn.sh
+	*	1702649659	0
+	"	16	24
+	^	16	25
+	.	17	0
+	+	16	25
+	+	17	0
+
+> ~/script/cudaTest/cudnnTest.sh
+	*	1702648980	0
+	"	13	0
+	^	20	0
+	.	19	16
+	+	2	109
+	+	2	14
+	+	2	13
+	+	1	0
+	+	2	24
+	+	19	16
+
+> ~/script/cudaTest/cudnnInstall.sh
+	*	1702648425	0
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	8
+	+	6	84
+	+	1	24
+	+	3	32
+	+	1	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	3	37
+	+	6	86
+	+	9	0
+	+	8	22
+	+	4	1
+	+	5	1
+	+	6	1
+	+	4	1
+	+	5	1
+	+	6	1
+	+	1	0
+
+> ~/Project/AIGC/VITS/Bert-VITS2/.git/MERGE_MSG
+	*	1702630913	0
+	"	2	0
+
+> ~/Project/LLM/Embed-Adapter/.git/COMMIT_EDITMSG
+	*	1702534056	0
+	"	1	33
+	^	1	34
+	.	1	33
+	+	1	33
+
+> ~/script/cudaTest/torchTest.py
+	*	1702434430	0
+	"	2	29
+	^	2	29
+	.	2	29
+	+	11	63
+	+	1	4
+	+	2	29
+	p	1	0
 
 > ~/.tmux.conf
 	*	1702341825	0
@@ -741,39 +874,6 @@ $
 	+	3	38
 	+	5	27
 
-> ~/.gitignore
-	*	1701189729	0
-	"	1	0
-	^	3	13
-	.	3	12
-	+	11	16
-	+	32	9
-	+	42	0
-	+	43	6
-	+	44	7
-	+	50	3
-	+	48	0
-	+	51	3
-	+	52	12
-	+	10	4
-	+	10	0
-	+	10	6
-	+	10	10
-	+	10	0
-	+	52	0
-	+	1	8
-	+	2	0
-	+	2	12
-	+	5	0
-	+	1	8
-	+	2	13
-	+	1	0
-	+	2	0
-	+	27	0
-	+	1	0
-	+	2	13
-	+	3	12
-
 > ~/script/cudaTest/MgpusTest/README.md
 	*	1701184880	0
 	"	3	55
@@ -854,30 +954,6 @@ $
 	^	26	0
 	.	26	0
 	+	26	0
-
-> ~/script/cudaTest/cudnnInstall.sh
-	*	1700760048	0
-	"	5	0
-	^	5	1
-	.	5	1
-	+	1	8
-	+	5	84
-	+	1	24
-	+	2	32
-	+	1	0
-	+	3	0
-	+	4	0
-	+	5	0
-	+	2	37
-	+	5	86
-	+	8	0
-	+	7	22
-	+	3	1
-	+	4	1
-	+	5	1
-	+	3	1
-	+	4	1
-	+	5	1
 
 > ~/Download/cuda12.1/run.sh
 	*	1700747123	0
@@ -1000,14 +1076,6 @@ $
 	+	10	0
 	+	1	0
 
-> ~/SoftWare/clash/config.yaml
-	*	1700709552	0
-	"	6	35
-	^	6	36
-	.	6	35
-	+	1	15
-	+	6	35
-
 > ~/SoftWare/neovim/Cmake
 	*	1699672557	0
 	"	1	0
@@ -1074,16 +1142,6 @@ $
 > /etc/n2n/supernode.conf
 	*	1694529621	0
 	"	1	0
-
-> ~/script/cudaTest/torchTest.py
-	*	1694403713	0
-	"	2	24
-	^	2	25
-	.	2	24
-	+	11	63
-	+	1	4
-	+	2	24
-	p	1	0
 
 > ~/Project/HPC/PAC/PAC22/PAC22-SYCL/onetest/run.sh
 	*	1693875575	0
@@ -1201,15 +1259,6 @@ $
 > ~/script/dockerRun/nvDocker.sh
 	*	1689250878	0
 	"	1	0
-
-> ~/script/cudaTest/cudnnTest.sh
-	*	1689250853	0
-	"	1	0
-	.	1	0
-	+	2	109
-	+	2	14
-	+	3	13
-	+	1	0
 
 > ~/hpl/hpl-linux-x86_64/HPL.dat
 	*	1689151817	0
@@ -1425,43 +1474,4 @@ $
 
 > ~/hpl.sh
 	*	1686151535	0
-	"	1	0
-
-> ~/ASCpro/linpack/hpl/hpl.sh
-	*	1686151526	0
-	"	80	0
-	^	6	1
-	.	4	0
-	+	4	0
-
-> ~/ASCpro/linpack/hpl/run.sh
-	*	1686151338	0
-	"	1	0
-
-> ~/ASCpro/docker/run.sh
-	*	1686037591	0
-	"	1	191
-	^	1	192
-	.	1	191
-	+	1	0
-	+	1	191
-
-> ~/.config/.tmux1.conf
-	*	1685876665	0
-	"	211	161
-	^	211	162
-	.	211	106
-	+	846	0
-	+	844	164
-	+	424	0
-	+	422	164
-	+	212	0
-	+	211	106
-
-> ~/.zshrczsh
-	*	1685874536	0
-	"	1	0
-
-> ~/.bash_history
-	*	1685707672	0
 	"	1	0

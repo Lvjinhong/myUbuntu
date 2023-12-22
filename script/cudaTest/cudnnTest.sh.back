@@ -1,0 +1,20 @@
+#!/bin/bash
+function lib_installed()
+{
+    /sbin/ldconfig -p | grep $1
+}
+
+function check() {
+    lib_details=$(lib_installed $1)
+    if [ -n "$lib_details" ]; then
+        echo "Found $1:"
+        echo "$lib_details"
+    else
+        echo "ERROR: $1 is NOT installed"
+    fi
+}
+
+# 使用示例
+# 检测 libcudnn
+check "libcudnn"
+

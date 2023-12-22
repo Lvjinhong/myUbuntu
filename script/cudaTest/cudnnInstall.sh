@@ -1,3 +1,4 @@
+
 if [ -n "$CUDA_V" ]; then
 	echo "目前使用的CUDA版本CUDA_V为  $CUDA_V"
 	sudo cp ./include/cudnn*.h /usr/local/$CUDA_V/include

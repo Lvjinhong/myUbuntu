@@ -1,0 +1,31 @@
+/home/inspur/nfs/ljh/SoftWare/miniforge3/envs/GPT/bin/python: can't open file '/home/inspur/nfs/ljh/Project/LLM/transformers-benchmarks/transformers/examples/pytorch/language-modeling/run_mlm.py': [Errno 2] No such file or directory
+[2023-12-13 03:57:59,007] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 2) local_rank: 0 (pid: 173818) of binary: /home/inspur/nfs/ljh/SoftWare/miniforge3/envs/GPT/bin/python
+Traceback (most recent call last):
+  File "/home/inspur/nfs/ljh/SoftWare/miniforge3/envs/GPT/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/home/inspur/nfs/ljh/SoftWare/miniforge3/envs/GPT/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/home/inspur/nfs/ljh/SoftWare/miniforge3/envs/GPT/lib/python3.10/site-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/home/inspur/nfs/ljh/SoftWare/miniforge3/envs/GPT/lib/python3.10/site-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/home/inspur/nfs/ljh/SoftWare/miniforge3/envs/GPT/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/inspur/nfs/ljh/SoftWare/miniforge3/envs/GPT/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+transformers/examples/pytorch/language-modeling/run_mlm.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-12-13_03:57:59
+  host      : inspur1
+  rank      : 0 (local_rank: 0)
+  exitcode  : 2 (pid: 173818)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

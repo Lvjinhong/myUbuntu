@@ -1,5 +1,5 @@
 import torch
-print("CUDA版本：",torch.version.cuda)
+print("构建pytorch基于的CUDA版本：",torch.version.cuda)
 
 import torch
 print("pytorch NCCL版本：", torch.cuda.nccl.version())

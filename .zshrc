@@ -166,7 +166,7 @@ alias nv='watch -n 1 nvidia-smi'
 alias mm='mamba'
 
 alias setcudaV='export PATH=/usr/local/$CUDA_V/bin:$PATH&&export LD_LIBRARY_PATH=/usr/local/$CUDA_V/lib64:$LD_LIBRARY_PATH'
-alias setproxy='export https_proxy=$claship http_proxy=$claship all_proxy=${claship/http/socks5}; echo '开始测试是否连通google';proxy'
+alias setproxy='export https_proxy=http://$claship http_proxy=http://$claship all_proxy=socks5://$claship; echo '开始测试是否连通google';proxy'
 alias unsetproxy='unset https_proxy http_proxy all_proxy'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias oneapi='source /home/ljh/SoftWare/intel/oneapi/setvars.sh --include-intel-llvm --force'
@@ -221,7 +221,7 @@ export HF_HOME=/home/ljh/Project/LLM/HFhub
 #--------------------------------------系统级驱动配置----------------------------------
 export HISTFILESIZE=1000
 #注意不要与其他端口冲突
-export claship="http://127.0.0.1:7889"
+export claship="127.0.0.1:7889"
 export EDITOR=/usr/bin/vim
 export CUDA_V=cuda-12.1
 #------------------------------------应用初始化----------------------------------------
