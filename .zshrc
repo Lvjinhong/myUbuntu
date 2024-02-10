@@ -204,6 +204,7 @@ alias setOrigin_LD_LIBRARY_PATH='export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-g
 add_to_path_if_exists /home/ljh/.local/bin /home/inspur/nfs/ljh/SoftWare/vim/bin \
 /home/inspur/nfs/ljh/SoftWare/neovim/bin /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin \
 /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/12.3/openmpi4/latest/bin
+
 setOrigin_LD_LIBRARY_PATH
 #export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/libibverbs:/usr/local/lib64:/usr/lib" 
 add_to_LD_LIBRARY_PATH_if_exists /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/12.3/openmpi4/latest/lib \

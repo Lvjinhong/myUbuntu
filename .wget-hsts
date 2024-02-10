@@ -3,11 +3,11 @@
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
 download.jetbrains.com	0	1	1693206478	31536000
 developer.nvidia.com	0	1	1700751082	63072000
-update.code.visualstudio.com	0	1	1703092053	31536000
+update.code.visualstudio.com	0	1	1707532788	31536000
 raw.githubusercontent.com	0	0	1700671631	31536000
 api.mason-registry.dev	0	0	1693842860	63072000
 developer.download.nvidia.cn	0	0	1700751036	31536000
 registrationcenter-download.intel.com	0	1	1693452886	31536000
 codeload.github.com	0	0	1699670946	31536000
-github.com	0	1	1702699633	31536000
+github.com	0	1	1706696608	31536000
 drive.google.com	0	0	1702458378	31536000

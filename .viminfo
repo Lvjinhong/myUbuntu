@@ -21,9 +21,11 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1703232245,,"wq"
+|2,0,1706887201,,"wq"
+:Wq
+|2,0,1703250517,,"Wq"
 :q
-|2,0,1703232238,,"q"
+|2,0,1703244849,,"q"
 :q!
 |2,0,1701265102,,"q!"
 :x
@@ -40,8 +42,6 @@ $
 |2,0,1700731824,,"https://github.com/nvm-sh/nvm"
 :WQ
 |2,0,1700708205,,"WQ"
-:Wq
-|2,0,1699667413,,"Wq"
 ::Copilot setup
 |2,0,1699665294,,":Copilot setup"
 :Q
@@ -161,6 +161,69 @@ $
 	#PATH="/homepur/1111****************/bin:$PATH"
 |3,0,0,1,2,0,1700828768,"","#PATH=\"/homepur/1111****************/bin:$PATH\""
 ""1	LINE	0
+	739
+<ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDDy6+eZFN0dA8fYIGLk9Gv42jh+1KqkGjQHQ/u+jiFAFCdP5GqtmH/OfUciz5Kjxo+143Kf2a0syBHWj93SIEFNmfFrQCTh77+6MAL9KLWLk+y8ZOEOZ6X/12CW1WjH3JhWSuvrh/fsxOKI6jrAtiVabRZkuK6bRDAd6FskE7DkpupL0qI3aqUa17fLh7Kz2J0+SJfdLPrR76M6ZmscgxFMoFAbVG8fkXKRnwga8Rq50prsZrvd4hVJXxRXnOSLCo/Jw3lNy6FKI28yhCCoZkEykTawfVBfWLYtRGsiYrbG44Fmx8Z1sq2WUFvLJTX76htanaM4sD2iHwK99QjdK7kbPB22wLUDrOkCLCwuZ1x8afa4AvSVGpit6numpHXrrQVPcsjw5uVLUMbMkf472bHq0j0YfXQq+ZJmiS1tUkqKj2hY6RsvVB2V0sbCr6XMSTFPDMareuSF367DHj0Oyiya7K6qw3ZXwLqkSs7LJaXWxzrxfIJ1l9zSkQ+9vztuKJ0VW1++PKAEIZWrbPuaLtaNfYIQoZWLydkpB2Zw5JJKOhkZdfXemJhHDXAGQNA4ki3QFXQfTjHc3VTW0skh6hx1E2pJNcVu4ec5Bnvk0lxlVdkV0NkafnmTGcqIj0rVb0fauvKx9DmUUCRwn3LMThihPk9hcubmoLJcC2cq9GSoQ== ljh@inspur1
+	573
+<ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC66Wlm3qRrm4c7n6r5nz8asMLv/eiFO6VGpZdJGMda6mgi9YbvyDuhM1HUKSTptKCvLTqdbVvhmyU5t3tYHGW/EcQTBlGUmDHyEVc5vLRrAZo59k/buhCLoHa9eV49oSdZZDQzUCSLBH1UGWmK1to4lv0rFw4X6Yu2wygg+I53b4pQADDdxYzAy/xKnei2+vrrSYFHD36LdPbwqUR3g6J8Xy62M/n529sFmF6917Kn8VwqLkcF8qSV1UsObddWnzYUTdi4PcwRxxSfaD3hT9qrQC2Vh4O0ihQdaUOEr/6aiLOUAKWEd9U8k4cuW4B/NzjK/jyX/jIL4vyB5b8lUsZwxyS4wc56r7qXIyUjagC15/uqXOKyHZRrQUsNNg9Zh4tSsWTfmEqwxH/Dga28V9/m0j/HzBo3ZggqPHRqftdg8zwD67nl5nJL9Hv7Vl0CGFDytHux5QK3Caz7XcWZSGN6/89qgMGa9MP/acQbdQCP62+xa5+q5+QQktLN8yp7Qdk= 3027026585@qq.com
+|3,1,1,1,2,0,1706338523,>738
+|<"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDDy6+eZFN0dA8fYIGLk9Gv42jh+1KqkGjQHQ/u+jiFAFCdP5GqtmH/OfUciz5Kjxo+143Kf2a0syBHWj93SIEFNmfFrQCTh77+6MAL9KLWLk+y8ZOEOZ6X/12CW1WjH3JhWSuvrh/fsxOKI6jrAtiVabRZkuK6bRDAd6FskE7DkpupL0qI3aqUa17fLh7Kz2J0+SJfdLPrR76M6ZmscgxFMoFAbVG8fkXKRnwga8Rq50prsZrvd4hVJXxRXnOSLCo/Jw3lNy6FKI28yhCCoZkEykTawfVBfWLYtRGsiYrbG44Fmx8Z1sq2WUFvLJTX76htanaM4sD2iHwK99QjdK7kbPB22wLUDrOkCLCwuZ1x8afa4AvSVGpit6numpHXrrQVPcsjw5uVLUMbMkf472bHq0j0YfXQq+ZJmiS1tUkqKj2hY6RsvVB2V0sbCr6XMSTFPD
+|<MareuSF367DHj0Oyiya7K6qw3ZXwLqkSs7LJaXWxzrxfIJ1l9zSkQ+9vztuKJ0VW1++PKAEIZWrbPuaLtaNfYIQoZWLydkpB2Zw5JJKOhkZdfXemJhHDXAGQNA4ki3QFXQfTjHc3VTW0skh6hx1E2pJNcVu4ec5Bnvk0lxlVdkV0NkafnmTGcqIj0rVb0fauvKx9DmUUCRwn3LMThihPk9hcubmoLJcC2cq9GSoQ== ljh@inspur1",>572
+|<"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC66Wlm3qRrm4c7n6r5nz8asMLv/eiFO6VGpZdJGMda6mgi9YbvyDuhM1HUKSTptKCvLTqdbVvhmyU5t3tYHGW/EcQTBlGUmDHyEVc5vLRrAZo59k/buhCLoHa9eV49oSdZZDQzUCSLBH1UGWmK1to4lv0rFw4X6Yu2wygg+I53b4pQADDdxYzAy/xKnei2+vrrSYFHD36LdPbwqUR3g6J8Xy62M/n529sFmF6917Kn8VwqLkcF8qSV1UsObddWnzYUTdi4PcwRxxSfaD3hT9qrQC2Vh4O0ihQdaUOEr/6aiLOUAKWEd9U8k4cuW4B/NzjK/jyX/jIL4vyB5b8lUsZwxyS4wc56r7qXIyUjagC15/uqXOKyHZRrQUsNNg9Zh4tSsWTfmEqwxH/Dga28V9/m0j/HzBo3ZggqPHRqftdg8zwD67nl5nJL9Hv7Vl0CGFDytH
+|<ux5QK3Caz7XcWZSGN6/89qgMGa9MP/acQbdQCP62+xa5+q5+QQktLN8yp7Qdk= 3027026585@qq.com"
+"2	LINE	0
+	mv ~/.zshrc.back ~/.zshrc
+|3,0,2,1,1,0,1703467717,"mv ~/.zshrc.back ~/.zshrc"
+"3	LINE	0
+	
+	# 这里可以写IP也可以写域名
+	Host JetsonNano
+		HostName 192.168.31.161
+		User zsh
+		PreferredAuthentications publickey
+		# Password ubuntu
+		# User zsh
+	
+	Host github.com
+		Hostname ssh.github.com
+		Port 443
+	
+	Host devcloud
+		HostName localhost
+		User u198221
+		IdentityFile ~/.ssh/devcloud.txt
+		ProxyCommand ssh -T -i ~/.ssh/devcloud.txt  guest@ssh.devcloud.intel.com
+	
+|3,0,3,1,19,0,1703312192,"","# 这里可以写IP也可以写域名","Host JetsonNano","	HostName 192.168.31.161","	User zsh","	PreferredAuthentications publickey","	# Password ubuntu","	# User zsh","","Host github.com","	Hostname ssh.github.com","	Port 443","","Host devcloud","	HostName localhost","	User u198221","	IdentityFile ~/.ssh/devcloud.txt","	ProxyCommand ssh -T -i ~/.ssh/devcloud.txt  guest@ssh.devcloud.intel.com",""
+"4	LINE	0
+	# 源文件夹和目标文件夹路径
+	SOURCE_DIR="./"
+	#如果是服务器加上username@server.com:  
+	TARGET_DIR=""
+	
+	# 使用 rsync 同步文件夹   --delete选项会删除目标文件夹中没有的文件
+	rsync -avhP -e "ssh -p 39290" $SOURCE_DIR ljh@115.24.15.70:TARGET_DIR
+	
+	
+	echo "同步完成。"dd$d
+	
+|3,0,4,1,11,0,1703253964,"# 源文件夹和目标文件夹路径","SOURCE_DIR=\"./\"","#如果是服务器加上username@server.com:  ","TARGET_DIR=\"\"","","# 使用 rsync 同步文件夹   --delete选项会删除目标文件夹中没有的文件","rsync -avhP -e \"ssh -p 39290\" $SOURCE_DIR ljh@115.24.15.70:TARGET_DIR","","","echo \"同步完成。\"dd$d",""
+"5	LINE	0
+	
+	
+|3,0,5,1,2,0,1703253955,"",""
+"6	LINE	0
+	#!/bin/bash
+	
+	# 源文件夹和目标文件夹路径
+	SOURCE_DIR="gggg"
+	TARGET_DIR=""
+	
+	# 使用 rsync 同步文件夹   --delete选项会删除目标文件夹中没有的文件
+	rsync -avhP  "$SOURCE_DIR" "$TARGET_DIR"
+	
+	echo "同步完成。"
+|3,0,6,1,10,0,1703250514,"#!/bin/bash","","# 源文件夹和目标文件夹路径","SOURCE_DIR=\"gggg\"","TARGET_DIR=\"\"","","# 使用 rsync 同步文件夹   --delete选项会删除目标文件夹中没有的文件","rsync -avhP  \"$SOURCE_DIR\" \"$TARGET_DIR\"","","echo \"同步完成。\""
+"7	LINE	0
 	function lib_installed()
 	{
 	    /sbin/ldconfig -N -v $(sed 's/:/ /g' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1 | sed -e 's/^\t*//' -e 's/.*=>//'
@@ -179,357 +242,349 @@ $
 	# 检测 libcudnn
 	check "libcudnn"
 	
-|3,1,1,1,18,0,1702648925,"function lib_installed()","{","    /sbin/ldconfig -N -v $(sed 's/:/ /g' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1 | sed -e 's/^\\t*//' -e 's/.*=>//'","}","","function check() {","    lib_path=$(lib_installed $1)","    if [ -n \"$lib_path\" ]; then","        echo \"$1 is installed at $lib_path\"","    else","        echo \"ERROR: $1 is NOT installed\"","    fi","}","","# 使用示例","# 检测 libcudnn","check \"libcudnn\"",""
-"2	LINE	0
+|3,0,7,1,18,0,1702648925,"function lib_installed()","{","    /sbin/ldconfig -N -v $(sed 's/:/ /g' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1 | sed -e 's/^\\t*//' -e 's/.*=>//'","}","","function check() {","    lib_path=$(lib_installed $1)","    if [ -n \"$lib_path\" ]; then","        echo \"$1 is installed at $lib_path\"","    else","        echo \"ERROR: $1 is NOT installed\"","    fi","}","","# 使用示例","# 检测 libcudnn","check \"libcudnn\"",""
+"8	LINE	0
 	function lib_installed() 
 	{ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1; }
 	function check() { lib_installed $1 && echo "$1 is installed" || echo "ERROR: $1 is NOT installed"; }
 	check libcudnn
-|3,0,2,1,4,0,1702648803,"function lib_installed() ","{ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1; }","function check() { lib_installed $1 && echo \"$1 is installed\" || echo \"ERROR: $1 is NOT installed\"; }","check libcudnn"
-"3	LINE	0
+|3,0,8,1,4,0,1702648803,"function lib_installed() ","{ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1; }","function check() { lib_installed $1 && echo \"$1 is installed\" || echo \"ERROR: $1 is NOT installed\"; }","check libcudnn"
+"9	LINE	0
 	dGall:
 	    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 	clean:
 	    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 	
-|3,0,3,1,5,0,1701766503,"dGall:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules","clean:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean",""
-"4	LINE	0
-	export TRANSFORMERS_CACHE=/home/ljh/Project/LLM/HFhub/transformers
-	export HF_DATASETS_CACHE=/home/ljh/Project/LLM/HFhub/datasets
-	export HF_METRICS_CACHE=/home/ljh/Project/LLM/HFhub/metrics
-|3,0,4,1,3,0,1701536900,"export TRANSFORMERS_CACHE=/home/ljh/Project/LLM/HFhub/transformers","export HF_DATASETS_CACHE=/home/ljh/Project/LLM/HFhub/datasets","export HF_METRICS_CACHE=/home/ljh/Project/LLM/HFhub/metrics"
-"5	LINE	0
-	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done"
-|3,0,5,1,1,0,1701267358,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l) GHz; done\""
-"6	LINE	0
-	watch -n 0.2 "for i in \$(seq 0 $((NUM_CORES - 1))); do echo \$(cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done"
-|3,0,6,1,1,0,1701266295,"watch -n 0.2 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do echo \\$(cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq) / 1000000 | bc -l; done\""
-"7	LINE	0
-	watch -n 1 "for i in \$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\$i/cpufreq/scaling_cur_freq; done"
-|3,0,7,1,1,0,1701266058,"watch -n 1 \"for i in \\$(seq 0 $((NUM_CORES - 1))); do cat /sys/devices/system/cpu/cpu\\$i/cpufreq/scaling_cur_freq; done\""
-"8	LINE	0
-	# 读取所有核心的频率
-	for i in $(seq 0 27); do
-	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
-	         total_freq=$((total_freq + core_freq))
-	         done
-	le read -r line; do
-	    # 检查行是否包含频率信息
-	    #     if [[ "$line" =~ "cpu MHz" ]]; then
-	    #             # 提取频率值并累加
-	    #                     freq=$(echo "$line" | awk '{print $4}')
-	    #                             total_freq=$(echo "$total_freq + $freq" | bc)
-	    #                                     ((core_count++))
-	    #                                         fi
-	    #                                         done < /proc/cpuinfo
-	    #
-	    #                                         # 计算平均频率
-	    #                                         if [ $core_count -gt 0 ]; then
-	    #                                             avg_freq=$(echo "scale=2; $total_freq / $core_count" | bc)
-	    #                                                 echo "Average CPU frequency: $avg_freq MHz"
-	    #                                                 else
-	    #                                                     echo "No CPU frequency information found."
-	    #                                                     fi
-	         # 计算平均频率
-	         avg_freq=$((total_freq / 28))
-	#
-	         # 将频率从 kHz 转换为 GHz
-	         avg_freq_ghz=$(echo "scale=2; $avg_freq / 1000000" | bc)
-	#
-	         # 输出平均频率
-	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
-	#
-	
-|3,0,8,1,32,0,1701265099,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","le read -r line; do","    # 检查行是否包含频率信息","    #     if [[ \"$line\" =~ \"cpu MHz\" ]]; then","    #             # 提取频率值并累加","    #                     freq=$(echo \"$line\" | awk '{print $4}')",>83
-|<"    #                             total_freq=$(echo \"$total_freq + $freq\" | bc)","    #                                     ((core_count++))","    #                                         fi","    #                                         done < /proc/cpuinfo","    #","    #                                         # 计算平均频率","    #                                         if [ $core_count -gt 0 ]; then",>112
-|<"    #                                             avg_freq=$(echo \"scale=2; $total_freq / $core_count\" | bc)","    #                                                 echo \"Average CPU frequency: $avg_freq MHz\"","    #                                                 else","    #                                                     echo \"No CPU frequency information found.\"","    #                                                     fi","         # 计算平均频率",>40
-|<"         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率","         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
-"9	LINE	0
-	# 读取所有核心的频率
-	for i in $(seq 0 27); do
-	     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)
-	         total_freq=$((total_freq + core_freq))
-	         done
-	
-	         # 计算平均频率
-	         avg_freq=$((total_freq / 28))
-	#
-	         # 将频率从 kHz 转换为 GHz
-	         avg_freq_ghz=$(echo "scale=2; $avg_freq / 1000000" | bc)
-	#
-	         # 输出平均频率
-	         echo "Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz"
-	#
-	
-|3,0,9,1,16,0,1701265087,"# 读取所有核心的频率","for i in $(seq 0 27); do","     core_freq=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_cur_freq)","         total_freq=$((total_freq + core_freq))","         done","","         # 计算平均频率","         avg_freq=$((total_freq / 28))","#","         # 将频率从 kHz 转换为 GHz","         avg_freq_ghz=$(echo \"scale=2; $avg_freq / 1000000\" | bc)","#","         # 输出平均频率",>94
-|<"         echo \"Average CPU frequency over $MONITOR_DURATION seconds is: $avg_freq_ghz GHz\"","#",""
+|3,0,9,1,5,0,1701766503,"dGall:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules","clean:","    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean",""
 "-	CHAR	0
-	s
-|3,0,36,0,1,0,1700747114,"s"
+	39290
+|3,0,36,0,1,0,1705718669,"39290"
 
 # File marks:
-'0  52  3  ~/.gitignore
-|4,48,52,3,1703232245,"~/.gitignore"
-'1  1  0  ~/.zshrc
-|4,49,1,0,1703232238,"~/.zshrc"
-'2  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,50,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
-'3  174  9  ~/.zshrc
-|4,51,174,9,1702884264,"~/.zshrc"
-'4  174  9  ~/.zshrc
-|4,52,174,9,1702884264,"~/.zshrc"
-'5  1  15  ~/SoftWare/clash/config.yaml
-|4,53,1,15,1702726467,"~/SoftWare/clash/config.yaml"
-'6  1  15  ~/SoftWare/clash/config.yaml
-|4,54,1,15,1702726347,"~/SoftWare/clash/config.yaml"
-'7  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,55,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
-'8  4  39  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,56,4,39,1702713722,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
-'9  4  39  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,57,4,39,1702713722,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+'0  16  65  ~/script/cudaTest/torchTest.py
+|4,48,16,65,1706887201,"~/script/cudaTest/torchTest.py"
+'1  9  0  ~/script/cudaTest/MgpusTest/test_Mgpus.sh
+|4,49,9,0,1706882210,"~/script/cudaTest/MgpusTest/test_Mgpus.sh"
+'2  77  0  ~/.ssh/config
+|4,50,77,0,1706459565,"~/.ssh/config"
+'3  11  0  ~/.ssh/authorized_keys
+|4,51,11,0,1706338524,"~/.ssh/authorized_keys"
+'4  71  10  ~/.ssh/config
+|4,52,71,10,1705718675,"~/.ssh/config"
+'5  71  10  ~/.ssh/config
+|4,53,71,10,1705718675,"~/.ssh/config"
+'6  22  0  ~/script/testAll/myConfig.sh
+|4,54,22,0,1703467719,"~/script/testAll/myConfig.sh"
+'7  73  10  ~/.ssh/config
+|4,55,73,10,1703312205,"~/.ssh/config"
+'8  73  10  ~/.ssh/config
+|4,56,73,10,1703312205,"~/.ssh/config"
+'9  73  10  ~/.ssh/config
+|4,57,73,10,1703312205,"~/.ssh/config"
 
 # Jumplist (newest first):
--'  52  3  ~/.gitignore
-|4,39,52,3,1703232245,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1703232242,"~/.gitignore"
--'  1  0  ~/.zshrc
-|4,39,1,0,1703232238,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1703232238,"~/.zshrc"
--'  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  21  99  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,21,99,1702950627,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  7  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,7,0,1702950623,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  7  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,7,0,1702950623,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  7  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,7,0,1702950623,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  7  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,7,0,1702950623,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  1  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,1,0,1702950619,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  1  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,1,0,1702950619,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  1  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,1,0,1702950619,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  1  0  ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
-|4,39,1,0,1702950619,"~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py"
--'  174  9  ~/.zshrc
-|4,39,174,9,1702884264,"~/.zshrc"
--'  174  9  ~/.zshrc
-|4,39,174,9,1702884264,"~/.zshrc"
--'  174  9  ~/.zshrc
-|4,39,174,9,1702884264,"~/.zshrc"
--'  174  9  ~/.zshrc
-|4,39,174,9,1702884264,"~/.zshrc"
--'  174  9  ~/.zshrc
-|4,39,174,9,1702884264,"~/.zshrc"
--'  174  9  ~/.zshrc
-|4,39,174,9,1702884264,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1702884237,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1702884237,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1702884237,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1702884237,"~/.zshrc"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726467,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  15  ~/SoftWare/clash/config.yaml
-|4,39,1,15,1702726347,"~/SoftWare/clash/config.yaml"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
--'  1  0  ~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh
-|4,39,1,0,1702713743,"~/Project/ASC/SXU-Yuan/ASC24-LLM-inference-optimization/llama/run.sh"
+-'  16  65  ~/script/cudaTest/torchTest.py
+|4,39,16,65,1706887201,"~/script/cudaTest/torchTest.py"
+-'  1  0  ~/script/cudaTest/torchTest.py
+|4,39,1,0,1706887150,"~/script/cudaTest/torchTest.py"
+-'  9  0  ~/script/cudaTest/MgpusTest/test_Mgpus.sh
+|4,39,9,0,1706882210,"~/script/cudaTest/MgpusTest/test_Mgpus.sh"
+-'  9  0  ~/script/cudaTest/MgpusTest/test_Mgpus.sh
+|4,39,9,0,1706882210,"~/script/cudaTest/MgpusTest/test_Mgpus.sh"
+-'  2  0  ~/script/cudaTest/MgpusTest/test_Mgpus.sh
+|4,39,2,0,1706882194,"~/script/cudaTest/MgpusTest/test_Mgpus.sh"
+-'  2  0  ~/script/cudaTest/MgpusTest/test_Mgpus.sh
+|4,39,2,0,1706882194,"~/script/cudaTest/MgpusTest/test_Mgpus.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/test_Mgpus.sh
+|4,39,1,0,1706882180,"~/script/cudaTest/MgpusTest/test_Mgpus.sh"
+-'  1  0  ~/script/cudaTest/MgpusTest/test_Mgpus.sh
+|4,39,1,0,1706882180,"~/script/cudaTest/MgpusTest/test_Mgpus.sh"
+-'  77  0  ~/.ssh/config
+|4,39,77,0,1706459565,"~/.ssh/config"
+-'  77  0  ~/.ssh/config
+|4,39,77,0,1706459565,"~/.ssh/config"
+-'  77  0  ~/.ssh/config
+|4,39,77,0,1706459565,"~/.ssh/config"
+-'  77  0  ~/.ssh/config
+|4,39,77,0,1706459565,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1706459548,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1706459548,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1706459548,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1706459548,"~/.ssh/config"
+-'  11  0  ~/.ssh/authorized_keys
+|4,39,11,0,1706338524,"~/.ssh/authorized_keys"
+-'  11  0  ~/.ssh/authorized_keys
+|4,39,11,0,1706338524,"~/.ssh/authorized_keys"
+-'  11  0  ~/.ssh/authorized_keys
+|4,39,11,0,1706338524,"~/.ssh/authorized_keys"
+-'  11  0  ~/.ssh/authorized_keys
+|4,39,11,0,1706338524,"~/.ssh/authorized_keys"
+-'  11  0  ~/.ssh/authorized_keys
+|4,39,11,0,1706338524,"~/.ssh/authorized_keys"
+-'  11  0  ~/.ssh/authorized_keys
+|4,39,11,0,1706338524,"~/.ssh/authorized_keys"
+-'  11  0  ~/.ssh/authorized_keys
+|4,39,11,0,1706338524,"~/.ssh/authorized_keys"
+-'  11  0  ~/.ssh/authorized_keys
+|4,39,11,0,1706338524,"~/.ssh/authorized_keys"
+-'  12  0  ~/.ssh/authorized_keys
+|4,39,12,0,1706338523,"~/.ssh/authorized_keys"
+-'  12  0  ~/.ssh/authorized_keys
+|4,39,12,0,1706338523,"~/.ssh/authorized_keys"
+-'  12  0  ~/.ssh/authorized_keys
+|4,39,12,0,1706338523,"~/.ssh/authorized_keys"
+-'  12  0  ~/.ssh/authorized_keys
+|4,39,12,0,1706338523,"~/.ssh/authorized_keys"
+-'  12  0  ~/.ssh/authorized_keys
+|4,39,12,0,1706338523,"~/.ssh/authorized_keys"
+-'  12  0  ~/.ssh/authorized_keys
+|4,39,12,0,1706338523,"~/.ssh/authorized_keys"
+-'  12  0  ~/.ssh/authorized_keys
+|4,39,12,0,1706338523,"~/.ssh/authorized_keys"
+-'  12  0  ~/.ssh/authorized_keys
+|4,39,12,0,1706338523,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1706338519,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1706338519,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1706338519,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1706338519,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1706338519,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1706338519,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1706338519,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1706338519,"~/.ssh/authorized_keys"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  71  10  ~/.ssh/config
+|4,39,71,10,1705718675,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1705718653,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1705718653,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1705718653,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1705718653,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1705718653,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1705718653,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1705718653,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1705718653,"~/.ssh/config"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  22  0  ~/script/testAll/myConfig.sh
+|4,39,22,0,1703467719,"~/script/testAll/myConfig.sh"
+-'  15  0  ~/script/testAll/myConfig.sh
+|4,39,15,0,1703467697,"~/script/testAll/myConfig.sh"
+-'  15  0  ~/script/testAll/myConfig.sh
+|4,39,15,0,1703467697,"~/script/testAll/myConfig.sh"
+-'  15  0  ~/script/testAll/myConfig.sh
+|4,39,15,0,1703467697,"~/script/testAll/myConfig.sh"
+-'  15  0  ~/script/testAll/myConfig.sh
+|4,39,15,0,1703467697,"~/script/testAll/myConfig.sh"
+-'  15  0  ~/script/testAll/myConfig.sh
+|4,39,15,0,1703467697,"~/script/testAll/myConfig.sh"
+-'  15  0  ~/script/testAll/myConfig.sh
+|4,39,15,0,1703467697,"~/script/testAll/myConfig.sh"
+-'  15  0  ~/script/testAll/myConfig.sh
+|4,39,15,0,1703467697,"~/script/testAll/myConfig.sh"
+-'  15  0  ~/script/testAll/myConfig.sh
+|4,39,15,0,1703467697,"~/script/testAll/myConfig.sh"
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore
-	*	1703232245	0
-	"	52	3
-	^	52	4
-	.	52	3
-	+	11	16
-	+	32	9
-	+	42	0
-	+	43	6
-	+	44	7
-	+	50	3
-	+	48	0
-	+	51	3
-	+	52	12
-	+	10	4
+> ~/script/cudaTest/torchTest.py
+	*	1706887201	0
+	"	16	65
+	^	16	66
+	.	16	65
+	+	11	63
+	+	1	4
+	+	2	29
+	+	16	65
+	p	1	0
+
+> ~/script/cudaTest/MgpusTest/test_Mgpus.sh
+	*	1706882210	0
+	"	9	0
+	^	9	1
+	.	9	0
+	+	22	0
+	+	21	0
+	+	20	0
+	+	23	0
+	+	15	0
+	+	14	0
+	+	13	0
+	+	12	0
+	+	11	0
 	+	10	0
-	+	10	6
-	+	10	10
-	+	10	0
-	+	52	0
-	+	1	8
-	+	2	0
-	+	2	12
-	+	5	0
-	+	1	8
-	+	2	13
+	+	9	0
+
+> ~/.ssh/config
+	*	1706459564	0
+	"	77	0
+	^	77	1
+	.	77	1
+	+	12	8
+	+	13	1
+	+	17	1
+	+	6	0
+	+	74	0
+	+	70	10
+	+	71	10
+	+	77	10
+	+	76	1
+	+	77	1
+
+> ~/.ssh/authorized_keys
+	*	1706338523	0
+	"	11	0
+	.	12	0
+	+	12	0
+
+> ~/script/testAll/myConfig.sh
+	*	1703467718	0
+	"	22	0
+	.	23	0
+	+	15	0
+	+	14	18
+	+	16	24
+	+	17	0
+	+	23	0
+
+> ~/script/cudaTest/MgpusTest/README.md
+	*	1703302659	0
+	"	6	4
+	^	6	5
+	.	6	4
+	+	3	55
+	+	1	73
+	+	4	31
+	+	5	93
+	+	4	24
+	+	5	47
+	+	6	35
+	+	5	2
+	+	6	4
+
+> ~/script/testAll/sync.sh
+	*	1703253968	0
+	"	1	0
+	.	1	0
+	+	1	12
+	+	1	11
+	+	1	38
+	+	1	21
 	+	1	0
-	+	2	0
-	+	27	0
+	+	11	23
+	+	1	26
 	+	1	0
+
+> ~/Project/ASC/ASC24-LLM-inference-optimization/sync.sh
+	*	1703250264	0
+	"	1	0
+	^	6	27
+	.	2	13
+	+	10	24
 	+	2	13
-	+	3	12
-	+	52	3
 
 > ~/.zshrc
-	*	1703232236	0
-	"	1	0
+	*	1703244849	0
+	"	238	0
 	^	169	39
 	.	169	39
 	+	202	70
@@ -633,6 +688,40 @@ $
 	+	169	0
 	+	169	39
 
+> ~/.gitignore
+	*	1703244839	0
+	"	52	0
+	^	52	4
+	.	52	3
+	+	11	16
+	+	32	9
+	+	42	0
+	+	43	6
+	+	44	7
+	+	50	3
+	+	48	0
+	+	51	3
+	+	52	12
+	+	10	4
+	+	10	0
+	+	10	6
+	+	10	10
+	+	10	0
+	+	52	0
+	+	1	8
+	+	2	0
+	+	2	12
+	+	5	0
+	+	1	8
+	+	2	13
+	+	1	0
+	+	2	0
+	+	27	0
+	+	1	0
+	+	2	13
+	+	3	12
+	+	52	3
+
 > ~/Project/ASC/ASC24-LLM-inference-optimization/acl_baseline.py
 	*	1702950627	0
 	"	21	99
@@ -717,16 +806,6 @@ $
 	^	1	34
 	.	1	33
 	+	1	33
-
-> ~/script/cudaTest/torchTest.py
-	*	1702434430	0
-	"	2	29
-	^	2	29
-	.	2	29
-	+	11	63
-	+	1	4
-	+	2	29
-	p	1	0
 
 > ~/.tmux.conf
 	*	1702341825	0
@@ -874,13 +953,6 @@ $
 	+	3	38
 	+	5	27
 
-> ~/script/cudaTest/MgpusTest/README.md
-	*	1701184880	0
-	"	3	55
-	^	3	58
-	.	3	55
-	+	3	55
-
 > ~/Project/AIGC/VITS/Bert-VITS2/run_MnodesAndMgpus.sh
 	*	1700922184	0
 	"	15	0
@@ -964,16 +1036,6 @@ $
 	+	1	0
 	+	1	99
 	+	7	27
-
-> ~/.ssh/config
-	*	1700742474	0
-	"	6	1
-	^	6	2
-	.	6	0
-	+	12	8
-	+	13	1
-	+	17	1
-	+	6	0
 
 > /etc/ssh/sshd_config
 	*	1700741910	0
@@ -1446,32 +1508,3 @@ $
 	+	131	22
 	+	1	0
 	+	433	0
-
-> ~/ASCpro/deepmd-kit/start.sh
-	*	1688184719	0
-	"	2	32
-	^	2	33
-	.	2	32
-	+	2	38
-	+	3	0
-	+	2	32
-
-> ~/ASCpro/ASC23/yuan/yuan_process/vocab.txt
-	*	1687696559	0
-	"	1	0
-
-> ~/ASCpro/deepmd-kit/water/test.sh
-	*	1687157408	0
-	"	1	30
-	^	1	31
-	.	1	29
-	+	48	0
-	+	1	29
-
-> ~/ASCpro/deepmd-kit/water/input.json
-	*	1687157345	0
-	"	2	0
-
-> ~/hpl.sh
-	*	1686151535	0
-	"	1	0
