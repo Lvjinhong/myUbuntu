@@ -1,15 +1,11 @@
-
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -44,7 +40,6 @@ fi
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
-
 
 
 if [ -n "$force_color_prompt" ]; then
@@ -85,8 +80,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-
 
 
 plugins=(
@@ -201,18 +194,6 @@ add_to_LD_LIBRARY_PATH_if_exists() {
 
 alias setOriginPath='export PATH=$(getconf PATH)'
 alias setOrigin_LD_LIBRARY_PATH='export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/libibverbs:/usr/local/lib64:/usr/lib"'
-add_to_path_if_exists /home/ljh/.local/bin /home/inspur/nfs/ljh/SoftWare/vim/bin \
-/home/inspur/nfs/ljh/SoftWare/neovim/bin /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin \
-/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/12.3/openmpi4/latest/bin
-
-setOrigin_LD_LIBRARY_PATH
-#export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/libibverbs:/usr/local/lib64:/usr/lib" 
-add_to_LD_LIBRARY_PATH_if_exists /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/12.3/openmpi4/latest/lib \
-/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/nccl/lib \
-/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/comm_libs/12.3/hpcx/hpcx-2.16/nccl_rdma_sharp_plugin/lib
-
-
-
 #--------------------------------- export 常用应用软件环境变量--------------------------------------
 
 export NVM_DIR="$HOME/SoftWare/nvm"
@@ -226,14 +207,10 @@ export claship="127.0.0.1:7889"
 export EDITOR=/usr/bin/vim
 export CUDA_V=cuda-12.1
 #------------------------------------应用初始化----------------------------------------
-eval $(thefuck --alias fff)
-setcudaV
+
+#eval $(thefuck --alias fff)
 #cowthink -f dragon  "以荒之名 独断万古"
-source /home/inspur/nfs/ljh/SoftWare/spack/share/spack/setup-env.sh
 
-
-# export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin:$PATH
-#export MANPATH=/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/man:$MANPATH
 
 
 
